@@ -15,7 +15,7 @@ public class User {
     private Long id;
 
     @Column(name = "password", nullable = false, length = 100)
-    private String password;            // BCrypt
+    private String password;
 
     @Column(name = "codice", nullable = false, length = 10, unique = true)
     private String codice;
@@ -30,12 +30,18 @@ public class User {
     private String cognome;
 
     @Column(name = "data_nascita", length = 100)
-    private String dataNascita;         // DB è varchar, quindi String
+    private String dataNascita;
 
     @Column(name = "genere", length = 2)
     private String genere;
 
-    // --- GETTER ---
+    @Column(name = "tipo_utente", length = 2)
+    private String tipoUtente;
+
+    @Column(name = "tutor_associato")
+    private Long tutorAssociato;
+
+    // --- GETTER & SETTER ---
     public Long getId() { return id; }
     public String getPassword() { return password; }
     public String getCodice() { return codice; }
@@ -44,8 +50,9 @@ public class User {
     public String getCognome() { return cognome; }
     public String getDataNascita() { return dataNascita; }
     public String getGenere() { return genere; }
+    public String getTipoUtente() { return tipoUtente; }
+    public Long getTutorAssociato() { return tutorAssociato; }
 
-    // --- SETTER ---
     public void setId(Long id) { this.id = id; }
     public void setPassword(String password) { this.password = password; }
     public void setCodice(String codice) { this.codice = codice; }
@@ -54,4 +61,6 @@ public class User {
     public void setCognome(String cognome) { this.cognome = cognome; }
     public void setDataNascita(String dataNascita) { this.dataNascita = dataNascita; }
     public void setGenere(String genere) { this.genere = genere; }
+    public void setTipoUtente(String tipoUtente) { this.tipoUtente = tipoUtente; }
+    public void setTutorAssociato(Long tutorAssociato) { this.tutorAssociato = tutorAssociato; }
 }

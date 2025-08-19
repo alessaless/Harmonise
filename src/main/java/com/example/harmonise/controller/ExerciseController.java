@@ -2,6 +2,7 @@ package com.example.harmonise.controller;
 
 import com.example.harmonise.dto.ExerciseDto;
 import com.example.harmonise.service.ExerciseService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,14 +11,14 @@ import java.util.List;
 @RequestMapping("/exercises")
 public class ExerciseController {
 
-    private final ExerciseService service;
+    private final ExerciseService exerciseService;
 
-    public ExerciseController(ExerciseService service) {
-        this.service = service;
+    public ExerciseController(ExerciseService exerciseService) {
+        this.exerciseService = exerciseService;
     }
 
     @GetMapping
-    public List<ExerciseDto> getExercises() {
-        return service.getAllExercises();
+    public ResponseEntity<List<ExerciseDto>> getAllExercises() {
+        return ResponseEntity.ok(exerciseService.getAllExercises());
     }
 }

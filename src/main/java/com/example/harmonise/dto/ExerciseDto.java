@@ -1,30 +1,37 @@
 package com.example.harmonise.dto;
 
+import com.example.harmonise.entity.Exercise;
 
 public class ExerciseDto {
-    private Long id;
-    private String nome;
+    private Long idEsercizio;
+    private String nomeEsercizio;
 
     public ExerciseDto() {}
 
-    public ExerciseDto(Long id, String nome) {
-        this.id = id;
-        this.nome = nome;
+    public ExerciseDto(Long idEsercizio, String nomeEsercizio) {
+        this.idEsercizio = idEsercizio;
+        this.nomeEsercizio = nomeEsercizio;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdEsercizio() {
+        return idEsercizio;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdEsercizio(Long idEsercizio) {
+        this.idEsercizio = idEsercizio;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeEsercizio() {
+        return nomeEsercizio;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeEsercizio(String nomeEsercizio) {
+        this.nomeEsercizio = nomeEsercizio;
+    }
+
+    // Factory method
+    public static ExerciseDto from(Exercise e) {
+        if (e == null) return null;
+        return new ExerciseDto(e.getIdEsercizio(), e.getNomeEsercizio());
     }
 }

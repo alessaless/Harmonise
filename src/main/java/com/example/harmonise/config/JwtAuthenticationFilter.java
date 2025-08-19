@@ -28,8 +28,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
-            throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain chain) throws ServletException, IOException {
 
         final String header = request.getHeader(HttpHeaders.AUTHORIZATION);
         if (header == null || !header.startsWith("Bearer ")) {
@@ -40,13 +41,29 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         final String token = header.substring(7);
         try {
             String username = jwtService.extractUsername(token);
+
+            System.out.println("JWT token ricevuto: " + token);
+            System.out.println("Username estratto: " + username);
+
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-                var auth = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
-                SecurityContextHolder.getContext().setAuthentication(auth);
+
+                if (jwtService.isTokenValid(token, userDetails)) {
+                    UsernamePasswordAuthenticationToken auth =
+                            new UsernamePasswordAuthenticationToken(
+                                    userDetails,
+                                    null,
+                                    userDetails.getAuthorities() // anche se vuoto basta per authenticated()
+                            );
+
+                    System.out.println("Autenticato: " + auth);
+
+                    SecurityContextHolder.getContext().setAuthentication(auth);
+                }
             }
         } catch (Exception e) {
-            // token non valido → prosegui senza autenticazione
+            // se il token è invalido → nessuna autenticazione
+            SecurityContextHolder.clearContext();
         }
         chain.doFilter(request, response);
     }

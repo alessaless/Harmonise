@@ -10,12 +10,14 @@ public class UserDto {
     private String cognome;
     private String dataNascita;
     private String genere;
+    private String tipoUtente;
+    private Long tutorAssociato;
 
     // --- COSTRUTTORI ---
     public UserDto() {}
 
     public UserDto(Long id, String codice, String email, String nome, String cognome,
-                   String dataNascita, String genere) {
+                   String dataNascita, String genere, String tipoUtente, Long tutorAssociato) {
         this.id = id;
         this.codice = codice;
         this.email = email;
@@ -23,6 +25,8 @@ public class UserDto {
         this.cognome = cognome;
         this.dataNascita = dataNascita;
         this.genere = genere;
+        this.tipoUtente = tipoUtente;
+        this.tutorAssociato = tutorAssociato;
     }
 
     // --- GETTER ---
@@ -33,6 +37,8 @@ public class UserDto {
     public String getCognome() { return cognome; }
     public String getDataNascita() { return dataNascita; }
     public String getGenere() { return genere; }
+    public String getTipoUtente() { return tipoUtente; }
+    public Long getTutorAssociato() { return tutorAssociato; }
 
     // --- SETTER ---
     public void setId(Long id) { this.id = id; }
@@ -42,6 +48,8 @@ public class UserDto {
     public void setCognome(String cognome) { this.cognome = cognome; }
     public void setDataNascita(String dataNascita) { this.dataNascita = dataNascita; }
     public void setGenere(String genere) { this.genere = genere; }
+    public void setTipoUtente(String tipoUtente) { this.tipoUtente = tipoUtente; }
+    public void setTutorAssociato(Long tutorAssociato) { this.tutorAssociato = tutorAssociato; }
 
     // --- FACTORY METHOD ---
     public static UserDto from(User u) {
@@ -54,6 +62,8 @@ public class UserDto {
         dto.setCognome(u.getCognome());
         dto.setDataNascita(u.getDataNascita());
         dto.setGenere(u.getGenere());
+        dto.setTipoUtente(u.getTipoUtente());          // <-- aggiunto
+        dto.setTutorAssociato(u.getTutorAssociato());  // <-- aggiunto
         return dto;
     }
 }
