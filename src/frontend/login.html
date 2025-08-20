@@ -38,8 +38,11 @@
 
             const data = await response.json();
 
+            // 🔑 Salva token e user in localStorage
             localStorage.setItem("token", data.token);
+            localStorage.setItem("user", JSON.stringify(data.user));
 
+            // Redirect alla pagina elenco esercizi
             window.location.href = "elenco_esercizi.html";
         } catch (err) {
             document.getElementById("message").textContent = "Errore: " + err.message;
