@@ -9,6 +9,9 @@ public class ExerciseExecution {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_esecuzione")
+    private Long idEsecuzione;
+
     @Column(name = "id_esercizio")
     private Long idEsercizio;
 
@@ -26,7 +29,9 @@ public class ExerciseExecution {
 
     public ExerciseExecution() {}
 
-    public ExerciseExecution(Long bambino, Integer numeroErrori, String terminato, LocalDateTime dataEsecuzione) {
+    public ExerciseExecution(Long esecuzione, Long bambino, Long esercizio, Integer numeroErrori, String terminato, LocalDateTime dataEsecuzione) {
+        this.idEsecuzione = esecuzione;
+        this.idEsercizio = esercizio;
         this.bambino = bambino;
         this.numeroErrori = numeroErrori;
         this.terminato = terminato;
@@ -47,4 +52,12 @@ public class ExerciseExecution {
 
     public LocalDateTime getDataEsecuzione() { return dataEsecuzione; }
     public void setDataEsecuzione(LocalDateTime dataEsecuzione) { this.dataEsecuzione = dataEsecuzione; }
+
+    public Long getIdEsecuzione() {
+        return idEsecuzione;
+    }
+
+    public void setIdEsecuzione(Long idEsecuzione) {
+        this.idEsecuzione = idEsecuzione;
+    }
 }

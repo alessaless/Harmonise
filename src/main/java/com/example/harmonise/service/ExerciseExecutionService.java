@@ -29,6 +29,7 @@ public class ExerciseExecutionService {
     // ADD new execution
     public ExerciseExecutionDto addExecution(ExerciseExecutionDto dto) {
         ExerciseExecution execution = new ExerciseExecution();
+        execution.setIdEsercizio(dto.getIdEsercizio());
         execution.setBambino(dto.getBambino());
         execution.setNumeroErrori(dto.getNumeroErrori());
         execution.setTerminato(dto.getTerminato());
