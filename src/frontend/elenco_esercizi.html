@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Esercizi</title>
+</head>
+<body>
+<h2>Recupera esercizi</h2>
+
+<button id="fetchBtn">Carica esercizi</button>
+
+<h3>Risultato:</h3>
+<pre id="result"></pre>
+
+<script>
+    document.getElementById("fetchBtn").addEventListener("click", async () => {
+        const token = localStorage.getItem("token");
+        if (!token) {
+            alert("Nessun token trovato in localStorage! Fai prima il login.");
+            return;
+        }
+
+        try {
+            const response = await fetch("http://localhost:8080/exercises", {
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + token,
+                    "Content-Type": "application/json"
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error("Errore HTTP " + response.status);
+            }
+
+            const data = await response.json();
+            document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+        } catch (err) {
+            console.error("Errore:", err);
+            document.getElementById("result").textContent = "Errore: " + err.message;
+        }
+    });
+</script>
+</body>
+</html>
