@@ -10,16 +10,18 @@ public class ExerciseExecutionDto {
     private Integer numeroErrori;
     private String terminato;
     private LocalDateTime dataEsecuzione;
+    private int livelliCompletati;
 
     public ExerciseExecutionDto() {}
 
-    public ExerciseExecutionDto(Long idEsecuzione, Long idEsercizio, Long bambino, Integer numeroErrori, String terminato, LocalDateTime dataEsecuzione) {
+    public ExerciseExecutionDto(Long idEsecuzione, Long idEsercizio, Long bambino, Integer numeroErrori, String terminato, LocalDateTime dataEsecuzione, int livelliCompletati) {
         this.idEsecuzione = idEsecuzione;
         this.idEsercizio = idEsercizio;
         this.bambino = bambino;
         this.numeroErrori = numeroErrori;
         this.terminato = terminato;
         this.dataEsecuzione = dataEsecuzione;
+        this.livelliCompletati = livelliCompletati;
     }
 
     public Long getIdEsercizio() { return idEsercizio; }
@@ -45,6 +47,14 @@ public class ExerciseExecutionDto {
         this.idEsecuzione = idEsecuzione;
     }
 
+    public int getLivelliCompletati() {
+        return livelliCompletati;
+    }
+
+    public void setLivelliCompletati(int livelliCompletati) {
+        this.livelliCompletati = livelliCompletati;
+    }
+
     // Factory method
     public static ExerciseExecutionDto from(ExerciseExecution e) {
         if (e == null) return null;
@@ -54,7 +64,8 @@ public class ExerciseExecutionDto {
                 e.getBambino(),
                 e.getNumeroErrori(),
                 e.getTerminato(),
-                e.getDataEsecuzione()
+                e.getDataEsecuzione(),
+                e.getLivelliCompletati()
         );
     }
 }
