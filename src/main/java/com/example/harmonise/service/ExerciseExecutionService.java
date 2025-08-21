@@ -34,7 +34,7 @@ public class ExerciseExecutionService {
         execution.setNumeroErrori(dto.getNumeroErrori());
         execution.setTerminato(dto.getTerminato());
         execution.setDataEsecuzione(dto.getDataEsecuzione() != null ? dto.getDataEsecuzione() : LocalDateTime.now());
-
+        execution.setLivelliCompletati(dto.getLivelliCompletati());
         ExerciseExecution saved = repository.save(execution);
         return ExerciseExecutionDto.from(saved);
     }

@@ -27,15 +27,19 @@ public class ExerciseExecution {
     @Column(name = "data_esecuzione")
     private LocalDateTime dataEsecuzione;
 
+    @Column(name = "livelli_completati")
+    private int livelliCompletati;
+
     public ExerciseExecution() {}
 
-    public ExerciseExecution(Long esecuzione, Long bambino, Long esercizio, Integer numeroErrori, String terminato, LocalDateTime dataEsecuzione) {
+    public ExerciseExecution(Long esecuzione, Long bambino, Long esercizio, Integer numeroErrori, String terminato, LocalDateTime dataEsecuzione, int livelliCompletati) {
         this.idEsecuzione = esecuzione;
         this.idEsercizio = esercizio;
         this.bambino = bambino;
         this.numeroErrori = numeroErrori;
         this.terminato = terminato;
         this.dataEsecuzione = dataEsecuzione;
+        this.livelliCompletati = livelliCompletati;
     }
 
     public Long getIdEsercizio() { return idEsercizio; }
@@ -59,5 +63,13 @@ public class ExerciseExecution {
 
     public void setIdEsecuzione(Long idEsecuzione) {
         this.idEsecuzione = idEsecuzione;
+    }
+
+    public int getLivelliCompletati() {
+        return livelliCompletati;
+    }
+
+    public void setLivelliCompletati(int livelliCompletati) {
+        this.livelliCompletati = livelliCompletati;
     }
 }
