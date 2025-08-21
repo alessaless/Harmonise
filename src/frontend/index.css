@@ -1,0 +1,83 @@
+header {
+  width: 100%;
+  background-color: #99CCFF;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 75px;
+  width: auto;
+  margin-right: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #99CCFF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+  margin: 100px auto;
+}
+
+
+.logo-login {
+  width: 100px;      /* dimensione del logo */
+  height: auto;      /* mantiene proporzioni */
+}
+
+.container h1 {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #72A5CB66; /* stesso colore del bottone */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: black; /* colore del placeholder */
+  opacity: 35%;
+}
+
+button {
+  background-color: #72A5CB66;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 15px;
+  width: max-content;
+}
+
+button:hover {
+  background-color: #72A5CB;
+}

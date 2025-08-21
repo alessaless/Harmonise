@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrazione</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="Pagina di registrazione">
+
+    <link rel="icon" href="logo.ico" sizes="any">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
+
+    <style>
+        .container {
+            margin: 40px auto;
+        }
+
+        select {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            margin-bottom: 20px;
+            background-color: #72A5CB66;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            color: black;
+            appearance: none;      /* rimuove freccia predefinita del browser */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-align-last: center; /* centra il testo selezionato */
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+<header>
+    <div class="header-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+</header>
+
+<div class="container">
+    <img src="logo.png" alt="Logo" class="logo-login">
+    <h1>Registrazione</h1>
+    <form id="registerForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Conferma Password" required>
+        <input type="date" id="dob" placeholder="Data di nascita" required>
+
+        <select id="gender" required>
+            <option value="" disabled selected>Seleziona genere</option>
+            <option value="maschio">Maschio</option>
+            <option value="femmina">Femmina</option>
+            <option value="altro">Altro</option>
+        </select>
+
+        <button type="submit">Registrati</button>
+    </form>
+</div>
+
+
+
+<p id="message"></p>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        try {
+            const response = await fetch("http://localhost:8080/api/auth/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (!response.ok) {
+                throw new Error("Credenziali non valide");
+            }
+
+            const data = await response.json();
+
+            // 🔑 Salva token e user in localStorage
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("user", JSON.stringify(data.user));
+
+            // Redirect alla pagina elenco esercizi
+            window.location.href = "elenco_esercizi.html";
+        } catch (err) {
+            document.getElementById("message").textContent = "Errore: " + err.message;
+        }
+    });
+</script>
+</body>
+</html>

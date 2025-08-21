@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="homepageEducatore.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="logo.ico" sizes="any">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<div id="header-placeholder"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+<main class="container">
+  <aside class="sidebar">
+    <h2>Seleziona un alunno</h2>
+    <div class="student-buttons">
+      <button class="student selected">Paolo Carmine Valletta</button>
+      <button class="student">Michele Rabesco</button>
+      <button class="student">Vincenzo Arnone</button>
+    </div>
+  </aside>
+  <section class="student-">
+    <div class="student-info">
+      <h2>Paolo Carmine Valletta</h2>
+      <div class="info-card">
+        <img src="avatar.png" alt="Avatar alunno" class="avatar">
+        <div class="details">
+          <p><strong>Anni:</strong> 6</p>
+          <p><strong>Data di nascita:</strong> 12/07/2019</p>
+          <p><strong>Luogo di nascita:</strong> Caserta</p>
+          <button class="action">Visualizza progressi</button>
+          <button class="action">Modifica dati alunno</button>
+        </div>
+      </div>
+      <p class="credentials">
+        Username: <strong>pcarmine</strong> Password: <strong>12345</strong>
+      </p>
+    </div>
+    <div class="button">
+      <button class="add-student">Aggiungi un nuovo alunno</button>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

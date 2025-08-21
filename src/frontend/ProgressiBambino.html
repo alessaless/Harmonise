@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progressi studente</title>
+  <link rel="stylesheet" href="header.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="logo.ico" sizes="any">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body style="background:#e6f2ff; font-family:sans-serif; text-align:center;">
+<div id="header-placeholder"></div>
+
+<h2>Progressi di Mario Rossi</h2>
+<canvas id="progressChart" width="250" height="250"></canvas>
+
+<br>
+<button onclick="aggiungiCorretto()">+ Corretto</button>
+<button onclick="aggiungiSbagliato()">+ Sbagliato</button>
+<button onclick="aggiungiIncompleto()">+ Incompleto</button>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    })
+    .catch(err => console.error("Impossibile caricare header:", err));
+
+
+let dati = { corretti: 3, sbagliati: 1, incompleti: 0 };
+
+  const ctx = document.getElementById("progressChart").getContext("2d");
+  const progressChart = new Chart(ctx, {
+    type: "pie",
+    data: {
+      labels: ["Corretti", "Sbagliati", "Incompleti"],
+      datasets: [{
+        data: [dati.corretti, dati.sbagliati, dati.incompleti],
+        backgroundColor: ["#4caf50", "#f44336", "#ff9800"]
+      }]
+    },
+    options: {
+      responsive: false,
+      plugins: { legend: { position: "bottom" } }
+    }
+  });
+
+  // funzioni aggiornamento
+  function aggiornaGrafico() {
+    progressChart.data.datasets[0].data = [dati.corretti, dati.sbagliati, dati.incompleti];
+    progressChart.update();
+  }
+  function aggiungiCorretto() { dati.corretti++; aggiornaGrafico(); }
+  function aggiungiSbagliato() { dati.sbagliati++; aggiornaGrafico(); }
+  function aggiungiIncompleto() { dati.incompleti++; aggiornaGrafico(); }
+</script>
+</body>
+</html>
+
