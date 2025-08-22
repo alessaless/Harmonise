@@ -9,12 +9,6 @@
   <link rel="stylesheet" href="homepageEducatore.css">
   <meta name="description" content="">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
   <link rel="icon" href="logo.ico" sizes="any">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="logo.png">
@@ -34,37 +28,115 @@
     });
 </script>
 <main class="container">
-  <aside class="sidebar">
-    <h2>Seleziona un alunno</h2>
-    <div class="student-buttons">
-      <button class="student selected">Paolo Carmine Valletta</button>
-      <button class="student">Michele Rabesco</button>
-      <button class="student">Vincenzo Arnone</button>
-    </div>
-  </aside>
-  <section class="student-">
-    <div class="student-info">
-      <h2>Paolo Carmine Valletta</h2>
-      <div class="info-card">
-        <img src="avatar.png" alt="Avatar alunno" class="avatar">
-        <div class="details">
-          <p><strong>Anni:</strong> 6</p>
-          <p><strong>Data di nascita:</strong> 12/07/2019</p>
-          <p><strong>Luogo di nascita:</strong> Caserta</p>
-          <button class="action">Visualizza progressi</button>
-          <button class="action">Modifica dati alunno</button>
-        </div>
-      </div>
-      <p class="credentials">
-        Username: <strong>pcarmine</strong> Password: <strong>12345</strong>
-      </p>
-    </div>
-    <div class="button">
-      <button class="add-student">Aggiungi un nuovo alunno</button>
-    </div>
-  </section>
+    <aside class="sidebar">
+        <h2>Seleziona un alunno</h2>
+        <div class="student-buttons" id="studentList"></div>
+    </aside>
 
+    <section class="student-" id="studentDetails">
+        <div class="student-info">
+            <h2 id="studentName"></h2>
+            <div class="info-card" id="studentCard" style="display:none;">
+                <img id="studentAvatar" src="" alt="Avatar alunno" class="avatar">
+                <div class="details-buttons">
+                    <div class="details">
+                        <p><strong>Email:</strong> <span id="email"></span></p>
+                        <p><strong>Data di nascita:</strong> <span id="studentDob"></span></p>
+                        <p><strong>Anni:</strong> <span id="studentAge"></span></p>
+                    </div>
+                    <button class="action" id="progressi">Visualizza progressi</button>
+                    <button class="action" id="modifica">Modifica dati alunno</button>
+                </div>
+            </div>
+            <p class="credentials" id="studentCredentials" style="display:none;">
+                Username: <strong id="studentUsername"></strong>
+                Password: <strong id="studentPassword"></strong>
+            </p>
+        </div>
+        <div class="button">
+            <button class="add-student">Aggiungi un nuovo alunno</button>
+        </div>
+    </section>
 </main>
+
+<script>
+    const token = localStorage.getItem("token");
+
+    const user = JSON.parse(localStorage.getItem("user"));
+    const tutorId = user.id;
+
+    async function loadChildren() {
+        try {
+            const res = await fetch(`http://localhost:8080/api/users/getChildren/${tutorId}`, {
+                headers: {
+                    "Authorization": "Bearer " + token
+                }
+            });
+
+            if (!res.ok) throw new Error("Errore caricamento bambini");
+
+            const children = await res.json();
+            const studentList = document.getElementById("studentList");
+            studentList.innerHTML = "";
+
+            children.forEach(child => {
+                const btn = document.createElement("button");
+                btn.className = "student";
+                btn.textContent = child.nome + " " + child.cognome;
+                btn.addEventListener("click", () => showStudentDetails(child));
+                studentList.appendChild(btn);
+            });
+
+        } catch (err) {
+            console.error(err);
+            document.getElementById("studentList").textContent = "Errore nel caricamento.";
+        }
+    }
+
+    function showStudentDetails(student) {
+        document.getElementById("studentName").textContent = student.nome + " " + student.cognome;
+        document.getElementById("studentDob").textContent = student.dataNascita;
+        document.getElementById("email").textContent = student.email;
+
+        const today = new Date();
+        const birthDate = new Date(student.dataNascita);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        document.getElementById("studentAge").textContent = age;
+
+        const avatarImg = document.querySelector(".avatar");
+        if (student.genere === "F") {
+            avatarImg.src = "avatarF.png";
+        } else {
+            avatarImg.src = "avatar.png";
+        }
+
+        document.getElementById("studentCard").style.display = "flex";
+        document.getElementById("studentCredentials").style.display = "block";
+        document.getElementById("studentUsername").textContent = student.codice.toLowerCase();
+        document.getElementById("studentPassword").textContent = student.password.toLowerCase();
+
+        document.getElementById("progressi").onclick = () => {
+            localStorage.setItem("selectedChild", JSON.stringify(student));
+            window.location.href = "ProgressiBambino.html";
+        };
+
+        document.getElementById("modifica").onclick = () => {
+            localStorage.setItem("selectedChild", JSON.stringify(student));
+            window.location.href = "modificabambino.html";
+        };
+
+    }
+
+    loadChildren();
+
+    document.querySelector(".add-student").addEventListener("click", () => {
+        window.location.href = "AggiungiBambino.html";
+    });
+</script>
 
 </body>
 </html>
