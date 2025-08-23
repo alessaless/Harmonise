@@ -1,5 +1,6 @@
 package com.example.harmonise.controller;
 
+import com.example.harmonise.dto.UpdateUserDto;
 import com.example.harmonise.dto.UserDto;
 import com.example.harmonise.entity.User;
 import com.example.harmonise.service.UserService;
@@ -42,6 +43,13 @@ public class UserController {
     public ResponseEntity<List<UserDto>> getChildrenByIdTutor(@PathVariable Long id) {
         List<UserDto> children = userService.getChildrenByTutorId(id);
         return ResponseEntity.ok(children);
+    }
+
+    @PostMapping("/update/{id}")
+    public ResponseEntity<UserDto> updateChild(@PathVariable Long id,
+                                               @RequestBody UpdateUserDto dto) {
+        User updated = userService.updateChild(id, dto);
+        return ResponseEntity.ok(UserDto.from(updated));
     }
 
 }

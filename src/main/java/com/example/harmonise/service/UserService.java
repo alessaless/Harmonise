@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.example.harmonise.dto.RegisterRequest;
+import com.example.harmonise.dto.UpdateUserDto;
 import com.example.harmonise.dto.UserDto;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -67,6 +68,23 @@ public class UserService {
                 .filter(u -> "B".equals(u.getTipoUtente())) // solo bambini
                 .map(UserDto::from)
                 .toList();
+    }
+
+    public User updateChild(Long id, UpdateUserDto dto) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        if (dto.getNome() != null) user.setNome(dto.getNome());
+        if (dto.getCognome() != null) user.setCognome(dto.getCognome());
+        if (dto.getDataNascita() != null) user.setDataNascita(dto.getDataNascita());
+        if (dto.getEmail() != null) user.setEmail(dto.getEmail());
+        if (dto.getGenere() != null) user.setGenere(dto.getGenere());
+
+        if (dto.getPassword() != null && !dto.getPassword().isBlank()) {
+            user.setPassword(passwordEncoder.encode(dto.getPassword()));
+        }
+
+        return userRepository.save(user);
     }
 
 
