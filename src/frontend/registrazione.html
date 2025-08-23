@@ -53,7 +53,8 @@
     <img src="logo.png" alt="Logo" class="logo-login">
     <h1>Registrazione</h1>
     <form id="registerForm">
-        <input type="text" id="username" placeholder="Username" required>
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="text" id="cognome" placeholder="Cognome" required>
         <input type="email" id="email" placeholder="Email" required>
         <input type="password" id="password" placeholder="Password" required>
         <input type="password" id="confirmPassword" placeholder="Conferma Password" required>
@@ -63,7 +64,6 @@
             <option value="" disabled selected>Seleziona genere</option>
             <option value="maschio">Maschio</option>
             <option value="femmina">Femmina</option>
-            <option value="altro">Altro</option>
         </select>
 
         <button type="submit">Registrati</button>
@@ -75,35 +75,57 @@
 <p id="message"></p>
 
 <script>
-    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    document.getElementById("registerForm").addEventListener("submit", async function (e) {
         e.preventDefault();
 
-        const username = document.getElementById("username").value;
+        const nome = document.getElementById("nome").value;
+        const cognome = document.getElementById("cognome").value;
+        const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        const dob = document.getElementById("dob").value;
+        const gender = document.getElementById("gender").value;
+
+        // Controllo password
+        if (password !== confirmPassword) {
+            document.getElementById("message").textContent = "Le password non coincidono!";
+            return;
+        }
+
+        const requestBody = {
+            email: email,
+            password: password,
+            nome: nome,
+            cognome: cognome,
+            dataNascita: dob,
+            genere: gender.charAt(0).toUpperCase(), // M/F
+            tipoUtente: "T",
+            tutorAssociato: null  // Tutor non ha tutorAssociato
+        };
 
         try {
-            const response = await fetch("http://localhost:8080/api/auth/login", {
+            const response = await fetch("http://localhost:8080/api/auth/register", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ username, password })
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(requestBody)
             });
 
             if (!response.ok) {
-                throw new Error("Credenziali non valide");
+                throw new Error("Registrazione fallita (" + response.status + ")");
             }
 
             const data = await response.json();
+            console.log("Registrazione avvenuta:", data);
+            document.getElementById("message").textContent = "Registrazione completata con successo! Benvenuto " + data.nome;
 
-            // 🔑 Salva token e user in localStorage
-            localStorage.setItem("token", data.token);
-            localStorage.setItem("user", JSON.stringify(data.user));
-
-            // Redirect alla pagina elenco esercizi
-            window.location.href = "elenco_esercizi.html";
         } catch (err) {
+            console.error(err);
             document.getElementById("message").textContent = "Errore: " + err.message;
         }
     });
 </script>
+
 </body>
 </html>

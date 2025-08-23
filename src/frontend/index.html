@@ -35,7 +35,7 @@
     <img src="logo.png" alt="Logo" class="logo-login">
     <h1>Login</h1>
     <form id="loginForm">
-      <input id="username" placeholder="Username" required type="email">
+      <input id="username" placeholder="Username" required type="text">
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Accedi</button>
     </form>
@@ -63,12 +63,17 @@
 
       const data = await response.json();
 
-      // 🔑 Salva token e user in localStorage
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      // Redirect alla pagina elenco esercizi
-      window.location.href = "elenco_esercizi.html";
+      const tipoUtente = data.user.tipoUtente;
+
+      if (tipoUtente === "B") {
+        window.location.href = "elenco_esercizi.html";
+      } else {
+        window.location.href = "homepageEducatore.html";
+      }
+
     } catch (err) {
       document.getElementById("message").textContent = "Errore: " + err.message;
     }

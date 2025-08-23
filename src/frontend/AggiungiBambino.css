@@ -1,0 +1,149 @@
+/* Reset e base */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principale */
+main.nuovo-bambino {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* Contenitore azzurro */
+.form-container {
+    background-color: #99ccff;
+    box-shadow: 0px 4px 4px #00000040;
+    padding: 2rem;
+    max-width: 1223px;
+    width: 100%;
+}
+
+/* Titolo */
+h2 {
+    margin-top: 0;
+    font-weight: 800;
+}
+
+/* Selezione genere */
+fieldset.gender-selection {
+    display: flex;
+    gap: 2rem;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.gender-selection input[type="radio"] {
+    display: none;
+}
+
+.gender-selection label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 141px;
+    background-color: #72a5cb66;
+    box-shadow: 0px 4px 4px #00000040;
+    cursor: pointer;
+    transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+.gender-selection input[type="radio"]:checked + label {
+    outline: 3px solid #000;
+    transform: scale(1.05);
+}
+
+.gender-selection img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-bottom: 2rem;
+}
+
+input {
+    border: none;
+    background-color: #72A5CB66;
+    font-size: 20px;
+    font-weight: 800;
+    color: #000000;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #00000033;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    max-width: 1287px;
+    width: 100%;
+    background-color: white;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    background: #99CCFF;
+    transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+    background: rgba(153, 204, 255, 0.8);
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(153, 204, 255, 0.8);
+    z-index: 1000;
+}
+
+#overlay-content {
+    background: rgba(114, 165, 203, 0.8);
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#overlay-content h2 {
+    margin-top: 0;
+}
+
+#overlay-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    background: rgba(114, 165, 203, 0.8);
+    font-weight: bold;
+}
+
+/* Scroll e overflow */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}

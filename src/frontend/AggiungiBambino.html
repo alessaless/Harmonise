@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Aggiunta alunno</title>
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="homepageEducatore.css">
+    <link rel="stylesheet" href="AggiungiBambino.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.ico" sizes="any">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <meta name="theme-color" content="#fafafa">
+
+</head>
+<body>
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        });
+</script>
+
+<main class="nuovo-bambino">
+    <div class="form-container">
+        <h2 id="form-title">Nuovo alunno</h2>
+        <form id="student-form" novalidate>
+            <fieldset class="gender-selection">
+                <legend class="visually-hidden">Seleziona il genere dello studente</legend>
+                <input type="radio" id="bambino" name="gender" value="M" />
+                <label for="bambino">
+                    <img src="avatar.png" alt="Bambino" />
+                </label>
+                <input type="radio" id="bambina" name="gender" value="F" />
+                <label for="bambina">
+                    <img src="avatarF.png" alt="Bambina" />
+                </label>
+            </fieldset>
+
+            <div class="form-grid">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required />
+                <input type="text" id="cognome" name="cognome" placeholder="Cognome" required />
+                <input type="email" id="email" name="email" placeholder="Email" required />
+                <input type="date" id="dob" name="data" placeholder="Data di nascita" required />
+                <input type="password" id="password" name="password" minlength="8" placeholder="Password" required />
+            </div>
+        </form>
+    </div>
+    <div class="buttons">
+        <button type="submit">Aggiungi</button>
+        <button type="button" class="cancel-button">Annulla</button>
+    </div>
+</main>
+
+<div id="overlay">
+    <div id="overlay-content">
+        <h2>Alunno creato!</h2>
+        <p>Codice: <span id="newCode"></span></p>
+        <p>Password: <span id="newPassword"></span></p>
+        <button id="closeOverlay">Chiudi</button>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("student-form");
+    const overlay = document.getElementById("overlay");
+    const newCodeSpan = document.getElementById("newCode");
+    const newPasswordSpan = document.getElementById("newPassword");
+
+    // Submit del form tramite bottone esterno
+    document.querySelector(".buttons button[type='submit']").addEventListener("click", () => {
+        // Triggers l'evento submit del form
+        form.dispatchEvent(new Event("submit", { cancelable: true }));
+    });
+
+    // Bottone Annulla
+    document.querySelector(".buttons .cancel-button").addEventListener("click", () => {
+        window.location.href = "homepageEducatore.html";
+    });
+
+    // Listener submit
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const user = JSON.parse(localStorage.getItem("user"));
+        const tutorId = user?.id;
+
+        const nome = document.getElementById("nome").value;
+        const cognome = document.getElementById("cognome").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const dob = document.getElementById("dob").value;
+        const gender = document.querySelector('input[name="gender"]:checked')?.value;
+
+        const requestBody = {
+            email,
+            password,
+            nome,
+            cognome,
+            dataNascita: dob,
+            genere: gender,
+            tipoUtente: "B",
+            tutorAssociato: tutorId
+        };
+
+        try {
+            const response = await fetch("http://localhost:8080/api/auth/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(requestBody)
+            });
+
+            if (!response.ok) throw new Error("Registrazione fallita (" + response.status + ")");
+
+            const data = await response.json();
+            newCodeSpan.textContent = data.codice;
+            newPasswordSpan.textContent = password;
+            overlay.style.display = "flex";
+
+        } catch (err) {
+            console.error(err);
+            alert("Registrazione fallita: " + err.message);
+        }
+    });
+
+    // Chiudi overlay
+    document.getElementById("closeOverlay").addEventListener("click", () => {
+        window.location.href = "homepageEducatore.html";
+    });
+</script>
+
+</body>
+</html>

@@ -1,59 +1,63 @@
 <!doctype html>
-<html class="no-js" lang="it">
-
+<html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Progressi studente</title>
+  <meta charset="UTF-8">
+  <title>Progressi alunno</title>
+
   <link rel="stylesheet" href="header.css">
-  <meta name="description" content="">
+  <link rel="stylesheet" href="homepageEducatore.css">
+  <link rel="stylesheet" href="AggiungiBambino.css">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="logo.ico" sizes="any">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+  <style>
+    body { background:white; font-family: Inter, sans-serif; padding: 1rem; }
+    h2 { text-align: center; }
+    #exerciseList { margin-top: 1rem; }
+    .execution-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+      background: #f9f9f9;
+    }
+    canvas { display: block; margin: 2rem auto; }
+  </style>
 </head>
-
-<body style="background:#e6f2ff; font-family:sans-serif; text-align:center;">
+<body>
 <div id="header-placeholder"></div>
 
-<h2>Progressi di Mario Rossi</h2>
-<canvas id="progressChart" width="250" height="250"></canvas>
+<h2 id="pageTitle">Progressi</h2>
+<canvas id="progressChart" width="300" height="300"></canvas>
 
-<br>
-<button onclick="aggiungiCorretto()">+ Corretto</button>
-<button onclick="aggiungiSbagliato()">+ Sbagliato</button>
-<button onclick="aggiungiIncompleto()">+ Incompleto</button>
+<section id="exerciseList"></section>
 
 <script>
+  // carica header
   fetch("header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
-    })
-    .catch(err => console.error("Impossibile caricare header:", err));
+          .then(res => res.text())
+          .then(data => { document.getElementById("header-placeholder").innerHTML = data; });
 
+  // recupera bambino da localStorage
+  const child = JSON.parse(localStorage.getItem("selectedChild"));
+  const token = localStorage.getItem("token");
 
-let dati = { corretti: 3, sbagliati: 1, incompleti: 0 };
+  document.getElementById("pageTitle").textContent = "Progressi di " + child.nome + " " + child.cognome;
 
+  // inizializza chart
   const ctx = document.getElementById("progressChart").getContext("2d");
   const progressChart = new Chart(ctx, {
-    type: "pie",
+    type: "doughnut",
     data: {
-      labels: ["Corretti", "Sbagliati", "Incompleti"],
+      labels: ["Completati", "Non completati"],
       datasets: [{
-        data: [dati.corretti, dati.sbagliati, dati.incompleti],
-        backgroundColor: ["#4caf50", "#f44336", "#ff9800"]
+        data: [0, 0],
+        backgroundColor: ["#4caf50", "#f44336"]
       }]
     },
     options: {
@@ -62,15 +66,50 @@ let dati = { corretti: 3, sbagliati: 1, incompleti: 0 };
     }
   });
 
-  // funzioni aggiornamento
-  function aggiornaGrafico() {
-    progressChart.data.datasets[0].data = [dati.corretti, dati.sbagliati, dati.incompleti];
+  function aggiornaGrafico(completati, nonCompletati) {
+    progressChart.data.datasets[0].data = [completati, nonCompletati];
     progressChart.update();
   }
-  function aggiungiCorretto() { dati.corretti++; aggiornaGrafico(); }
-  function aggiungiSbagliato() { dati.sbagliati++; aggiornaGrafico(); }
-  function aggiungiIncompleto() { dati.incompleti++; aggiornaGrafico(); }
+
+  async function loadExecutions() {
+    try {
+      const res = await fetch(`http://localhost:8080/executions/child/${child.id}`, {
+        headers: { "Authorization": "Bearer " + token }
+      });
+      if (!res.ok) throw new Error("Errore nel caricamento esecuzioni");
+
+      const executions = await res.json();
+      const container = document.getElementById("exerciseList");
+      container.innerHTML = "";
+
+      let completati = 0;
+      let nonCompletati = 0;
+
+      executions.forEach(exec => {
+        const card = document.createElement("div");
+        card.className = "execution-card";
+
+        const terminato = exec.terminato === "Y";
+        if (terminato) completati++; else nonCompletati++;
+
+        card.innerHTML = `
+          <p><strong>ID Esercizio:</strong> ${exec.idEsercizio}</p>
+          <p><strong>Data:</strong> ${new Date(exec.dataEsecuzione).toLocaleString()}</p>
+          <p><strong>Errori:</strong> ${exec.numeroErrori}</p>
+          <p><strong>Livelli completati:</strong> ${exec.livelliCompletati}</p>
+          <p><strong>Stato:</strong> ${terminato ? "✅ Completato" : "❌ Non completato"}</p>
+        `;
+        container.appendChild(card);
+      });
+
+      aggiornaGrafico(completati, nonCompletati);
+    } catch (err) {
+      console.error(err);
+      document.getElementById("exerciseList").textContent = "Errore nel caricamento progressi.";
+    }
+  }
+
+  loadExecutions();
 </script>
 </body>
 </html>
-
