@@ -34,22 +34,20 @@
 
 <h2 id="pageTitle">Progressi</h2>
 <canvas id="progressChart" width="300" height="300"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <section id="exerciseList"></section>
 
 <script>
-  // carica header
   fetch("header.html")
           .then(res => res.text())
           .then(data => { document.getElementById("header-placeholder").innerHTML = data; });
 
-  // recupera bambino da localStorage
   const child = JSON.parse(localStorage.getItem("selectedChild"));
   const token = localStorage.getItem("token");
 
   document.getElementById("pageTitle").textContent = "Progressi di " + child.nome + " " + child.cognome;
 
-  // inizializza chart
   const ctx = document.getElementById("progressChart").getContext("2d");
   const progressChart = new Chart(ctx, {
     type: "doughnut",
@@ -74,7 +72,10 @@
   async function loadExecutions() {
     try {
       const res = await fetch(`http://localhost:8080/executions/child/${child.id}`, {
-        headers: { "Authorization": "Bearer " + token }
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + token
+        },
       });
       if (!res.ok) throw new Error("Errore nel caricamento esecuzioni");
 

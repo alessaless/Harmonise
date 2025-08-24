@@ -77,7 +77,6 @@
         document.getElementById("cognome").value = selectedChild.cognome;
         document.getElementById("email").value = selectedChild.email;
         document.getElementById("dob").value = selectedChild.dataNascita;
-        document.getElementById("password").value = selectedChild.password;
 
         // Seleziona avatar
         if (selectedChild.genere === "F") {
@@ -87,21 +86,16 @@
         }
     }
 
-    // Submit tramite bottone esterno
     document.querySelector(".buttons button[type='submit']").addEventListener("click", () => {
         form.dispatchEvent(new Event("submit", { cancelable: true }));
     });
 
-    // Bottone Annulla
     document.querySelector(".buttons .cancel-button").addEventListener("click", () => {
         window.location.href = "homepageEducatore.html";
     });
 
     form.addEventListener("submit", async function(e) {
         e.preventDefault();
-
-        const user = JSON.parse(localStorage.getItem("user"));
-        const tutorId = user?.id;
 
         const nome = document.getElementById("nome").value;
         const cognome = document.getElementById("cognome").value;
@@ -111,25 +105,30 @@
         const gender = document.querySelector('input[name="gender"]:checked')?.value;
 
         const requestBody = {
-            email,
-            password,
             nome,
             cognome,
+            email,
             dataNascita: dob,
-            genere: gender,
-            tipoUtente: "B",
-            tutorAssociato: tutorId
+            password,
+            genere: gender
         };
 
         try {
-            // Modifica l'utente con PUT (supponendo esista un endpoint /update)
-            const response = await fetch(`http://localhost:8080/api/users/${selectedChild.id}`, {
-                method: "PUT",
-                headers: { "Content-Type": "application/json" },
+            const token = localStorage.getItem("token");
+
+            const response = await fetch(`http://localhost:8080/api/users/update/${selectedChild.id}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + token
+                },
                 body: JSON.stringify(requestBody)
             });
 
-            if (!response.ok) throw new Error("Modifica fallita (" + response.status + ")");
+            if (!response.ok) {
+                const errText = await response.text();
+                throw new Error("Modifica fallita (" + response.status + ")");
+            }
             overlay.style.display = "flex";
 
         } catch (err) {

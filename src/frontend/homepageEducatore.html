@@ -48,10 +48,6 @@
                     <button class="action" id="modifica">Modifica dati alunno</button>
                 </div>
             </div>
-            <p class="credentials" id="studentCredentials" style="display:none;">
-                Username: <strong id="studentUsername"></strong>
-                Password: <strong id="studentPassword"></strong>
-            </p>
         </div>
         <div class="button">
             <button class="add-student">Aggiungi un nuovo alunno</button>
@@ -115,19 +111,17 @@
         }
 
         document.getElementById("studentCard").style.display = "flex";
-        document.getElementById("studentCredentials").style.display = "block";
-        document.getElementById("studentUsername").textContent = student.codice.toLowerCase();
-        document.getElementById("studentPassword").textContent = student.password.toLowerCase();
 
-        document.getElementById("progressi").onclick = () => {
+        document.getElementById("progressi").addEventListener("click", () => {
             localStorage.setItem("selectedChild", JSON.stringify(student));
             window.location.href = "ProgressiBambino.html";
-        };
+        });
 
-        document.getElementById("modifica").onclick = () => {
+        document.getElementById("modifica").addEventListener("click", () => {
             localStorage.setItem("selectedChild", JSON.stringify(student));
             window.location.href = "modificabambino.html";
-        };
+        });
+
 
     }
 
