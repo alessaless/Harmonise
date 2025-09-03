@@ -34,6 +34,18 @@ public class ExercisesExecutionAdvancedController {
         return new ResponseEntity<>(executions, HttpStatus.OK);
     }
 
+    @GetMapping("/averageByBambino/{bambinoId}")
+    public ResponseEntity<Integer> getAverageExercisesExecuted(@PathVariable Long bambinoId) {
+        Integer executions = service.getAverageExercisesExecuted(bambinoId);
+        return new ResponseEntity<>(executions, HttpStatus.OK);
+    }
+
+    @GetMapping("/averageTimeByBambino/{bambinoId}")
+    public ResponseEntity<Integer> getAverageTimeLastWeek(@PathVariable Long bambinoId) {
+        Integer executions = service.getAverageTimeLastWeek(bambinoId);
+        return new ResponseEntity<>(executions, HttpStatus.OK);
+    }
+
     private ExercisesExecutionAdvanced convertToEntity(ExercisesExecutionAdvancedDto dto) {
         ExercisesExecutionAdvanced entity = new ExercisesExecutionAdvanced();
         entity.setBambino(dto.getBambino());

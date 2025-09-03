@@ -24,4 +24,12 @@ public class ExercisesExecutionAdvancedService {
     public List<ExercisesExecutionAdvanced> getByBambino(Long bambinoId) {
         return repository.findByBambino(bambinoId);
     }
+
+    public Integer getAverageExercisesExecuted(Long bambino) {
+        return repository.getAverageExercisesExecuted(bambino);
+    }
+
+    public Integer getAverageTimeLastWeek(Long bambino) {
+        return repository.getAverageTimeLastWeek(bambino);
+    }
 }
