@@ -213,7 +213,7 @@ checkBtn.addEventListener("click", () => {
             } else {
                 document.body.classList.add("completed");
                 messageBox.textContent= "Hai completato tutti i livelli! 🌟", "success";
-                terminaEsercuzioneEsercizio(idEsercizio, "Y")
+                terminaEsercuzioneEsercizio(idEsercizio, "Y", false)
                 setTimeout(() => {
                     showVictoryModal();
                 }, 500);

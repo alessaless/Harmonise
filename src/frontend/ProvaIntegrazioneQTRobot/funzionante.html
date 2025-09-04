@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="js/roslib.min.js"></script>
+</head>
+<body>
+<script>
+    var ros = new ROSLIB.Ros({ url : 'ws://192.168.100.2:9091' });
+
+    ros.on('connection', function() {
+      console.log('Connected to rosbridge.');
+
+      var say = new ROSLIB.Service({
+        ros : ros,
+        name : '/qt_robot/speech/say',
+        serviceType : 'qt_robot_interface/speech_say'
+      });
+
+      say.callService(new ROSLIB.ServiceRequest({ message : 'Hello from Alessandro!' }),
+        function(res){ console.log('Speech OK', res); },
+        function(err){ console.error('Speech ERR', err); }
+      );
+
+      var emo = new ROSLIB.Service({
+        ros : ros,
+        name : '/qt_robot/emotion/show',
+        serviceType : 'qt_robot_interface/emotion_show'
+      });
+
+      emo.callService(new ROSLIB.ServiceRequest({ name : 'QT/happy' }),
+        function(res){ console.log('Emotion OK', res); },
+        function(err){ console.error('Emotion ERR', err); }
+      );
+    });
+
+    ros.on('error', function(e){ console.error('WS error', e); });
+    ros.on('close', function(){ console.log('WS closed'); });
+</script>
+</body>
+</html>

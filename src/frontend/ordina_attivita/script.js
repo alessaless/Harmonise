@@ -231,7 +231,7 @@ checkBtn.addEventListener("click", () => {
             if (currentLevel < levels.length) {
                 loadLevel();
             } else {
-                terminaEsercuzioneEsercizio(idEsercizio, "Y")
+                terminaEsercuzioneEsercizio(idEsercizio, "Y", false)
                 showVictoryModal();
             }
         }, 1500);

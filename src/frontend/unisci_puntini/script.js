@@ -197,7 +197,7 @@ document.addEventListener("mouseup", e => {
                             loadLevel(level);
                         } else {
                             incrementaLivelliCompletati();
-                            terminaEsercuzioneEsercizio(idEsercizio, "Y")
+                            terminaEsercuzioneEsercizio(idEsercizio, "Y", false)
                             message.textContent = "Hai completato tutti i livelli 🎊";
                             message.classList.remove("message-warning");
                             message.classList.add("message-success");

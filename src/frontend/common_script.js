@@ -25,8 +25,7 @@ quitBtn.addEventListener("click", () => {
 });
 
 quitYesBtn.addEventListener("click", () => {
-    terminaEsercuzioneEsercizio(getIdEsercizio(), "N");
-    window.location.href = "../elenco_esercizi.html";
+    terminaEsercuzioneEsercizio(getIdEsercizio(), "N", true);
 });
 
 quitNoBtn.addEventListener("click", () => {
@@ -42,9 +41,10 @@ function incrementaNumeroErrori() {
     numeroErrori++;
 }
 
-function terminaEsercuzioneEsercizio(idEsercizio, terminato) {
+function terminaEsercuzioneEsercizio(idEsercizio, terminato, goHome) {
     const token = localStorage.getItem("token"); // recupero il token dal localstorage
-    const idBambino = 11;
+    const idBambino = JSON.parse(localStorage.getItem("user")).id;
+
     const body = {
         idEsercizio: idEsercizio,
         bambino: idBambino,
@@ -52,6 +52,7 @@ function terminaEsercuzioneEsercizio(idEsercizio, terminato) {
         terminato: terminato,
         livelliCompletati: livelloCompletati
     };
+
 
     fetch("http://localhost:8080/executions", {
         method: "POST",
@@ -68,10 +69,12 @@ function terminaEsercuzioneEsercizio(idEsercizio, terminato) {
             return response.json();
         })
         .then(data => {
-            console.log("Esecuzione salvata correttamente:", data);
+            //console.log("Esecuzione salvata correttamente:", data);
+            if(goHome) window.location.href = "../elenco_esercizi.html";
         })
         .catch(error => {
             console.error("Errore:", error);
         });
 }
+
 
