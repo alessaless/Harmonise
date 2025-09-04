@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Gioco Sequenze - Livelli</title>
+    <link rel="stylesheet" href="../common_style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<img src="../logo.png" class="logo" alt="Logo"/>
+<h1>Completa l’attività!</h1>
+<div id="level-info">Livello 1</div>
+
+<div id="game">
+    <!-- Colonna sinistra (30%) -->
+    <div id="left-panel">
+        <div class="task-list">
+            <!-- Qui entrano le attività -->
+        </div>
+
+    </div>
+    <!-- Colonna destra (70%) -->
+    <div id="right-panel">
+        <!-- Slot generati dinamicamente -->
+
+    </div>
+    <button id="check-btn">Verifica</button>
+
+</div>
+
+
+<div id="message"></div>
+<button id="quit-btn">Termina esercizio</button>
+
+<div id="victory-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>🎉 Complimenti! 🎉</h2>
+        <p>Hai completato tutti i livelli!</p>
+        <button id="play-again-btn">Torna alla Home</button>
+    </div>
+</div>
+
+<div id="quit-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Vuoi abbandonare l'attività?</h2>
+        <div class="modal-buttons">
+            <button id="quit-yes-btn" class="danger">Sì</button>
+            <button id="quit-no-btn" class="safe">No</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../common_script.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

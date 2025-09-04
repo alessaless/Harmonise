@@ -1,0 +1,165 @@
+#game {
+    position: relative;
+    width: 75%;
+    height: 55vh;
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+
+.screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%; /* fuori schermo a destra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.6s ease-in-out;
+    text-align: center;
+}
+
+.screen.active {
+    left: 0; /* visibile */
+}
+
+.problem-big {
+    width: 80%;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.problem-small {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+    max-width: 80%;
+}
+
+.rules {
+    font-size: 1.5em;
+}
+
+/* Pulsante Avanti */
+#next-btn {
+    position: absolute;
+    bottom: 140px;
+    right: 140px;
+    padding: 15px 35px;
+    font-size: 1.3em;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    border-radius: 15px;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+#next-btn:hover {
+    background: #fa5252;
+    transform: scale(1.05);
+}
+
+#operation {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+#play-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.operator {
+    font-size: 1.8rem;
+}
+
+
+
+/* Contenitore numeri */
+#numbers-container {
+    display: flex;
+    gap: 20px;
+    margin: 25px 0 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.draggable {
+    padding: 18px 28px;
+    background: #ffd43b;
+    border-radius: 15px;
+    font-size: 1.8em;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    user-select: none;
+}
+
+/* Spazi vuoti */
+.dropzone {
+    width: 100px;
+    height: 90px;
+    border: 2px dashed #339af0;
+    border-radius: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    margin: 0 15px;
+    background: #e7f5ff;
+}
+
+.dropzone.filled {
+    border-style: solid;
+    background: #a5d8ff;
+}
+
+/* Casella di input */
+#answer-input {
+    width: 100px;
+    height: 90px;
+    border: 2px dashed #339af0;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.6em;
+    background: #e7f5ff;
+    font-family: 'Fredoka One', cursive;
+    margin-left: 15px;
+}
+#answer-input:focus {
+    outline: none;
+    border-style: solid;
+    background: #a5d8ff;
+}
+
+/* Bottone verifica */
+#check-btn {
+    width: 300px;
+    align-self: center;
+    margin-top: 30px;
+    padding: 15px 35px;
+    font-size: 1.3em;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    border-radius: 15px;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+#check-btn:hover {
+    background: #fa5252;
+    transform: scale(1.05);
+}

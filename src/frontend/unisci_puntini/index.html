@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Unisci i puntini - Gioco a livelli</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../common_style.css">
+</head>
+<body>
+
+<img src="../logo.png" class="logo"/>
+
+<h1>Collega tutti i puntini in ordine</h1>
+<!-- Messaggio livello in alto -->
+<div id="level-info"></div>
+
+<!-- Area di gioco -->
+<div id="game">
+    <canvas id="canvas" width="400" height="400"></canvas>
+</div>
+
+<!-- Messaggi di errore o completamento -->
+<div id="message"></div>
+
+<!-- Bottone per interrompere -->
+<button id="quit-btn">Termina esercizio</button>
+
+<div id="victory-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>🎉 Complimenti! 🎉</h2>
+        <p>Hai completato tutti i livelli!</p>
+        <button id="play-again-btn">Torna alla Home</button>
+    </div>
+</div>
+
+<div id="quit-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Vuoi abbandonare l'attività?</h2>
+        <div class="modal-buttons">
+            <button id="quit-yes-btn" class="danger">Sì</button>
+            <button id="quit-no-btn" class="safe">No</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="../common_script.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

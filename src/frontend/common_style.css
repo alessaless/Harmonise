@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #a5d8ff;
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+    flex-direction: column;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+#quit-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    border-radius: 15px;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+#quit-btn:hover {
+    background: #fa5252;
+    transform: scale(1.05);
+}
+
+#level-info {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px 20px;
+    background: #a5d8ff;
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 8px 15px;
+    min-height: 40px;
+    border-radius: 12px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: pop 0.5s ease;
+    visibility: hidden;
+}
+
+#message.message-warning {
+    background: #ffe066; /* giallo */
+    visibility: visible;
+}
+
+#message.message-success {
+    background: #8ce99a; /* verde chiaro */
+    visibility: visible;
+}
+
+body.completed {
+    background: linear-gradient(135deg, #d4f9d2, #b2f2bb) !important;
+}
+
+body.error {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+
+.modal-victory {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #b2f2bb, #d0ebff);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: pop 0.6s ease;
+}
+
+.modal-victory h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #2b8a3e;
+}
+
+.modal-victory p {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    color: #212529;
+}
+
+.play-again-btn {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    border-radius: 20px;
+    background: #ff922b;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+.play-again-btn:hover {
+    background: #f76707;
+    transform: scale(1.08);
+}
+
+@keyframes pop {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Overlay scuro sopra al gioco */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none; /* nascosta di default */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Contenuto modale */
+.modal-content {
+    background: linear-gradient(135deg, #b2f2bb, #d0ebff);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    animation: pop 0.6s ease;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #2b8a3e;
+}
+
+.modal-content p {
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    color: #212529;
+}
+
+#play-again-btn {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    border-radius: 20px;
+    background: #ff922b;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+#play-again-btn:hover {
+    background: #f76707;
+    transform: scale(1.08);
+}
+
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.modal-buttons button:hover {
+    transform: scale(1.08);
+}
+
+/* Bottoni specifici */
+.modal-buttons .danger {
+    background: #ff6b6b;
+    color: white;
+}
+.modal-buttons .danger:hover {
+    background: #e03131;
+}
+
+.modal-buttons .safe {
+    background: #51cf66;
+    color: white;
+}
+.modal-buttons .safe:hover {
+    background: #2b8a3e;
+}
+
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.modal-buttons button:hover {
+    transform: scale(1.08);
+}
+
+/* Bottoni specifici */
+.modal-buttons .danger {
+    background: #ff6b6b;
+    color: white;
+}
+.modal-buttons .danger:hover {
+    background: #e03131;
+}
+
+.modal-buttons .safe {
+    background: #51cf66;
+    color: white;
+}
+.modal-buttons .safe:hover {
+    background: #2b8a3e;
+}
+
+

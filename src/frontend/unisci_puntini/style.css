@@ -1,0 +1,47 @@
+#game {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    background: #fffbe7;
+    border: 6px solid #ff6b6b;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.dot {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #4dabf7;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dot:hover {
+    transform: scale(1.2);
+    background: #339af0;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+

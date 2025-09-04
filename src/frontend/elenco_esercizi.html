@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Lista Esercizi</title>
+    <link rel="stylesheet" href="common_style.css" />
+    <link rel="stylesheet" href="elenco_esercizi.css" />
 </head>
 <body>
-<h2>Recupera esercizi</h2>
+<img class="logo" src="logo.png" alt="Harmonise" />
 
-<button id="fetchBtn">Carica esercizi</button>
+<h1 class="page-title">Scegli un esercizio</h1>
 
-<h3>Risultato:</h3>
-<pre id="result"></pre>
+<!-- Griglia card (2 righe) -->
+<section class="cards-grid">
+    <a class="card" href="operazioni_matematiche/index.html">
+        <div class="card-icon" aria-hidden="true">➕</div>
+        <h3>Operazioni matematiche</h3>
+        <p>Somme, differenze, moltiplicazioni e divisioni.</p>
+        <span class="cta">Apri</span>
+    </a>
 
-<script>
-    document.getElementById("fetchBtn").addEventListener("click", async () => {
-        const token = localStorage.getItem("token");
-        if (!token) {
-            alert("Nessun token trovato in localStorage! Fai prima il login.");
-            return;
-        }
+    <a class="card" href="ordina_attivita/index.html">
+        <div class="card-icon" aria-hidden="true">🧩</div>
+        <h3>Ordina attività</h3>
+        <p>Metti in ordine le azioni per completare il compito.</p>
+        <span class="cta">Apri</span>
+    </a>
 
-        try {
-            const response = await fetch("http://localhost:8080/exercises", {
-                method: "GET",
-                headers: {
-                    "Authorization": "Bearer " + token,
-                    "Content-Type": "application/json"
-                }
-            });
+    <a class="card" href="problemi_matematici/index.html">
+        <div class="card-icon" aria-hidden="true">🧠</div>
+        <h3>Problemi matematici</h3>
+        <p>Leggi, ragiona e trova la soluzione.</p>
+        <span class="cta">Apri</span>
+    </a>
 
-            if (!response.ok) {
-                throw new Error("Errore HTTP " + response.status);
-            }
+    <a class="card" href="unisci_puntini/index.html">
+        <div class="card-icon" aria-hidden="true">🟢</div>
+        <h3>Unisci i puntini</h3>
+        <p>Collega i numeri nell’ordine giusto.</p>
+        <span class="cta">Apri</span>
+    </a>
 
-            const data = await response.json();
-            document.getElementById("result").textContent = JSON.stringify(data, null, 2);
-        } catch (err) {
-            console.error("Errore:", err);
-            document.getElementById("result").textContent = "Errore: " + err.message;
-        }
-    });
-</script>
+    <a class="card" href="unisci_puntini/index.html">
+        <div class="card-icon" aria-hidden="true">⭐</div>
+        <h3>Prova 1</h3>
+        <p>Esercizio di test.</p>
+        <span class="cta">Apri</span>
+    </a>
+
+    <a class="card" href="unisci_puntini/index.html">
+        <div class="card-icon" aria-hidden="true">✨</div>
+        <h3>Prova 2</h3>
+        <p>Esercizio di test.</p>
+        <span class="cta">Apri</span>
+    </a>
+</section>
 </body>
 </html>
