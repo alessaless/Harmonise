@@ -12,7 +12,7 @@ function showVictoryModal() {
 
     const playAgainBtn = document.getElementById("play-again-btn");
     playAgainBtn.onclick = () => {
-        window.location.href = "elenco_esercizi.html";
+        window.location.href = "../elenco_esercizi.html";
         /*modal.style.display = "none"; // nascondo modale
         currentLevel = 0;
         loadLevel();*/

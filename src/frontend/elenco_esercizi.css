@@ -22,12 +22,11 @@ body {
     font-size: 2rem;
 }
 
-/* Griglia 3x2 (due righe) su desktop */
 .cards-grid {
     width: min(1100px, 92%);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr;        /* tutte le card stessa altezza */
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
     gap: 22px;
 }
 
