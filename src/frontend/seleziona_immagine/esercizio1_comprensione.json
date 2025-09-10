@@ -1,0 +1,1488 @@
+{
+  "facile": [
+    {
+      "testo": "Protegge dalla pioggia.",
+      "risposta": "ombrello",
+      "distrattori": [
+        "cucchiaio",
+        "gallo",
+        "bicicletta"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Si usa per giocare a calcio.",
+      "risposta": "pallone",
+      "distrattori": [
+        "pollo",
+        "orologio",
+        "tavolo"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Serve per chiamare e inviare messaggi.",
+      "risposta": "telefono",
+      "distrattori": [
+        "panchina",
+        "chiave",
+        "bicicletta"
+      ],
+      "topic": "tecnologia"
+    },
+    {
+      "testo": "Scrive con l'inchiostro.",
+      "risposta": "penna",
+      "distrattori": [
+        "campanello",
+        "righello",
+        "pane"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Corre veloce ed è spesso sellato.",
+      "risposta": "cavallo",
+      "distrattori": [
+        "pollo",
+        "mucca",
+        "scivolo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Affila la punta della matita.",
+      "risposta": "temperino",
+      "distrattori": [
+        "quaderno",
+        "tavolo",
+        "pollo"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Indumento che tiene caldo.",
+      "risposta": "giacca",
+      "distrattori": [
+        "quaderno",
+        "gallina",
+        "bicicletta"
+      ],
+      "topic": "abbigliamento"
+    },
+    {
+      "testo": "Ha orecchie lunghe e mangia carote.",
+      "risposta": "coniglio",
+      "distrattori": [
+        "tavolo",
+        "sapone",
+        "panchina"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Si usa per lavare i denti.",
+      "risposta": "spazzolino",
+      "distrattori": [
+        "pallone",
+        "matita",
+        "televisore"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Si legge e ha molte pagine.",
+      "risposta": "libro",
+      "distrattori": [
+        "righello",
+        "scivolo",
+        "tavolo"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Contiene l'acqua da bere.",
+      "risposta": "bottiglia",
+      "distrattori": [
+        "temperino",
+        "pastelli",
+        "altalena"
+      ],
+      "topic": "utensili"
+    },
+    {
+      "testo": "Schermo tattile portatile.",
+      "risposta": "tablet",
+      "distrattori": [
+        "cavallo",
+        "finestra",
+        "panchina"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Serve per cancellare la matita.",
+      "risposta": "gomma",
+      "distrattori": [
+        "matita",
+        "cucchiaio",
+        "latte"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Vive in fattoria, ha lana morbida.",
+      "risposta": "pecora",
+      "distrattori": [
+        "libro",
+        "penna",
+        "sapone"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Fa entrare luce e aria.",
+      "risposta": "finestra",
+      "distrattori": [
+        "bicicletta",
+        "sedia",
+        "panchina"
+      ],
+      "topic": "arredi"
+    },
+    {
+      "testo": "Si apre e si chiude per entrare.",
+      "risposta": "porta",
+      "distrattori": [
+        "temperino",
+        "cucchiaio",
+        "quaderno"
+      ],
+      "topic": "arredi"
+    },
+    {
+      "testo": "Si usa per scrivere o disegnare sul quaderno.",
+      "risposta": "matita",
+      "distrattori": [
+        "pastelli",
+        "tablet",
+        "pecora"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Ha due ruote e si pedala.",
+      "risposta": "bicicletta",
+      "distrattori": [
+        "quaderno",
+        "mucca",
+        "computer"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Posata per minestre e yogurt.",
+      "risposta": "cucchiaio",
+      "distrattori": [
+        "ombrello",
+        "sedia",
+        "cavallo"
+      ],
+      "topic": "utensili"
+    },
+    {
+      "testo": "È un animale domestico che abbaia.",
+      "risposta": "cane",
+      "distrattori": [
+        "quaderno",
+        "campanello",
+        "pane"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Gioco del parco su cui si scende.",
+      "risposta": "scivolo",
+      "distrattori": [
+        "computer",
+        "righello",
+        "panchina"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Ha quattro gambe e si mangia sopra.",
+      "risposta": "tavolo",
+      "distrattori": [
+        "tazza",
+        "giacca",
+        "altalena"
+      ],
+      "topic": "arredi"
+    },
+    {
+      "testo": "Si usa per mangiare a tavola.",
+      "risposta": "piatto",
+      "distrattori": [
+        "spazzolino",
+        "coniglio",
+        "libro"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Frutto rotondo, rosso o verde.",
+      "risposta": "mela",
+      "distrattori": [
+        "pesce",
+        "zaino",
+        "latte"
+      ],
+      "topic": "cibo_bevande"
+    },
+    {
+      "testo": "Si trova al parco per sedersi.",
+      "risposta": "panchina",
+      "distrattori": [
+        "cucchiaio",
+        "forchetta",
+        "libro"
+      ],
+      "topic": "arredi"
+    },
+    {
+      "testo": "Serve per lavare le mani.",
+      "risposta": "sapone",
+      "distrattori": [
+        "mela",
+        "porta",
+        "scarpe"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Si mette in testa per il sole o il freddo.",
+      "risposta": "cappello",
+      "distrattori": [
+        "porta",
+        "ombrello",
+        "pallone"
+      ],
+      "topic": "abbigliamento"
+    },
+    {
+      "testo": "Si usa per studiare e giocare.",
+      "risposta": "computer",
+      "distrattori": [
+        "quaderno",
+        "pesce",
+        "piatto"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Mostra programmi e film.",
+      "risposta": "televisore",
+      "distrattori": [
+        "tazza",
+        "pollo",
+        "banana"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Gioco del parco che va avanti e indietro.",
+      "risposta": "altalena",
+      "distrattori": [
+        "pecora",
+        "gallo",
+        "coniglio"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Alimento base, si taglia a fette.",
+      "risposta": "pane",
+      "distrattori": [
+        "chiave",
+        "matita",
+        "scivolo"
+      ],
+      "topic": "cibo_bevande"
+    },
+    {
+      "testo": "Mostra l'ora sul polso o al muro.",
+      "risposta": "orologio",
+      "distrattori": [
+        "scarpe",
+        "finestra",
+        "cavallo"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Contiene latte o tè.",
+      "risposta": "tazza",
+      "distrattori": [
+        "bicicletta",
+        "finestra",
+        "spazzolino"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Colorano su carta con la cera.",
+      "risposta": "pastelli",
+      "distrattori": [
+        "piatto",
+        "libro",
+        "cucchiaio"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Serve per tracciare linee dritte.",
+      "risposta": "righello",
+      "distrattori": [
+        "cane",
+        "pastelli",
+        "latte"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Frutto giallo con buccia da sbucciare.",
+      "risposta": "banana",
+      "distrattori": [
+        "gallo",
+        "scivolo",
+        "forchetta"
+      ],
+      "topic": "cibo_bevande"
+    },
+    {
+      "testo": "Bevanda bianca che si beve a colazione.",
+      "risposta": "latte",
+      "distrattori": [
+        "banana",
+        "sedia",
+        "panchina"
+      ],
+      "topic": "cibo_bevande"
+    },
+    {
+      "testo": "Vive in fattoria e fa 'muu'.",
+      "risposta": "mucca",
+      "distrattori": [
+        "televisore",
+        "pesce",
+        "telefono"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Si indossano ai piedi.",
+      "risposta": "scarpe",
+      "distrattori": [
+        "cappello",
+        "matita",
+        "sapone"
+      ],
+      "topic": "abbigliamento"
+    },
+    {
+      "testo": "Suona per chiamare qualcuno.",
+      "risposta": "campanello",
+      "distrattori": [
+        "cane",
+        "latte",
+        "libro"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Uccello da cortile che fa le uova.",
+      "risposta": "pollo",
+      "distrattori": [
+        "piatto",
+        "banana",
+        "gomma"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Posata con denti per prendere il cibo.",
+      "risposta": "forchetta",
+      "distrattori": [
+        "tazza",
+        "gallina",
+        "panchina"
+      ],
+      "topic": "utensili"
+    },
+    {
+      "testo": "Uccello da cortile, cova le uova.",
+      "risposta": "gallina",
+      "distrattori": [
+        "computer",
+        "panchina",
+        "piatto"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Vive nell'acqua e nuota.",
+      "risposta": "pesce",
+      "distrattori": [
+        "finestra",
+        "righello",
+        "matita"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Si usa per prendere appunti a scuola.",
+      "risposta": "quaderno",
+      "distrattori": [
+        "bicicletta",
+        "banana",
+        "matita"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Si porta sulle spalle e contiene libri.",
+      "risposta": "zaino",
+      "distrattori": [
+        "cucchiaio",
+        "forchetta",
+        "cane"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Ci si siede sopra.",
+      "risposta": "sedia",
+      "distrattori": [
+        "finestra",
+        "tablet",
+        "tazza"
+      ],
+      "topic": "arredi"
+    },
+    {
+      "testo": "È un animale domestico che miagola.",
+      "risposta": "gatto",
+      "distrattori": [
+        "mucca",
+        "pesce",
+        "bicicletta"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Canta all'alba nella fattoria.",
+      "risposta": "gallo",
+      "distrattori": [
+        "computer",
+        "libro",
+        "pecora"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Serve per aprire una serratura.",
+      "risposta": "chiave",
+      "distrattori": [
+        "zaino",
+        "orologio",
+        "pollo"
+      ],
+      "topic": "utensili"
+    }
+  ],
+  "medio": [
+    {
+      "testo": "Re della savana con una grande criniera.",
+      "risposta": "leone",
+      "distrattori": [
+        "lama",
+        "foca",
+        "zebra"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Piccolo animale con aculei.",
+      "risposta": "riccio",
+      "distrattori": [
+        "orso",
+        "lupo",
+        "asino"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Ha corna ramificate e vive nel bosco.",
+      "risposta": "cervo",
+      "distrattori": [
+        "anatra",
+        "mappa",
+        "ippopotamo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Vive in fattoria, mangia l'erba ed è agile sulle rocce.",
+      "risposta": "capra",
+      "distrattori": [
+        "lontra",
+        "pappagallo",
+        "pinguino"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Salta e gracida vicino agli stagni.",
+      "risposta": "rana",
+      "distrattori": [
+        "sale",
+        "capra",
+        "colla"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Grande e con un corno sul naso.",
+      "risposta": "rinoceronte",
+      "distrattori": [
+        "dromedario",
+        "coccinella",
+        "pappagallo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Insaporisce i piatti.",
+      "risposta": "sale",
+      "distrattori": [
+        "asino",
+        "gufo",
+        "koala"
+      ],
+      "topic": "cibo_bevande"
+    },
+    {
+      "testo": "Grande uccello che vola alto.",
+      "risposta": "aquila",
+      "distrattori": [
+        "tigre",
+        "serpente",
+        "sale"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Protegge la testa.",
+      "risposta": "casco",
+      "distrattori": [
+        "koala",
+        "squalo",
+        "gufo"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Molto grande, vive in mare e soffia acqua.",
+      "risposta": "balena",
+      "distrattori": [
+        "oca",
+        "lontra",
+        "sale"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Uccello notturno che ruota la testa.",
+      "risposta": "gufo",
+      "distrattori": [
+        "rana",
+        "pinguino",
+        "foca"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Ha gobbe e vive nel deserto.",
+      "risposta": "cammello",
+      "distrattori": [
+        "colla",
+        "zebra",
+        "coccinella"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Serve per incollare pezzi di carta.",
+      "risposta": "colla",
+      "distrattori": [
+        "cinghiale",
+        "corda",
+        "asino"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Fa luce quando è buio.",
+      "risposta": "lampada",
+      "distrattori": [
+        "anatra",
+        "delfino",
+        "cammello"
+      ],
+      "topic": "arredi"
+    },
+    {
+      "testo": "Lenta e con un guscio duro.",
+      "risposta": "tartaruga",
+      "distrattori": [
+        "lontra",
+        "lupo",
+        "sale"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Uccello colorato che imita i suoni.",
+      "risposta": "pappagallo",
+      "distrattori": [
+        "koala",
+        "serpente",
+        "formica"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Ha una gobba e vive nel deserto.",
+      "risposta": "dromedario",
+      "distrattori": [
+        "lince",
+        "delfino",
+        "riccio"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Serve per saltare durante la ricreazione.",
+      "risposta": "corda",
+      "distrattori": [
+        "rana",
+        "zucchero",
+        "coccinella"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Collo lunghissimo per mangiare le foglie.",
+      "risposta": "giraffa",
+      "distrattori": [
+        "tartaruga",
+        "ippopotamo",
+        "lama"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Felino selvatico dei boschi.",
+      "risposta": "lince",
+      "distrattori": [
+        "pappagallo",
+        "volpe",
+        "cinghiale"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Insetto che fa il miele.",
+      "risposta": "ape",
+      "distrattori": [
+        "balena",
+        "lince",
+        "anatra"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Rettile grande con forti mascelle.",
+      "risposta": "coccodrillo",
+      "distrattori": [
+        "mappa",
+        "asino",
+        "globo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Tagliano carta o cartoncino.",
+      "risposta": "forbici",
+      "distrattori": [
+        "colla",
+        "coltello",
+        "gufo"
+      ],
+      "topic": "utensili"
+    },
+    {
+      "testo": "Salta con una grande coda, vive in Australia.",
+      "risposta": "canguro",
+      "distrattori": [
+        "mappa",
+        "lupo",
+        "capra"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Vive sugli alberi e mangia eucalipto.",
+      "risposta": "koala",
+      "distrattori": [
+        "orso",
+        "tartaruga",
+        "zucchero"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Vive in branco e ulula.",
+      "risposta": "lupo",
+      "distrattori": [
+        "pinguino",
+        "giraffa",
+        "lama"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Insetto con ali colorate.",
+      "risposta": "farfalla",
+      "distrattori": [
+        "koala",
+        "aquila",
+        "leone"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Molto grande, ha una lunga proboscide.",
+      "risposta": "elefante",
+      "distrattori": [
+        "formica",
+        "koala",
+        "leone"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Maiale selvatico del bosco.",
+      "risposta": "cinghiale",
+      "distrattori": [
+        "oca",
+        "koala",
+        "farfalla"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Bianco e nero, mangia bambù.",
+      "risposta": "panda",
+      "distrattori": [
+        "ippopotamo",
+        "maiale",
+        "foca"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Uccello grande che starnazza e pizzica.",
+      "risposta": "oca",
+      "distrattori": [
+        "zucchero",
+        "koala",
+        "maiale"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Pesce grande con tanti denti.",
+      "risposta": "squalo",
+      "distrattori": [
+        "delfino",
+        "cinghiale",
+        "volpe"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Sfera che rappresenta la Terra.",
+      "risposta": "globo",
+      "distrattori": [
+        "ape",
+        "volpe",
+        "tigre"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Uccello che non vola e cammina goffo sul ghiaccio.",
+      "risposta": "pinguino",
+      "distrattori": [
+        "anatra",
+        "pappagallo",
+        "canguro"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Posata che taglia il cibo.",
+      "risposta": "coltello",
+      "distrattori": [
+        "lupo",
+        "rana",
+        "aquila"
+      ],
+      "topic": "utensili"
+    },
+    {
+      "testo": "Camelide sudamericano con collo lungo.",
+      "risposta": "lama",
+      "distrattori": [
+        "ape",
+        "coccodrillo",
+        "casco"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Insetto rosso a pois neri.",
+      "risposta": "coccinella",
+      "distrattori": [
+        "delfino",
+        "pappagallo",
+        "capra"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Vive in fattoria e ama il fango.",
+      "risposta": "maiale",
+      "distrattori": [
+        "farfalla",
+        "aquila",
+        "foca"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Uccello che nuota e starnazza.",
+      "risposta": "anatra",
+      "distrattori": [
+        "oca",
+        "corda",
+        "lama"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Dolcifica cibi e bevande.",
+      "risposta": "zucchero",
+      "distrattori": [
+        "capra",
+        "orso",
+        "oca"
+      ],
+      "topic": "cibo_bevande"
+    },
+    {
+      "testo": "Insetto piccolo e molto laborioso.",
+      "risposta": "formica",
+      "distrattori": [
+        "rana",
+        "anatra",
+        "squalo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Animale da fattoria, raglia forte.",
+      "risposta": "asino",
+      "distrattori": [
+        "zebra",
+        "capra",
+        "serpente"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Striscia e non ha zampe.",
+      "risposta": "serpente",
+      "distrattori": [
+        "globo",
+        "cammello",
+        "panda"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Grande felino a strisce.",
+      "risposta": "tigre",
+      "distrattori": [
+        "riccio",
+        "volpe",
+        "lince"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Ha il mantello a strisce bianche e nere.",
+      "risposta": "zebra",
+      "distrattori": [
+        "asino",
+        "casco",
+        "aquila"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Mammifero marino che scivola sul ghiaccio.",
+      "risposta": "foca",
+      "distrattori": [
+        "sale",
+        "volpe",
+        "formica"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Piccolo carnivoro rosso e furbo.",
+      "risposta": "volpe",
+      "distrattori": [
+        "elefante",
+        "maiale",
+        "corda"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Massiccio, vive spesso in acqua dolce.",
+      "risposta": "ippopotamo",
+      "distrattori": [
+        "zebra",
+        "dromedario",
+        "volpe"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Grande e peloso, ama il miele.",
+      "risposta": "orso",
+      "distrattori": [
+        "rana",
+        "forbici",
+        "giraffa"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Mammifero marino che salta fuori dall'acqua.",
+      "risposta": "delfino",
+      "distrattori": [
+        "cinghiale",
+        "cammello",
+        "formica"
+      ],
+      "topic": "animali"
+    }
+  ],
+  "difficile": [
+    {
+      "testo": "Uccello che nuota e starnazza.",
+      "risposta": "anatra",
+      "distrattori": [
+        "lama",
+        "lince",
+        "volpe"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Molto grande, ha una lunga proboscide.",
+      "risposta": "elefante",
+      "distrattori": [
+        "gufo",
+        "pinguino",
+        "asino"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Ha corna ramificate e vive nel bosco.",
+      "risposta": "cervo",
+      "distrattori": [
+        "cammello",
+        "tartaruga",
+        "asino"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Mammifero marino che salta fuori dall'acqua.",
+      "risposta": "delfino",
+      "distrattori": [
+        "tartaruga",
+        "elefante",
+        "colla"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Salta e gracida vicino agli stagni.",
+      "risposta": "rana",
+      "distrattori": [
+        "giraffa",
+        "forbici",
+        "squalo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Vive in branco e ulula.",
+      "risposta": "lupo",
+      "distrattori": [
+        "tartaruga",
+        "lince",
+        "civetta"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Uccello notturno che ruota la testa.",
+      "risposta": "gufo",
+      "distrattori": [
+        "lontra",
+        "corda",
+        "orso"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Insetto piccolo e molto laborioso.",
+      "risposta": "formica",
+      "distrattori": [
+        "giraffa",
+        "volpe",
+        "lupo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Ha una gobba e vive nel deserto.",
+      "risposta": "dromedario",
+      "distrattori": [
+        "aquila",
+        "maiale",
+        "lupo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Sfera che rappresenta la Terra.",
+      "risposta": "globo",
+      "distrattori": [
+        "corda",
+        "canguro",
+        "aquila"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Uccello grande che starnazza e pizzica.",
+      "risposta": "oca",
+      "distrattori": [
+        "forbici",
+        "corda",
+        "zebra"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Lenta e con un guscio duro.",
+      "risposta": "tartaruga",
+      "distrattori": [
+        "rinoceronte",
+        "volpe",
+        "mappa"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Grande uccello che vola alto.",
+      "risposta": "aquila",
+      "distrattori": [
+        "squalo",
+        "rana",
+        "asino"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Re della savana con una grande criniera.",
+      "risposta": "leone",
+      "distrattori": [
+        "ape",
+        "giraffa",
+        "tigre"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Uccello colorato che imita i suoni.",
+      "risposta": "pappagallo",
+      "distrattori": [
+        "farfalla",
+        "riccio",
+        "cammello"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Serve per incollare pezzi di carta.",
+      "risposta": "colla",
+      "distrattori": [
+        "elefante",
+        "maiale",
+        "coccodrillo"
+      ],
+      "topic": "scolastica"
+    },
+    {
+      "testo": "Uccello notturno con grandi occhi.",
+      "risposta": "civetta",
+      "distrattori": [
+        "leone",
+        "serpente",
+        "canguro"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Insetto con ali colorate.",
+      "risposta": "farfalla",
+      "distrattori": [
+        "rinoceronte",
+        "oca",
+        "riccio"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Insetto che fa il miele.",
+      "risposta": "ape",
+      "distrattori": [
+        "coccodrillo",
+        "coccinella",
+        "serpente"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Animale da fattoria, raglia forte.",
+      "risposta": "asino",
+      "distrattori": [
+        "colla",
+        "cinghiale",
+        "riccio"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Vive in fattoria e ama il fango.",
+      "risposta": "maiale",
+      "distrattori": [
+        "asino",
+        "pinguino",
+        "rinoceronte"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Striscia e non ha zampe.",
+      "risposta": "serpente",
+      "distrattori": [
+        "lupo",
+        "lama",
+        "zebra"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Collo lunghissimo per mangiare le foglie.",
+      "risposta": "giraffa",
+      "distrattori": [
+        "asino",
+        "squalo",
+        "panda"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Camelide sudamericano con collo lungo.",
+      "risposta": "lama",
+      "distrattori": [
+        "civetta",
+        "riccio",
+        "lampada"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Fa luce quando è buio.",
+      "risposta": "lampada",
+      "distrattori": [
+        "koala",
+        "civetta",
+        "lama"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Vive sugli alberi e mangia eucalipto.",
+      "risposta": "koala",
+      "distrattori": [
+        "coccinella",
+        "balena",
+        "serpente"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Salta con una grande coda, vive in Australia.",
+      "risposta": "canguro",
+      "distrattori": [
+        "dromedario",
+        "leone",
+        "zebra"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Felino selvatico dei boschi.",
+      "risposta": "lince",
+      "distrattori": [
+        "asino",
+        "globo",
+        "civetta"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Piccolo carnivoro rosso e furbo.",
+      "risposta": "volpe",
+      "distrattori": [
+        "capra",
+        "cervo",
+        "cinghiale"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Piccolo animale con aculei.",
+      "risposta": "riccio",
+      "distrattori": [
+        "colla",
+        "lampada",
+        "corda"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Grande felino a strisce.",
+      "risposta": "tigre",
+      "distrattori": [
+        "corda",
+        "forbici",
+        "leone"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Massiccio, vive spesso in acqua dolce.",
+      "risposta": "ippopotamo",
+      "distrattori": [
+        "rana",
+        "gufo",
+        "oca"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Grande e con un corno sul naso.",
+      "risposta": "rinoceronte",
+      "distrattori": [
+        "forbici",
+        "riccio",
+        "lontra"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Grande e peloso, ama il miele.",
+      "risposta": "orso",
+      "distrattori": [
+        "canguro",
+        "forbici",
+        "balena"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Tagliano carta o cartoncino.",
+      "risposta": "forbici",
+      "distrattori": [
+        "lampada",
+        "cammello",
+        "formica"
+      ],
+      "topic": "utensili"
+    },
+    {
+      "testo": "Mammifero che nuota giocando nei fiumi.",
+      "risposta": "lontra",
+      "distrattori": [
+        "cammello",
+        "forbici",
+        "aquila"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Molto grande, vive in mare e soffia acqua.",
+      "risposta": "balena",
+      "distrattori": [
+        "canguro",
+        "aquila",
+        "mappa"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Ha il mantello a strisce bianche e nere.",
+      "risposta": "zebra",
+      "distrattori": [
+        "cammello",
+        "lince",
+        "pinguino"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Uccello che non vola e cammina goffo sul ghiaccio.",
+      "risposta": "pinguino",
+      "distrattori": [
+        "tigre",
+        "civetta",
+        "forbici"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Pesce grande con tanti denti.",
+      "risposta": "squalo",
+      "distrattori": [
+        "serpente",
+        "colla",
+        "corda"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Serve per saltare durante la ricreazione.",
+      "risposta": "corda",
+      "distrattori": [
+        "lupo",
+        "panda",
+        "lince"
+      ],
+      "topic": "oggetto"
+    },
+    {
+      "testo": "Maiale selvatico del bosco.",
+      "risposta": "cinghiale",
+      "distrattori": [
+        "cammello",
+        "serpente",
+        "lince"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Rettile grande con forti mascelle.",
+      "risposta": "coccodrillo",
+      "distrattori": [
+        "capra",
+        "cammello",
+        "ippopotamo"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Vive in fattoria, mangia l'erba ed è agile sulle rocce.",
+      "risposta": "capra",
+      "distrattori": [
+        "elefante",
+        "gufo",
+        "lama"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Insetto rosso a pois neri.",
+      "risposta": "coccinella",
+      "distrattori": [
+        "panda",
+        "coccodrillo",
+        "koala"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Bianco e nero, mangia bambù.",
+      "risposta": "panda",
+      "distrattori": [
+        "tigre",
+        "formica",
+        "farfalla"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Ha gobbe e vive nel deserto.",
+      "risposta": "cammello",
+      "distrattori": [
+        "corda",
+        "volpe",
+        "forbici"
+      ],
+      "topic": "animali"
+    },
+    {
+      "testo": "Mostra strade, città e luoghi.",
+      "risposta": "mappa",
+      "distrattori": [
+        "delfino",
+        "ippopotamo",
+        "formica"
+      ],
+      "topic": "oggetto"
+    }
+  ]
+}

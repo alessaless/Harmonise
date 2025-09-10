@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 3 — Correggi la parola</title>
+    <link rel="stylesheet" href="../common_style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.ico" sizes="any">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<img src="../logo.png" class="logo" alt="Logo" />
+
+<h1>Correggi la parola</h1>
+<div id="level-info" class="badge">Livello 1</div>
+
+<!-- Parola da correggere -->
+<div id="prompt" class="card big"></div>
+
+<!-- Input + invio -->
+<div class="card input-row">
+    <input id="answer" type="text" placeholder="Scrivi qui la parola corretta" autocomplete="off" />
+    <button id="submit" class="btn" type="button">Invia</button>
+</div>
+
+<div id="message"></div>
+
+<button id="quit-btn" type="button">Termina esercizio</button>
+
+<div id="victory-modal" class="modal-overlay" style="display:none">
+    <div class="modal-content">
+        <h2>Bravo! Esercizio completato 🎉</h2>
+        <p>Vuoi giocare ancora?</p>
+        <button id="play-again-btn" type="button">Gioca di nuovo</button>
+    </div>
+</div>
+
+<div id="quit-modal" class="modal-overlay" style="display:none">
+    <div class="modal-content">
+        <h2>Vuoi abbandonare l'attività?</h2>
+        <div class="modal-buttons">
+            <button id="quit-yes-btn" class="danger" type="button">Sì</button>
+            <button id="quit-no-btn" class="safe" type="button">No</button>
+        </div>
+    </div>
+</div>
+
+<script src="../qtrobot_lib/roslib.min.js"></script>
+<script src="../qtrobot_lib/eventemitter2.min.js"></script>
+<script src="../qtrobot_lib/qtrobot_utils.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>

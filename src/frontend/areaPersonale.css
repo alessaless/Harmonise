@@ -1,0 +1,111 @@
+/* Struttura generale */
+body {
+    background: white;
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra del titolo */
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 1.5rem;
+}
+
+.title-bar h2 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* Bottone "indietro" */
+.title-bar .back-btn {
+    position: absolute;
+    right: 0;
+    display: block;
+    margin: 0 2rem;
+    padding: 0.6rem 1.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #99CCFF;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.title-bar .back-btn:hover {
+    background-color: #72A5CB;
+}
+
+/* Contenitore area personale */
+.personal-area {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Sezione info profilo */
+.profile-card {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #99CCFF;
+    margin-bottom: 1.5rem;
+}
+
+.profile-card h3 {
+    margin: 0 0 0.8rem 0;
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.profile-info div {
+    flex: 1 1 45%;
+    background: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Sezione opzioni (gestione alunni, progressi, impostazioni...) */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.option-card {
+    background: #99CCFF;
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.option-card:hover {
+    background-color: #72A5CB;
+    transform: translateY(-3px);
+}
+
+.option-card h4 {
+    margin: 0.5rem 0;
+}
+
+.option-card p {
+    font-size: 0.9rem;
+    color: #333;
+}

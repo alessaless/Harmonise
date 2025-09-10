@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Area Personale Tutor</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="areaPersonale.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.ico" sizes="any">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div id="header"></div>
+<script src="header.js"></script>
+
+<div class="title-bar">
+    <h2>Area Personale</h2>
+    <button class="back-btn" >← Indietro</button>
+</div>
+
+<section class="execution-card">
+    <h3>Dati Personali</h3>
+    <p><strong>Nome:</strong> <span id="nome"></span></p>
+    <p><strong>Cognome:</strong> <span id="cognome"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Data di nascita:</strong> <span id="dob"></span></p>
+</section>
+
+<section class="execution-card">
+    <h3>Impostazioni Account</h3>
+    <button>Modifica Dati</button>
+    <button>Logout</button>
+</section>
+
+<script>
+    fetch("header.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        });
+
+    document.querySelector(".back-btn").addEventListener("click", () => {
+        window.location.href = "homepageEducatore.html";
+    });
+
+    const utente = JSON.parse(localStorage.getItem("user"));
+
+    if (utente) {
+        const btnModifica = document.querySelector(".execution-card button:first-of-type");
+        if (btnModifica) {
+            btnModifica.addEventListener("click", () => {
+                window.location.href = "modificaDati.html";
+            });
+        }
+        document.getElementById("nome").textContent = utente.nome;
+        document.getElementById("cognome").textContent = utente.cognome;
+        document.getElementById("email").textContent = utente.email;
+        document.getElementById("dob").textContent = utente.dataNascita;
+    }
+
+    const btnLogout = document.querySelector(".execution-card button:last-of-type");
+    if (btnLogout) {
+        btnLogout.addEventListener("click", () => {
+            localStorage.clear();
+            window.location.href = "index.html";
+        });
+    }
+</script>
+</body>
+</html>

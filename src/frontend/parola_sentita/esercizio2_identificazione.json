@@ -1,0 +1,1216 @@
+{
+  "facile": [
+    {
+      "parola": "borsa",
+      "scelte": [
+        "brosa",
+        "borsa",
+        "borrsa",
+        "cane"
+      ],
+      "risposta": "borsa",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "cielo",
+      "scelte": [
+        "ciilo",
+        "cielo",
+        "ceilo",
+        "pane"
+      ],
+      "risposta": "cielo",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "gatto",
+      "scelte": [
+        "ghatto",
+        "gatto",
+        "agtto",
+        "orso"
+      ],
+      "risposta": "gatto",
+      "topic": "animali"
+    },
+    {
+      "parola": "mela",
+      "scelte": [
+        "emla",
+        "meal",
+        "cappello",
+        "mela"
+      ],
+      "risposta": "mela",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "banco",
+      "scelte": [
+        "danco",
+        "banco",
+        "banqo",
+        "mare"
+      ],
+      "risposta": "banco",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "penna",
+      "scelte": [
+        "pnena",
+        "lampada",
+        "penn",
+        "penna"
+      ],
+      "risposta": "penna",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "torta",
+      "scelte": [
+        "mare",
+        "torta",
+        "otrta",
+        "totra"
+      ],
+      "risposta": "torta",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "zebra",
+      "scelte": [
+        "zebar",
+        "capra",
+        "zebra",
+        "zedra"
+      ],
+      "risposta": "zebra",
+      "topic": "animali"
+    },
+    {
+      "parola": "bruco",
+      "scelte": [
+        "bruuco",
+        "bruco",
+        "rbuco",
+        "casa"
+      ],
+      "risposta": "bruco",
+      "topic": "animali"
+    },
+    {
+      "parola": "tunnel",
+      "scelte": [
+        "tunnel",
+        "tnunel",
+        "tunnil",
+        "libro"
+      ],
+      "risposta": "tunnel",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "legno",
+      "scelte": [
+        "leegno",
+        "legno",
+        "mare",
+        "leglo"
+      ],
+      "risposta": "legno",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "scuola",
+      "scelte": [
+        "scuola",
+        "libro",
+        "scuuola",
+        "squola"
+      ],
+      "risposta": "scuola",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "gioco",
+      "scelte": [
+        "gioco",
+        "libro",
+        "giooco",
+        "ghioco"
+      ],
+      "risposta": "gioco",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "latte",
+      "scelte": [
+        "latti",
+        "bicicletta",
+        "latt",
+        "latte"
+      ],
+      "risposta": "latte",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "scarpa",
+      "scelte": [
+        "scarba",
+        "mare",
+        "scarrpa",
+        "scarpa"
+      ],
+      "risposta": "scarpa",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola": "zaino",
+      "scelte": [
+        "zaino",
+        "zaion",
+        "zainno",
+        "forchetta"
+      ],
+      "risposta": "zaino",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "naso",
+      "scelte": [
+        "naaso",
+        "libro",
+        "maso",
+        "naso"
+      ],
+      "risposta": "naso",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "gomma",
+      "scelte": [
+        "gomma",
+        "goma",
+        "goomma",
+        "orologio"
+      ],
+      "risposta": "gomma",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "ferro",
+      "scelte": [
+        "ferr",
+        "feror",
+        "mare",
+        "ferro"
+      ],
+      "risposta": "ferro",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "tetto",
+      "scelte": [
+        "tettto",
+        "teto",
+        "mare",
+        "tetto"
+      ],
+      "risposta": "tetto",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "libro",
+      "scelte": [
+        "campanello",
+        "libro",
+        "lbiro",
+        "librro"
+      ],
+      "risposta": "libro",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "sale",
+      "scelte": [
+        "bottiglia",
+        "sare",
+        "slae",
+        "sale"
+      ],
+      "risposta": "sale",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "piede",
+      "scelte": [
+        "peede",
+        "pane",
+        "piede",
+        "pidee"
+      ],
+      "risposta": "piede",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "matita",
+      "scelte": [
+        "matita",
+        "pallone",
+        "maitta",
+        "maatita"
+      ],
+      "risposta": "matita",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "tasca",
+      "scelte": [
+        "tasca",
+        "cane",
+        "tacsa",
+        "tascca"
+      ],
+      "risposta": "tasca",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "gnocco",
+      "scelte": [
+        "goncco",
+        "gnocco",
+        "gnochco",
+        "pane"
+      ],
+      "risposta": "gnocco",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "leone",
+      "scelte": [
+        "leone",
+        "lleone",
+        "leeone",
+        "orso"
+      ],
+      "risposta": "leone",
+      "topic": "animali"
+    },
+    {
+      "parola": "foglia",
+      "scelte": [
+        "foglia",
+        "foglea",
+        "casa",
+        "folgia"
+      ],
+      "risposta": "foglia",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "bimba",
+      "scelte": [
+        "bibma",
+        "pane",
+        "bimba",
+        "biimba"
+      ],
+      "risposta": "bimba",
+      "topic": "persona"
+    },
+    {
+      "parola": "festa",
+      "scelte": [
+        "festa",
+        "ffesta",
+        "fessta",
+        "cane"
+      ],
+      "risposta": "festa",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "fuoco",
+      "scelte": [
+        "fuoqo",
+        "ffuoco",
+        "fuoco",
+        "cane"
+      ],
+      "risposta": "fuoco",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "favola",
+      "scelte": [
+        "favolla",
+        "fvaola",
+        "favola",
+        "casa"
+      ],
+      "risposta": "favola",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "mare",
+      "scelte": [
+        "mare",
+        "male",
+        "mar"
+      ],
+      "risposta": "mare",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "prugna",
+      "scelte": [
+        "prugn",
+        "libro",
+        "prguna",
+        "prugna"
+      ],
+      "risposta": "prugna",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "acqua",
+      "scelte": [
+        "acqua",
+        "cane",
+        "achqua",
+        "acqqua"
+      ],
+      "risposta": "acqua",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "chiave",
+      "scelte": [
+        "chiove",
+        "chiave",
+        "tazza",
+        "chiaave"
+      ],
+      "risposta": "chiave",
+      "topic": "utensili"
+    },
+    {
+      "parola": "mano",
+      "scelte": [
+        "mano",
+        "mmano",
+        "pane",
+        "manno"
+      ],
+      "risposta": "mano",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "nonno",
+      "scelte": [
+        "nonno",
+        "nono",
+        "nnonno",
+        "cane"
+      ],
+      "risposta": "nonno",
+      "topic": "persona"
+    },
+    {
+      "parola": "cane",
+      "scelte": [
+        "chane",
+        "cane",
+        "cani",
+        "pappagallo"
+      ],
+      "risposta": "cane",
+      "topic": "animali"
+    },
+    {
+      "parola": "casa",
+      "scelte": [
+        "cassa",
+        "casa",
+        "ccasa"
+      ],
+      "risposta": "casa",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "banana",
+      "scelte": [
+        "banana",
+        "banan",
+        "libro",
+        "banaan"
+      ],
+      "risposta": "banana",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "tablet",
+      "scelte": [
+        "porta",
+        "tadlet",
+        "tablet",
+        "tablit"
+      ],
+      "risposta": "tablet",
+      "topic": "tecnologia"
+    },
+    {
+      "parola": "sole",
+      "scelte": [
+        "sole",
+        "sloe",
+        "osle",
+        "pane"
+      ],
+      "risposta": "sole",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "bimbo",
+      "scelte": [
+        "bimbo",
+        "bimbbo",
+        "libro",
+        "bimmbo"
+      ],
+      "risposta": "bimbo",
+      "topic": "persona"
+    },
+    {
+      "parola": "neve",
+      "scelte": [
+        "neve",
+        "nneve",
+        "cane",
+        "nive"
+      ],
+      "risposta": "neve",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "banane",
+      "scelte": [
+        "banane",
+        "bannane",
+        "mare",
+        "banaen"
+      ],
+      "risposta": "banane",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "limone",
+      "scelte": [
+        "liimone",
+        "limome",
+        "cane",
+        "limone"
+      ],
+      "risposta": "limone",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "aquila",
+      "scelte": [
+        "aquuila",
+        "pinguino",
+        "aquila",
+        "auqila"
+      ],
+      "risposta": "aquila",
+      "topic": "animali"
+    },
+    {
+      "parola": "cuore",
+      "scelte": [
+        "cuoore",
+        "cuor",
+        "mare",
+        "cuore"
+      ],
+      "risposta": "cuore",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "colore",
+      "scelte": [
+        "qolore",
+        "corore",
+        "libro",
+        "colore"
+      ],
+      "risposta": "colore",
+      "topic": "scolastica"
+    }
+  ],
+  "medio": [
+    {
+      "parola": "pioggia",
+      "scelte": [
+        "libro",
+        "pioggia",
+        "piogia",
+        "piooggia"
+      ],
+      "risposta": "pioggia",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "montagna",
+      "scelte": [
+        "moontagna",
+        "montagna",
+        "libro",
+        "montanga"
+      ],
+      "risposta": "montagna",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "scivolo",
+      "scelte": [
+        "scivolo",
+        "sccivolo",
+        "scivvolo",
+        "righello"
+      ],
+      "risposta": "scivolo",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "aquilone",
+      "scelte": [
+        "aqquilone",
+        "aquiloni",
+        "libro",
+        "aquilone"
+      ],
+      "risposta": "aquilone",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "righello",
+      "scelte": [
+        "righelol",
+        "colla",
+        "righelllo",
+        "righello"
+      ],
+      "risposta": "righello",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "armadio",
+      "scelte": [
+        "arnadio",
+        "arrmadio",
+        "armadio",
+        "libro"
+      ],
+      "risposta": "armadio",
+      "topic": "arredi"
+    },
+    {
+      "parola": "elefante",
+      "scelte": [
+        "elefante",
+        "elefanet",
+        "elefannte",
+        "lontra"
+      ],
+      "risposta": "elefante",
+      "topic": "animali"
+    },
+    {
+      "parola": "pallone",
+      "scelte": [
+        "pallome",
+        "pallone",
+        "plalone",
+        "campanello"
+      ],
+      "risposta": "pallone",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "civetta",
+      "scelte": [
+        "giraffa",
+        "qivetta",
+        "civetta",
+        "civitta"
+      ],
+      "risposta": "civetta",
+      "topic": "animali"
+    },
+    {
+      "parola": "altalena",
+      "scelte": [
+        "altalena",
+        "alltalena",
+        "altalnea",
+        "corda"
+      ],
+      "risposta": "altalena",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "chitarra",
+      "scelte": [
+        "chitarra",
+        "casa",
+        "cihtarra",
+        "chitaarra"
+      ],
+      "risposta": "chitarra",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "pianeta",
+      "scelte": [
+        "pianeta",
+        "pane",
+        "peaneta",
+        "paineta"
+      ],
+      "risposta": "pianeta",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "disegno",
+      "scelte": [
+        "libro",
+        "disgeno",
+        "disegno",
+        "disegon"
+      ],
+      "risposta": "disegno",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "sciarpa",
+      "scelte": [
+        "casa",
+        "sciarp",
+        "sciarpa",
+        "sciarrpa"
+      ],
+      "risposta": "sciarpa",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola": "orologio",
+      "scelte": [
+        "oroloigo",
+        "orologio",
+        "libro",
+        "orollogio"
+      ],
+      "risposta": "orologio",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "scheletro",
+      "scelte": [
+        "casa",
+        "shceletro",
+        "scheletro",
+        "sceletro"
+      ],
+      "risposta": "scheletro",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "farfalla",
+      "scelte": [
+        "farfaalla",
+        "farflala",
+        "gatto",
+        "farfalla"
+      ],
+      "risposta": "farfalla",
+      "topic": "animali"
+    },
+    {
+      "parola": "trenino",
+      "scelte": [
+        "trenino",
+        "rtenino",
+        "casa",
+        "ternino"
+      ],
+      "risposta": "trenino",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "pinguino",
+      "scelte": [
+        "canguro",
+        "pinguinno",
+        "binguino",
+        "pinguino"
+      ],
+      "risposta": "pinguino",
+      "topic": "animali"
+    },
+    {
+      "parola": "viaggio",
+      "scelte": [
+        "viaggio",
+        "viiaggio",
+        "vaiggio",
+        "libro"
+      ],
+      "risposta": "viaggio",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "scimmia",
+      "scelte": [
+        "csimmia",
+        "sicmmia",
+        "scimmia",
+        "casa"
+      ],
+      "risposta": "scimmia",
+      "topic": "animali"
+    },
+    {
+      "parola": "computer",
+      "scelte": [
+        "libro",
+        "computre",
+        "compute",
+        "computer"
+      ],
+      "risposta": "computer",
+      "topic": "tecnologia"
+    },
+    {
+      "parola": "camicia",
+      "scelte": [
+        "camicia",
+        "canicia",
+        "cane",
+        "camciia"
+      ],
+      "risposta": "camicia",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola": "maglione",
+      "scelte": [
+        "mare",
+        "maglione",
+        "malgione",
+        "maglion"
+      ],
+      "risposta": "maglione",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola": "fontana",
+      "scelte": [
+        "cane",
+        "fonttana",
+        "fotnana",
+        "fontana"
+      ],
+      "risposta": "fontana",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "caramella",
+      "scelte": [
+        "caramella",
+        "acramella",
+        "libro",
+        "caramell"
+      ],
+      "risposta": "caramella",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "maestra",
+      "scelte": [
+        "mare",
+        "maestra",
+        "naestra",
+        "maestla"
+      ],
+      "risposta": "maestra",
+      "topic": "persona"
+    },
+    {
+      "parola": "sceriffo",
+      "scelte": [
+        "sceriffo",
+        "sceirffo",
+        "pane",
+        "sciriffo"
+      ],
+      "risposta": "sceriffo",
+      "topic": "persona"
+    },
+    {
+      "parola": "temperino",
+      "scelte": [
+        "temperino",
+        "timperino",
+        "piatto",
+        "tenperino"
+      ],
+      "risposta": "temperino",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "gnocchi",
+      "scelte": [
+        "goncchi",
+        "casa",
+        "gnocci",
+        "gnocchi"
+      ],
+      "risposta": "gnocchi",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "pagella",
+      "scelte": [
+        "paglela",
+        "mare",
+        "pagella",
+        "pagell"
+      ],
+      "risposta": "pagella",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "sciocco",
+      "scelte": [
+        "scioccco",
+        "mare",
+        "sciocco",
+        "ssciocco"
+      ],
+      "risposta": "sciocco",
+      "topic": "altro"
+    },
+    {
+      "parola": "chimica",
+      "scelte": [
+        "libro",
+        "chimcia",
+        "chimica",
+        "chimiica"
+      ],
+      "risposta": "chimica",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "liquore",
+      "scelte": [
+        "pane",
+        "lequore",
+        "liquore",
+        "liquoer"
+      ],
+      "risposta": "liquore",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "ghiaccio",
+      "scelte": [
+        "ghiaqcio",
+        "ghhiaccio",
+        "ghiaccio",
+        "pane"
+      ],
+      "risposta": "ghiaccio",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "animale",
+      "scelte": [
+        "annimale",
+        "animal",
+        "pane",
+        "animale"
+      ],
+      "risposta": "animale",
+      "topic": "animali"
+    },
+    {
+      "parola": "panchina",
+      "scelte": [
+        "panchina",
+        "zucchero",
+        "pancihna",
+        "panchhina"
+      ],
+      "risposta": "panchina",
+      "topic": "arredi"
+    },
+    {
+      "parola": "schermo",
+      "scelte": [
+        "schermo",
+        "scheermo",
+        "cane",
+        "cshermo"
+      ],
+      "risposta": "schermo",
+      "topic": "tecnologia"
+    },
+    {
+      "parola": "fragola",
+      "scelte": [
+        "cane",
+        "frragola",
+        "fragloa",
+        "fragola"
+      ],
+      "risposta": "fragola",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "pastelli",
+      "scelte": [
+        "pasttelli",
+        "televisore",
+        "apstelli",
+        "pastelli"
+      ],
+      "risposta": "pastelli",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "quaderno",
+      "scelte": [
+        "uqaderno",
+        "quaderno",
+        "bicicletta",
+        "quaaderno"
+      ],
+      "risposta": "quaderno",
+      "topic": "scolastica"
+    },
+    {
+      "parola": "telefono",
+      "scelte": [
+        "righello",
+        "telefono",
+        "tleefono",
+        "teleefono"
+      ],
+      "risposta": "telefono",
+      "topic": "tecnologia"
+    },
+    {
+      "parola": "ombelico",
+      "scelte": [
+        "ombelico",
+        "pane",
+        "ombeliqo",
+        "omeblico"
+      ],
+      "risposta": "ombelico",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "ghiotto",
+      "scelte": [
+        "ghiotto",
+        "hgiotto",
+        "mare",
+        "ghhiotto"
+      ],
+      "risposta": "ghiotto",
+      "topic": "altro"
+    },
+    {
+      "parola": "ghianda",
+      "scelte": [
+        "ghianda",
+        "ghiaanda",
+        "pane",
+        "gghianda"
+      ],
+      "risposta": "ghianda",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "astronave",
+      "scelte": [
+        "astronnave",
+        "astroanve",
+        "astronave",
+        "casa"
+      ],
+      "risposta": "astronave",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "finestra",
+      "scelte": [
+        "finestra",
+        "ifnestra",
+        "cucchiaio",
+        "finistra"
+      ],
+      "risposta": "finestra",
+      "topic": "arredi"
+    },
+    {
+      "parola": "arancia",
+      "scelte": [
+        "aranccia",
+        "arancia",
+        "raancia",
+        "libro"
+      ],
+      "risposta": "arancia",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "zucchero",
+      "scelte": [
+        "zuchero",
+        "porta",
+        "zucchelo",
+        "zucchero"
+      ],
+      "risposta": "zucchero",
+      "topic": "cibo_bevande"
+    }
+  ],
+  "difficile": [
+    {
+      "parola": "rinoceronte",
+      "scelte": [
+        "coniglio",
+        "rinoceronet",
+        "rinnoceronte",
+        "rinoceronte"
+      ],
+      "risposta": "rinoceronte",
+      "topic": "animali"
+    },
+    {
+      "parola": "bicicletta",
+      "scelte": [
+        "zucchero",
+        "bicicletta",
+        "biciclteta",
+        "biqicletta"
+      ],
+      "risposta": "bicicletta",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "cioccolato",
+      "scelte": [
+        "cioccolat",
+        "libro",
+        "ciocccolato",
+        "cioccolato"
+      ],
+      "risposta": "cioccolato",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola": "campanello",
+      "scelte": [
+        "ombrello",
+        "campanello",
+        "ccampanello",
+        "cambanello"
+      ],
+      "risposta": "campanello",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "chiocciola",
+      "scelte": [
+        "libro",
+        "chiocciola",
+        "chiocciol",
+        "cheocciola"
+      ],
+      "risposta": "chiocciola",
+      "topic": "animali"
+    },
+    {
+      "parola": "pagliaccio",
+      "scelte": [
+        "pagliaccoi",
+        "paglicacio",
+        "pane",
+        "pagliaccio"
+      ],
+      "risposta": "pagliaccio",
+      "topic": "persona"
+    },
+    {
+      "parola": "coccinella",
+      "scelte": [
+        "coccinell",
+        "coccinella",
+        "lama",
+        "coccinilla"
+      ],
+      "risposta": "coccinella",
+      "topic": "animali"
+    },
+    {
+      "parola": "psicologia",
+      "scelte": [
+        "psicologai",
+        "psicologia",
+        "mare",
+        "psicoologia"
+      ],
+      "risposta": "psicologia",
+      "topic": "altro"
+    },
+    {
+      "parola": "rinoceronte",
+      "scelte": [
+        "coniglio",
+        "rinoceronet",
+        "rinnoceronte",
+        "rinoceronte"
+      ],
+      "risposta": "rinoceronte",
+      "topic": "animali"
+    },
+    {
+      "parola": "bicicletta",
+      "scelte": [
+        "zucchero",
+        "bicicletta",
+        "biciclteta",
+        "biqicletta"
+      ],
+      "risposta": "bicicletta",
+      "topic": "oggetto"
+    },
+    {
+      "parola": "cioccolato",
+      "scelte": [
+        "cioccolat",
+        "libro",
+        "ciocccolato",
+        "cioccolato"
+      ],
+      "risposta": "cioccolato",
+      "topic": "cibo_bevande"
+    }
+  ]
+}

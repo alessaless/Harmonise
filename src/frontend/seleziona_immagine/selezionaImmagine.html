@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Esercizio 1 — Comprensione del testo</title>
+    <link rel="stylesheet" href="../common_style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.ico" sizes="any">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<img src="../logo.png" class="logo" alt="logo"/>
+
+<h1>Comprensione del testo</h1>
+<p class="subtle">Ascolta/leggi la descrizione e scegli l'opzione corretta.</p>
+<div id="level-info" class="badge">Livello 1</div>
+
+<div id="prompt" class="card prompt"></div>
+<div id="choices" class="grid"></div>
+
+<div id="message"></div>
+
+<button id="quit-btn">Termina esercizio</button>
+
+<div id="victory-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>🎉 Complimenti! 🎉</h2>
+        <p>Hai completato tutti i livelli!</p>
+        <button id="play-again-btn">Torna alla Home</button>
+    </div>
+</div>
+
+<div id="quit-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Vuoi abbandonare l'attività?</h2>
+        <div class="modal-buttons">
+            <button id="quit-yes-btn" class="danger">Sì</button>
+            <button id="quit-no-btn" class="safe">No</button>
+        </div>
+    </div>
+</div>
+
+<!-- QTrobot -->
+<script src="../qtrobot_lib/roslib.min.js"></script>
+<script src="../qtrobot_lib/eventemitter2.min.js"></script>
+<script src="../qtrobot_lib/qtrobot_utils.js"></script>
+
+<script src="../common_script.js"></script>
+<script src="script.js"></script>
+
+<script>
+    (async () => {
+        try {
+            await QT.init('ws://192.168.100.2:9091');
+            await QT.configure({ volume: 65, language: 'it-IT' });
+            await QT.say("In questo esercizio ascolta la descrizione e scegli l'opzione corretta.");
+        } catch (e) {
+            console.warn('QT non disponibile:', e);
+        }
+    })();
+</script>
+
+</body>
+</html>

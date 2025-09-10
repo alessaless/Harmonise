@@ -32,7 +32,6 @@ quitNoBtn.addEventListener("click", () => {
     quitModal.style.display = "none";
 });
 
-
 function incrementaLivelliCompletati() {
     livelloCompletati++;
 }

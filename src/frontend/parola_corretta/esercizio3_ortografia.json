@@ -1,0 +1,394 @@
+{
+  "facile": [
+    {
+      "parola_errata": "pallla",
+      "parola_corretta": "palla",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "taazza",
+      "parola_corretta": "tazza",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "forbcii",
+      "parola_corretta": "forbici",
+      "topic": "utensili"
+    },
+    {
+      "parola_errata": "mtaita",
+      "parola_corretta": "matita",
+      "topic": "scolastica"
+    },
+    {
+      "parola_errata": "pnena",
+      "parola_corretta": "penna",
+      "topic": "scolastica"
+    },
+    {
+      "parola_errata": "sciarpe",
+      "parola_corretta": "scarpe",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola_errata": "paghella",
+      "parola_corretta": "pagella",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "sciarrpa",
+      "parola_corretta": "sciarpa",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola_errata": "scioco",
+      "parola_corretta": "sciocco",
+      "topic": "altro"
+    },
+    {
+      "parola_errata": "shcermo",
+      "parola_corretta": "schermo",
+      "topic": "tecnologia"
+    },
+    {
+      "parola_errata": "scihena",
+      "parola_corretta": "schiena",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "chiiave",
+      "parola_corretta": "chiave",
+      "topic": "utensili"
+    },
+    {
+      "parola_errata": "ghianad",
+      "parola_corretta": "ghianda",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "ghirro",
+      "parola_corretta": "ghiro",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "ghiotot",
+      "parola_corretta": "ghiotto",
+      "topic": "altro"
+    },
+    {
+      "parola_errata": "gnumo",
+      "parola_corretta": "gnomo",
+      "topic": "altro"
+    },
+    {
+      "parola_errata": "ghnocchi",
+      "parola_corretta": "gnocchi",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "gncoco",
+      "parola_corretta": "gnocco",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "gnem",
+      "parola_corretta": "gnam",
+      "topic": "altro"
+    },
+    {
+      "parola_errata": "legnia",
+      "parola_corretta": "legna",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "griaffa",
+      "parola_corretta": "giraffa",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "ecqua",
+      "parola_corretta": "acqua",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "coure",
+      "parola_corretta": "cuore",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "chuoio",
+      "parola_corretta": "cuoio",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "casssa",
+      "parola_corretta": "cassa",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "chasa",
+      "parola_corretta": "casa",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "cassoone",
+      "parola_corretta": "cassone",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "lummaca",
+      "parola_corretta": "lumaca",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "fromica",
+      "parola_corretta": "formica",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "mtaita",
+      "parola_corretta": "matita",
+      "topic": "scolastica"
+    },
+    {
+      "parola_errata": "pnena",
+      "parola_corretta": "penna",
+      "topic": "scolastica"
+    },
+    {
+      "parola_errata": "sciarpe",
+      "parola_corretta": "scarpe",
+      "topic": "abbigliamento"
+    }
+  ],
+  "medio": [
+    {
+      "parola_errata": "acppello",
+      "parola_corretta": "cappello",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola_errata": "quadernno",
+      "parola_corretta": "quaderno",
+      "topic": "scolastica"
+    },
+    {
+      "parola_errata": "capoptto",
+      "parola_corretta": "cappotto",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola_errata": "colazionne",
+      "parola_corretta": "colazione",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "uzcchero",
+      "parola_corretta": "zucchero",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "caarmella",
+      "parola_corretta": "caramella",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "ibscotto",
+      "parola_corretta": "biscotto",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "rnaocchio",
+      "parola_corretta": "ranocchio",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "giirasole",
+      "parola_corretta": "girasole",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "castelol",
+      "parola_corretta": "castello",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "finistra",
+      "parola_corretta": "finestra",
+      "topic": "arredi"
+    },
+    {
+      "parola_errata": "goirnale",
+      "parola_corretta": "giornale",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "scerifof",
+      "parola_corretta": "sceriffo",
+      "topic": "persona"
+    },
+    {
+      "parola_errata": "sciatoore",
+      "parola_corretta": "sciatore",
+      "topic": "persona"
+    },
+    {
+      "parola_errata": "sciaamno",
+      "parola_corretta": "sciamano",
+      "topic": "persona"
+    },
+    {
+      "parola_errata": "sciropppo",
+      "parola_corretta": "sciroppo",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "sccheletro",
+      "parola_corretta": "scheletro",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "chitarrra",
+      "parola_corretta": "chitarra",
+      "topic": "utensili"
+    },
+    {
+      "parola_errata": "ghieccio",
+      "parola_corretta": "ghiaccio",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "gheparrdo",
+      "parola_corretta": "ghepardo",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "monatgna",
+      "parola_corretta": "montagna",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "campagnna",
+      "parola_corretta": "campagna",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "bagagleo",
+      "parola_corretta": "bagaglio",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "cnoiglio",
+      "parola_corretta": "coniglio",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "famigglia",
+      "parola_corretta": "famiglia",
+      "topic": "persona"
+    },
+    {
+      "parola_errata": "bottilgia",
+      "parola_corretta": "bottiglia",
+      "topic": "utensili"
+    },
+    {
+      "parola_errata": "sandwihc",
+      "parola_corretta": "sandwich",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "elefaante",
+      "parola_corretta": "elefante",
+      "topic": "animali"
+    }
+
+  ],
+  "difficile": [
+    {
+      "parola_errata": "pniguino",
+      "parola_corretta": "pinguino",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "acqoario",
+      "parola_corretta": "acquario",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "atrtaruga",
+      "parola_corretta": "tartaruga",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "maglioone",
+      "parola_corretta": "maglione",
+      "topic": "abbigliamento"
+    },
+    {
+      "parola_errata": "toovaglia",
+      "parola_corretta": "tovaglia",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "bicicltita",
+      "parola_corretta": "bicicletta",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "ciucolato",
+      "parola_corretta": "cioccolato",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "choccinlela",
+      "parola_corretta": "coccinella",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "pagliaccio",
+      "parola_corretta": "pagliaccio",
+      "topic": "persona"
+    },
+    {
+      "parola_errata": "chhioccioola",
+      "parola_corretta": "chiocciola",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "riinocerontte",
+      "parola_corretta": "rinoceronte",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "pennaaerllo",
+      "parola_corretta": "pennarello",
+      "topic": "scolastica"
+    },
+    {
+      "parola_errata": "bicicltita",
+      "parola_corretta": "bicicletta",
+      "topic": "oggetto"
+    },
+    {
+      "parola_errata": "ciucolato",
+      "parola_corretta": "cioccolato",
+      "topic": "cibo_bevande"
+    },
+    {
+      "parola_errata": "choccinlela",
+      "parola_corretta": "coccinella",
+      "topic": "animali"
+    },
+    {
+      "parola_errata": "pagliaccio",
+      "parola_corretta": "pagliaccio",
+      "topic": "persona"
+    },
+    {
+      "parola_errata": "pennaaerllo",
+      "parola_corretta": "pennarello",
+      "topic": "scolastica"
+    }
+  ]
+}

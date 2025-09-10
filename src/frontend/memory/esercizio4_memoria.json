@@ -1,0 +1,2692 @@
+{
+  "facile": [
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "7",
+        "7",
+        "9"
+      ],
+      "risposta": [
+        "7",
+        "7",
+        "9"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "blu",
+        "marrone",
+        "grigio",
+        "viola"
+      ],
+      "risposta": [
+        "blu",
+        "marrone",
+        "grigio",
+        "viola"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "7",
+        "0",
+        "1"
+      ],
+      "risposta": [
+        "7",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "rosa",
+        "rosso",
+        "nero",
+        "bianco"
+      ],
+      "risposta": [
+        "rosa",
+        "rosso",
+        "nero",
+        "bianco"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "1",
+        "9",
+        "9"
+      ],
+      "risposta": [
+        "1",
+        "9",
+        "9"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "nero",
+        "azzurro",
+        "giallo",
+        "marrone"
+      ],
+      "risposta": [
+        "nero",
+        "azzurro",
+        "giallo",
+        "marrone"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "0",
+        "3",
+        "7"
+      ],
+      "risposta": [
+        "5",
+        "0",
+        "3",
+        "7"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "nero",
+        "bianco",
+        "grigio",
+        "marrone"
+      ],
+      "risposta": [
+        "nero",
+        "bianco",
+        "grigio",
+        "marrone"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "7",
+        "1",
+        "1",
+        "3"
+      ],
+      "risposta": [
+        "5",
+        "7",
+        "1",
+        "1",
+        "3"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "viola",
+        "azzurro",
+        "arancione"
+      ],
+      "risposta": [
+        "viola",
+        "azzurro",
+        "arancione"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "5",
+        "1",
+        "0",
+        "2"
+      ],
+      "risposta": [
+        "8",
+        "5",
+        "1",
+        "0",
+        "2"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "verde",
+        "rosa",
+        "blu",
+        "arancione"
+      ],
+      "risposta": [
+        "verde",
+        "rosa",
+        "blu",
+        "arancione"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "3",
+        "3",
+        "1",
+        "6",
+        "3"
+      ],
+      "risposta": [
+        "3",
+        "3",
+        "1",
+        "6",
+        "3"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "giallo",
+        "viola",
+        "blu",
+        "rosa"
+      ],
+      "risposta": [
+        "giallo",
+        "viola",
+        "blu",
+        "rosa"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "1",
+        "7"
+      ],
+      "risposta": [
+        "9",
+        "1",
+        "7"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "grigio",
+        "bianco",
+        "nero",
+        "verde"
+      ],
+      "risposta": [
+        "grigio",
+        "bianco",
+        "nero",
+        "verde"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "0",
+        "8",
+        "0",
+        "8"
+      ],
+      "risposta": [
+        "0",
+        "8",
+        "0",
+        "8"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "bianco",
+        "marrone",
+        "nero",
+        "verde"
+      ],
+      "risposta": [
+        "bianco",
+        "marrone",
+        "nero",
+        "verde"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "2",
+        "2",
+        "1",
+        "6"
+      ],
+      "risposta": [
+        "9",
+        "2",
+        "2",
+        "1",
+        "6"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "nero",
+        "rosa",
+        "grigio",
+        "giallo"
+      ],
+      "risposta": [
+        "nero",
+        "rosa",
+        "grigio",
+        "giallo"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "5",
+        "4",
+        "7"
+      ],
+      "risposta": [
+        "6",
+        "5",
+        "4",
+        "7"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "verde",
+        "rosa",
+        "bianco"
+      ],
+      "risposta": [
+        "verde",
+        "rosa",
+        "bianco"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "4",
+        "8",
+        "5",
+        "8"
+      ],
+      "risposta": [
+        "8",
+        "4",
+        "8",
+        "5",
+        "8"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "giallo",
+        "azzurro",
+        "bianco"
+      ],
+      "risposta": [
+        "giallo",
+        "azzurro",
+        "bianco"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "4",
+        "5",
+        "2",
+        "2",
+        "8"
+      ],
+      "risposta": [
+        "4",
+        "5",
+        "2",
+        "2",
+        "8"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "azzurro",
+        "blu",
+        "viola",
+        "nero"
+      ],
+      "risposta": [
+        "azzurro",
+        "blu",
+        "viola",
+        "nero"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "9",
+        "6",
+        "8"
+      ],
+      "risposta": [
+        "9",
+        "9",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "rosa",
+        "rosso",
+        "nero",
+        "blu"
+      ],
+      "risposta": [
+        "rosa",
+        "rosso",
+        "nero",
+        "blu"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "2",
+        "0"
+      ],
+      "risposta": [
+        "6",
+        "2",
+        "0"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "giallo",
+        "arancione",
+        "verde"
+      ],
+      "risposta": [
+        "giallo",
+        "arancione",
+        "verde"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "4",
+        "2",
+        "0",
+        "4"
+      ],
+      "risposta": [
+        "4",
+        "2",
+        "0",
+        "4"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "nero",
+        "rosso",
+        "viola"
+      ],
+      "risposta": [
+        "nero",
+        "rosso",
+        "viola"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "1",
+        "9",
+        "8",
+        "3"
+      ],
+      "risposta": [
+        "1",
+        "9",
+        "8",
+        "3"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "giallo",
+        "nero",
+        "arancione",
+        "rosso"
+      ],
+      "risposta": [
+        "giallo",
+        "nero",
+        "arancione",
+        "rosso"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "6",
+        "5",
+        "8"
+      ],
+      "risposta": [
+        "6",
+        "6",
+        "5",
+        "8"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "rosso",
+        "arancione",
+        "giallo"
+      ],
+      "risposta": [
+        "rosso",
+        "arancione",
+        "giallo"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "7",
+        "3",
+        "5",
+        "9",
+        "8"
+      ],
+      "risposta": [
+        "7",
+        "3",
+        "5",
+        "9",
+        "8"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "azzurro",
+        "giallo",
+        "arancione"
+      ],
+      "risposta": [
+        "azzurro",
+        "giallo",
+        "arancione"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "risposta": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "rosa",
+        "rosso",
+        "azzurro"
+      ],
+      "risposta": [
+        "rosa",
+        "rosso",
+        "azzurro"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "4",
+        "2",
+        "2"
+      ],
+      "risposta": [
+        "8",
+        "4",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "rosso",
+        "viola",
+        "marrone",
+        "verde"
+      ],
+      "risposta": [
+        "rosso",
+        "viola",
+        "marrone",
+        "verde"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "2",
+        "5",
+        "9"
+      ],
+      "risposta": [
+        "2",
+        "5",
+        "9"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "grigio",
+        "bianco",
+        "arancione"
+      ],
+      "risposta": [
+        "grigio",
+        "bianco",
+        "arancione"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "8",
+        "5",
+        "1"
+      ],
+      "risposta": [
+        "9",
+        "8",
+        "5",
+        "1"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "nero",
+        "giallo",
+        "verde",
+        "azzurro"
+      ],
+      "risposta": [
+        "nero",
+        "giallo",
+        "verde",
+        "azzurro"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "2",
+        "6"
+      ],
+      "risposta": [
+        "8",
+        "2",
+        "6"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "blu",
+        "viola",
+        "giallo",
+        "bianco"
+      ],
+      "risposta": [
+        "blu",
+        "viola",
+        "giallo",
+        "bianco"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "5",
+        "5",
+        "4",
+        "3"
+      ],
+      "risposta": [
+        "5",
+        "5",
+        "5",
+        "4",
+        "3"
+      ]
+    },
+    {
+      "tipo": "colori",
+      "sequenza": [
+        "nero",
+        "grigio",
+        "rosso",
+        "blu"
+      ],
+      "risposta": [
+        "nero",
+        "grigio",
+        "rosso",
+        "blu"
+      ]
+    }
+  ],
+  "medio": [
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "7",
+        "3",
+        "9",
+        "9",
+        "3",
+        "0"
+      ],
+      "risposta": [
+        "5",
+        "7",
+        "3",
+        "9",
+        "9",
+        "3",
+        "0"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "ape",
+        "mucca",
+        "gatto",
+        "pollo",
+        "rana",
+        "pecora"
+      ],
+      "risposta": [
+        "ape",
+        "mucca",
+        "gatto",
+        "pollo",
+        "rana",
+        "pecora"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "4",
+        "0",
+        "8",
+        "5",
+        "8",
+        "8",
+        "7"
+      ],
+      "risposta": [
+        "4",
+        "0",
+        "8",
+        "5",
+        "8",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "cane",
+        "rana",
+        "uccello",
+        "ape",
+        "gatto"
+      ],
+      "risposta": [
+        "cane",
+        "rana",
+        "uccello",
+        "ape",
+        "gatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "2",
+        "8",
+        "8",
+        "0",
+        "1"
+      ],
+      "risposta": [
+        "2",
+        "8",
+        "8",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "pollo",
+        "coniglio",
+        "uccello",
+        "mucca"
+      ],
+      "risposta": [
+        "pollo",
+        "coniglio",
+        "uccello",
+        "mucca"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "3",
+        "8",
+        "6",
+        "1",
+        "2"
+      ],
+      "risposta": [
+        "3",
+        "8",
+        "6",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "pecora",
+        "ape",
+        "cane",
+        "gatto"
+      ],
+      "risposta": [
+        "pecora",
+        "ape",
+        "cane",
+        "gatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "0",
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "risposta": [
+        "0",
+        "2",
+        "4",
+        "8",
+        "1"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "uccello",
+        "rana",
+        "mucca",
+        "asino",
+        "pecora",
+        "ape"
+      ],
+      "risposta": [
+        "uccello",
+        "rana",
+        "mucca",
+        "asino",
+        "pecora",
+        "ape"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "5",
+        "0",
+        "6",
+        "1",
+        "8"
+      ],
+      "risposta": [
+        "6",
+        "5",
+        "0",
+        "6",
+        "1",
+        "8"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "pollo",
+        "asino",
+        "gatto",
+        "cane"
+      ],
+      "risposta": [
+        "pollo",
+        "asino",
+        "gatto",
+        "cane"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "1",
+        "5",
+        "8",
+        "1",
+        "4",
+        "4",
+        "9"
+      ],
+      "risposta": [
+        "1",
+        "5",
+        "8",
+        "1",
+        "4",
+        "4",
+        "9"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "rana",
+        "pecora",
+        "mucca",
+        "asino"
+      ],
+      "risposta": [
+        "rana",
+        "pecora",
+        "mucca",
+        "asino"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "0",
+        "7",
+        "2",
+        "8",
+        "3",
+        "2",
+        "6"
+      ],
+      "risposta": [
+        "0",
+        "7",
+        "2",
+        "8",
+        "3",
+        "2",
+        "6"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "rana",
+        "pollo",
+        "pesce",
+        "coniglio",
+        "ape",
+        "cane"
+      ],
+      "risposta": [
+        "rana",
+        "pollo",
+        "pesce",
+        "coniglio",
+        "ape",
+        "cane"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "2",
+        "1",
+        "0",
+        "0",
+        "9",
+        "9"
+      ],
+      "risposta": [
+        "8",
+        "2",
+        "1",
+        "0",
+        "0",
+        "9",
+        "9"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "cavallo",
+        "coniglio",
+        "gatto",
+        "rana",
+        "uccello"
+      ],
+      "risposta": [
+        "cavallo",
+        "coniglio",
+        "gatto",
+        "rana",
+        "uccello"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "3",
+        "6",
+        "8",
+        "2",
+        "2",
+        "2"
+      ],
+      "risposta": [
+        "5",
+        "3",
+        "6",
+        "8",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "asino",
+        "rana",
+        "uccello",
+        "gatto"
+      ],
+      "risposta": [
+        "asino",
+        "rana",
+        "uccello",
+        "gatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "0",
+        "8",
+        "7",
+        "8"
+      ],
+      "risposta": [
+        "9",
+        "0",
+        "8",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "rana",
+        "pollo",
+        "gatto",
+        "coniglio"
+      ],
+      "risposta": [
+        "rana",
+        "pollo",
+        "gatto",
+        "coniglio"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "3",
+        "9",
+        "7",
+        "5",
+        "5"
+      ],
+      "risposta": [
+        "3",
+        "9",
+        "7",
+        "5",
+        "5"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "pollo",
+        "coniglio",
+        "uccello",
+        "gatto"
+      ],
+      "risposta": [
+        "pollo",
+        "coniglio",
+        "uccello",
+        "gatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "1",
+        "3",
+        "5",
+        "7",
+        "7"
+      ],
+      "risposta": [
+        "9",
+        "1",
+        "3",
+        "5",
+        "7",
+        "7"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "asino",
+        "pollo",
+        "rana",
+        "pesce",
+        "ape"
+      ],
+      "risposta": [
+        "asino",
+        "pollo",
+        "rana",
+        "pesce",
+        "ape"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "2",
+        "0",
+        "5",
+        "3",
+        "3"
+      ],
+      "risposta": [
+        "6",
+        "2",
+        "0",
+        "5",
+        "3",
+        "3"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "coniglio",
+        "pollo",
+        "mucca",
+        "rana",
+        "ape",
+        "gatto"
+      ],
+      "risposta": [
+        "coniglio",
+        "pollo",
+        "mucca",
+        "rana",
+        "ape",
+        "gatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "7",
+        "7",
+        "7",
+        "5",
+        "4",
+        "7"
+      ],
+      "risposta": [
+        "5",
+        "7",
+        "7",
+        "7",
+        "5",
+        "4",
+        "7"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "gatto",
+        "pesce",
+        "asino",
+        "coniglio",
+        "rana",
+        "mucca"
+      ],
+      "risposta": [
+        "gatto",
+        "pesce",
+        "asino",
+        "coniglio",
+        "rana",
+        "mucca"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "3",
+        "4",
+        "1",
+        "1"
+      ],
+      "risposta": [
+        "8",
+        "3",
+        "4",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "cavallo",
+        "pollo",
+        "cane",
+        "mucca"
+      ],
+      "risposta": [
+        "cavallo",
+        "pollo",
+        "cane",
+        "mucca"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "3",
+        "0",
+        "8",
+        "4",
+        "8",
+        "8",
+        "7"
+      ],
+      "risposta": [
+        "3",
+        "0",
+        "8",
+        "4",
+        "8",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "pesce",
+        "ape",
+        "mucca",
+        "uccello",
+        "rana",
+        "gatto"
+      ],
+      "risposta": [
+        "pesce",
+        "ape",
+        "mucca",
+        "uccello",
+        "rana",
+        "gatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "8",
+        "1",
+        "6",
+        "5",
+        "8"
+      ],
+      "risposta": [
+        "8",
+        "8",
+        "1",
+        "6",
+        "5",
+        "8"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "pollo",
+        "uccello",
+        "asino",
+        "pesce"
+      ],
+      "risposta": [
+        "pollo",
+        "uccello",
+        "asino",
+        "pesce"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "2",
+        "7",
+        "2",
+        "2",
+        "9",
+        "9",
+        "2"
+      ],
+      "risposta": [
+        "2",
+        "7",
+        "2",
+        "2",
+        "9",
+        "9",
+        "2"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "coniglio",
+        "pecora",
+        "ape",
+        "cane",
+        "uccello",
+        "mucca"
+      ],
+      "risposta": [
+        "coniglio",
+        "pecora",
+        "ape",
+        "cane",
+        "uccello",
+        "mucca"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "3",
+        "1",
+        "4",
+        "5",
+        "3",
+        "0"
+      ],
+      "risposta": [
+        "3",
+        "1",
+        "4",
+        "5",
+        "3",
+        "0"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "uccello",
+        "cavallo",
+        "ape",
+        "mucca",
+        "pecora",
+        "coniglio"
+      ],
+      "risposta": [
+        "uccello",
+        "cavallo",
+        "ape",
+        "mucca",
+        "pecora",
+        "coniglio"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "0",
+        "5",
+        "1",
+        "8",
+        "4"
+      ],
+      "risposta": [
+        "0",
+        "5",
+        "1",
+        "8",
+        "4"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "rana",
+        "asino",
+        "cavallo",
+        "pesce",
+        "mucca",
+        "ape"
+      ],
+      "risposta": [
+        "rana",
+        "asino",
+        "cavallo",
+        "pesce",
+        "mucca",
+        "ape"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "9",
+        "1",
+        "8",
+        "4",
+        "6"
+      ],
+      "risposta": [
+        "5",
+        "9",
+        "1",
+        "8",
+        "4",
+        "6"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "cavallo",
+        "mucca",
+        "ape",
+        "asino"
+      ],
+      "risposta": [
+        "cavallo",
+        "mucca",
+        "ape",
+        "asino"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "7",
+        "9",
+        "0",
+        "8",
+        "2",
+        "7"
+      ],
+      "risposta": [
+        "7",
+        "9",
+        "0",
+        "8",
+        "2",
+        "7"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "uccello",
+        "gatto",
+        "cavallo",
+        "rana"
+      ],
+      "risposta": [
+        "uccello",
+        "gatto",
+        "cavallo",
+        "rana"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "2",
+        "2",
+        "2",
+        "5",
+        "9"
+      ],
+      "risposta": [
+        "2",
+        "2",
+        "2",
+        "5",
+        "9"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "gatto",
+        "pollo",
+        "uccello",
+        "mucca",
+        "ape",
+        "pecora"
+      ],
+      "risposta": [
+        "gatto",
+        "pollo",
+        "uccello",
+        "mucca",
+        "ape",
+        "pecora"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "7",
+        "7",
+        "7",
+        "3",
+        "9"
+      ],
+      "risposta": [
+        "7",
+        "7",
+        "7",
+        "3",
+        "9"
+      ]
+    },
+    {
+      "tipo": "animali",
+      "sequenza": [
+        "pollo",
+        "mucca",
+        "cane",
+        "uccello"
+      ],
+      "risposta": [
+        "pollo",
+        "mucca",
+        "cane",
+        "uccello"
+      ]
+    }
+  ],
+  "difficile": [
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "2",
+        "9",
+        "9",
+        "2",
+        "2",
+        "8",
+        "0"
+      ],
+      "risposta": [
+        "2",
+        "9",
+        "9",
+        "2",
+        "2",
+        "8",
+        "0"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "penna",
+        "palla",
+        "telefono",
+        "zaino",
+        "cucchiaio",
+        "piatto",
+        "libro"
+      ],
+      "risposta": [
+        "penna",
+        "palla",
+        "telefono",
+        "zaino",
+        "cucchiaio",
+        "piatto",
+        "libro"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "0",
+        "4",
+        "1",
+        "3",
+        "7",
+        "9",
+        "7",
+        "7"
+      ],
+      "risposta": [
+        "9",
+        "0",
+        "4",
+        "1",
+        "3",
+        "7",
+        "9",
+        "7",
+        "7"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "libro",
+        "tavolo",
+        "cucchiaio",
+        "penna",
+        "piatto"
+      ],
+      "risposta": [
+        "libro",
+        "tavolo",
+        "cucchiaio",
+        "penna",
+        "piatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "4",
+        "2",
+        "5",
+        "7",
+        "9",
+        "9",
+        "1",
+        "3"
+      ],
+      "risposta": [
+        "8",
+        "4",
+        "2",
+        "5",
+        "7",
+        "9",
+        "9",
+        "1",
+        "3"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "tavolo",
+        "penna",
+        "tazza",
+        "palla",
+        "libro",
+        "zaino"
+      ],
+      "risposta": [
+        "tavolo",
+        "penna",
+        "tazza",
+        "palla",
+        "libro",
+        "zaino"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "2",
+        "9",
+        "1",
+        "2",
+        "7",
+        "9",
+        "9",
+        "0"
+      ],
+      "risposta": [
+        "6",
+        "2",
+        "9",
+        "1",
+        "2",
+        "7",
+        "9",
+        "9",
+        "0"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "piatto",
+        "tazza",
+        "forchetta",
+        "chiave",
+        "penna",
+        "zaino",
+        "tavolo"
+      ],
+      "risposta": [
+        "piatto",
+        "tazza",
+        "forchetta",
+        "chiave",
+        "penna",
+        "zaino",
+        "tavolo"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "8",
+        "6",
+        "5",
+        "0",
+        "8",
+        "6"
+      ],
+      "risposta": [
+        "6",
+        "8",
+        "6",
+        "5",
+        "0",
+        "8",
+        "6"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "chiave",
+        "tavolo",
+        "sedia",
+        "tazza",
+        "forchetta"
+      ],
+      "risposta": [
+        "chiave",
+        "tavolo",
+        "sedia",
+        "tazza",
+        "forchetta"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "4",
+        "7",
+        "3",
+        "1",
+        "4",
+        "9",
+        "8"
+      ],
+      "risposta": [
+        "4",
+        "7",
+        "3",
+        "1",
+        "4",
+        "9",
+        "8"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "zaino",
+        "libro",
+        "palla",
+        "cucchiaio",
+        "tazza",
+        "telefono"
+      ],
+      "risposta": [
+        "zaino",
+        "libro",
+        "palla",
+        "cucchiaio",
+        "tazza",
+        "telefono"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "3",
+        "5",
+        "6",
+        "5",
+        "1",
+        "2"
+      ],
+      "risposta": [
+        "6",
+        "3",
+        "5",
+        "6",
+        "5",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "forchetta",
+        "cucchiaio",
+        "zaino",
+        "telefono",
+        "tavolo",
+        "piatto"
+      ],
+      "risposta": [
+        "forchetta",
+        "cucchiaio",
+        "zaino",
+        "telefono",
+        "tavolo",
+        "piatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "4",
+        "6",
+        "3",
+        "6",
+        "8",
+        "8",
+        "7"
+      ],
+      "risposta": [
+        "9",
+        "4",
+        "6",
+        "3",
+        "6",
+        "8",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "sedia",
+        "piatto",
+        "forchetta",
+        "chiave",
+        "zaino"
+      ],
+      "risposta": [
+        "sedia",
+        "piatto",
+        "forchetta",
+        "chiave",
+        "zaino"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "5",
+        "6",
+        "2",
+        "1",
+        "3",
+        "7",
+        "2"
+      ],
+      "risposta": [
+        "9",
+        "5",
+        "6",
+        "2",
+        "1",
+        "3",
+        "7",
+        "2"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "libro",
+        "piatto",
+        "tavolo",
+        "sedia",
+        "palla"
+      ],
+      "risposta": [
+        "libro",
+        "piatto",
+        "tavolo",
+        "sedia",
+        "palla"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "0",
+        "1",
+        "2",
+        "7",
+        "9",
+        "6"
+      ],
+      "risposta": [
+        "6",
+        "0",
+        "1",
+        "2",
+        "7",
+        "9",
+        "6"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "tazza",
+        "zaino",
+        "libro",
+        "sedia",
+        "telefono"
+      ],
+      "risposta": [
+        "tazza",
+        "zaino",
+        "libro",
+        "sedia",
+        "telefono"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "0",
+        "6",
+        "6",
+        "9",
+        "8",
+        "4",
+        "9",
+        "0",
+        "2"
+      ],
+      "risposta": [
+        "0",
+        "6",
+        "6",
+        "9",
+        "8",
+        "4",
+        "9",
+        "0",
+        "2"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "chiave",
+        "telefono",
+        "palla",
+        "libro",
+        "zaino",
+        "tazza",
+        "cucchiaio"
+      ],
+      "risposta": [
+        "chiave",
+        "telefono",
+        "palla",
+        "libro",
+        "zaino",
+        "tazza",
+        "cucchiaio"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "8",
+        "3",
+        "9",
+        "2",
+        "0",
+        "5",
+        "3",
+        "0"
+      ],
+      "risposta": [
+        "8",
+        "8",
+        "3",
+        "9",
+        "2",
+        "0",
+        "5",
+        "3",
+        "0"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "tazza",
+        "zaino",
+        "tavolo",
+        "sedia",
+        "cucchiaio"
+      ],
+      "risposta": [
+        "tazza",
+        "zaino",
+        "tavolo",
+        "sedia",
+        "cucchiaio"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "3",
+        "8",
+        "0",
+        "1",
+        "1",
+        "8",
+        "4"
+      ],
+      "risposta": [
+        "9",
+        "3",
+        "8",
+        "0",
+        "1",
+        "1",
+        "8",
+        "4"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "piatto",
+        "cucchiaio",
+        "sedia",
+        "forchetta",
+        "zaino",
+        "tazza",
+        "chiave"
+      ],
+      "risposta": [
+        "piatto",
+        "cucchiaio",
+        "sedia",
+        "forchetta",
+        "zaino",
+        "tazza",
+        "chiave"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "7",
+        "6",
+        "9",
+        "0",
+        "4",
+        "2",
+        "6"
+      ],
+      "risposta": [
+        "7",
+        "6",
+        "9",
+        "0",
+        "4",
+        "2",
+        "6"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "tazza",
+        "piatto",
+        "telefono",
+        "forchetta",
+        "zaino",
+        "penna",
+        "palla"
+      ],
+      "risposta": [
+        "tazza",
+        "piatto",
+        "telefono",
+        "forchetta",
+        "zaino",
+        "penna",
+        "palla"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "4",
+        "8",
+        "9",
+        "4",
+        "7",
+        "6",
+        "9",
+        "7",
+        "3"
+      ],
+      "risposta": [
+        "4",
+        "8",
+        "9",
+        "4",
+        "7",
+        "6",
+        "9",
+        "7",
+        "3"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "chiave",
+        "forchetta",
+        "telefono",
+        "palla",
+        "cucchiaio",
+        "piatto"
+      ],
+      "risposta": [
+        "chiave",
+        "forchetta",
+        "telefono",
+        "palla",
+        "cucchiaio",
+        "piatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "1",
+        "6",
+        "3",
+        "3",
+        "5",
+        "6",
+        "5",
+        "8"
+      ],
+      "risposta": [
+        "1",
+        "6",
+        "3",
+        "3",
+        "5",
+        "6",
+        "5",
+        "8"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "palla",
+        "zaino",
+        "libro",
+        "forchetta",
+        "tazza",
+        "cucchiaio",
+        "sedia"
+      ],
+      "risposta": [
+        "palla",
+        "zaino",
+        "libro",
+        "forchetta",
+        "tazza",
+        "cucchiaio",
+        "sedia"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "1",
+        "8",
+        "2",
+        "7",
+        "5",
+        "5",
+        "3",
+        "9"
+      ],
+      "risposta": [
+        "5",
+        "1",
+        "8",
+        "2",
+        "7",
+        "5",
+        "5",
+        "3",
+        "9"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "penna",
+        "forchetta",
+        "libro",
+        "chiave",
+        "cucchiaio",
+        "tazza"
+      ],
+      "risposta": [
+        "penna",
+        "forchetta",
+        "libro",
+        "chiave",
+        "cucchiaio",
+        "tazza"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "3",
+        "4",
+        "3",
+        "3",
+        "3",
+        "3",
+        "9",
+        "5",
+        "2"
+      ],
+      "risposta": [
+        "3",
+        "4",
+        "3",
+        "3",
+        "3",
+        "3",
+        "9",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "tazza",
+        "telefono",
+        "chiave",
+        "palla",
+        "piatto"
+      ],
+      "risposta": [
+        "tazza",
+        "telefono",
+        "chiave",
+        "palla",
+        "piatto"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "9",
+        "5",
+        "7",
+        "9",
+        "4",
+        "7",
+        "2"
+      ],
+      "risposta": [
+        "5",
+        "9",
+        "5",
+        "7",
+        "9",
+        "4",
+        "7",
+        "2"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "zaino",
+        "tavolo",
+        "libro",
+        "penna",
+        "palla",
+        "telefono",
+        "cucchiaio"
+      ],
+      "risposta": [
+        "zaino",
+        "tavolo",
+        "libro",
+        "penna",
+        "palla",
+        "telefono",
+        "cucchiaio"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "8",
+        "0",
+        "8",
+        "5",
+        "6",
+        "2",
+        "7",
+        "1"
+      ],
+      "risposta": [
+        "8",
+        "0",
+        "8",
+        "5",
+        "6",
+        "2",
+        "7",
+        "1"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "piatto",
+        "chiave",
+        "sedia",
+        "palla",
+        "telefono",
+        "cucchiaio",
+        "tazza"
+      ],
+      "risposta": [
+        "piatto",
+        "chiave",
+        "sedia",
+        "palla",
+        "telefono",
+        "cucchiaio",
+        "tazza"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "9",
+        "1",
+        "5",
+        "5",
+        "9",
+        "4",
+        "2",
+        "8"
+      ],
+      "risposta": [
+        "9",
+        "1",
+        "5",
+        "5",
+        "9",
+        "4",
+        "2",
+        "8"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "libro",
+        "zaino",
+        "chiave",
+        "sedia",
+        "piatto",
+        "tazza"
+      ],
+      "risposta": [
+        "libro",
+        "zaino",
+        "chiave",
+        "sedia",
+        "piatto",
+        "tazza"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "6",
+        "3",
+        "6",
+        "5",
+        "5",
+        "6",
+        "4",
+        "7"
+      ],
+      "risposta": [
+        "6",
+        "3",
+        "6",
+        "5",
+        "5",
+        "6",
+        "4",
+        "7"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "cucchiaio",
+        "penna",
+        "telefono",
+        "libro",
+        "tazza"
+      ],
+      "risposta": [
+        "cucchiaio",
+        "penna",
+        "telefono",
+        "libro",
+        "tazza"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "4",
+        "3",
+        "8",
+        "6",
+        "6",
+        "3",
+        "2",
+        "2",
+        "7"
+      ],
+      "risposta": [
+        "4",
+        "3",
+        "8",
+        "6",
+        "6",
+        "3",
+        "2",
+        "2",
+        "7"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "penna",
+        "tavolo",
+        "chiave",
+        "telefono",
+        "sedia"
+      ],
+      "risposta": [
+        "penna",
+        "tavolo",
+        "chiave",
+        "telefono",
+        "sedia"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "4",
+        "4",
+        "8",
+        "9",
+        "0",
+        "6",
+        "1",
+        "2"
+      ],
+      "risposta": [
+        "4",
+        "4",
+        "8",
+        "9",
+        "0",
+        "6",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "libro",
+        "zaino",
+        "chiave",
+        "tazza",
+        "cucchiaio"
+      ],
+      "risposta": [
+        "libro",
+        "zaino",
+        "chiave",
+        "tazza",
+        "cucchiaio"
+      ]
+    },
+    {
+      "tipo": "numeri",
+      "sequenza": [
+        "5",
+        "4",
+        "5",
+        "5",
+        "8",
+        "8",
+        "4",
+        "5",
+        "0"
+      ],
+      "risposta": [
+        "5",
+        "4",
+        "5",
+        "5",
+        "8",
+        "8",
+        "4",
+        "5",
+        "0"
+      ]
+    },
+    {
+      "tipo": "oggetti",
+      "sequenza": [
+        "tazza",
+        "sedia",
+        "cucchiaio",
+        "libro",
+        "penna",
+        "tavolo"
+      ],
+      "risposta": [
+        "tazza",
+        "sedia",
+        "cucchiaio",
+        "libro",
+        "penna",
+        "tavolo"
+      ]
+    }
+  ]
+}

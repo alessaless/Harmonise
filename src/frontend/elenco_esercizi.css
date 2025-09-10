@@ -23,9 +23,9 @@ body {
 }
 
 .cards-grid {
-    width: min(1100px, 92%);
+    width:90%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
     gap: 22px;
 }
@@ -88,7 +88,6 @@ body {
     background: #1c7ed6;
 }
 
-/* Responsività: 2 colonne poi 1 colonna */
 @media (max-width: 980px) {
     .cards-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -99,5 +98,22 @@ body {
     .cards-grid { grid-template-columns: 1fr; }
 }
 
-/* Opzionale: riuso dei tuoi stili messaggi/modali (se presenti altrove) */
-#message { visibility: hidden; } /* evita flash se non usato qui */
+#message { visibility: hidden; }
+
+.logout-btn {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 14px;
+    background: #ff6b6b;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform .18s ease, background .18s ease;
+    z-index: 1000;
+}
+.logout-btn:hover { background: #e03131; transform: translateY(-1px); }
+.logout-btn:active { transform: translateY(0); }
