@@ -182,7 +182,7 @@ const QT = (() => {
 */
 
 // qtrobot_utils.js
-// Richiede che eventemitter2 e roslib siano già caricati in pagina.
+// Richiede che eventemitter2 e roslib siano già caricati in pagina
 
 const QT = (() => {
     let ros = null;
@@ -362,6 +362,7 @@ const QT = (() => {
 
     // --- sayFast: publish (fire-and-forget)
     async function sayFast(text) {
+        console.log("Ciao")
         if (!connected) throw new Error('Non connesso. Chiama QT.init() prima.');
         const msg = (text || '').trim();
         if (!msg) return;

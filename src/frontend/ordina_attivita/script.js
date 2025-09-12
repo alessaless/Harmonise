@@ -161,6 +161,7 @@ function enableDragAndDrop() {
                 if (!level.correctOrder.includes(value)) {
                     // errore: attività non valida
                     incrementaNumeroErrori();
+                    QT.say("Questa attività non va qui!")
                     message.textContent = "Questa attività non va qui!";
                     message.className = "message-warning";
                     document.body.classList.add("error");
@@ -224,10 +225,16 @@ checkBtn.addEventListener("click", () => {
         message.textContent = "Bravo! Hai completato il livello!";
         message.className = "message-success";
         document.body.classList.add("completed");
+        currentLevel++;
+        if(currentLevel < levels.length) {
+            QT.say("Bravo, hai terminato il livello!")
+        } else {
+            QT.say("Bravissimo, hai terminato tutti i livelli")
+        }
 
         setTimeout(() => {
             document.body.classList.remove("completed");
-            currentLevel++;
+
             if (currentLevel < levels.length) {
                 loadLevel();
             } else {
@@ -237,6 +244,7 @@ checkBtn.addEventListener("click", () => {
         }, 1500);
     } else {
         incrementaNumeroErrori();
+        QT.say("Ricontrolla l'ordine delle attività! ")
         message.textContent = "Ops! Prova di nuovo...";
         message.className = "message-warning";
         document.body.classList.add("error");

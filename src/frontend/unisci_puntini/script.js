@@ -167,6 +167,7 @@ document.addEventListener("mouseup", e => {
 
             if (distance < 20) {
                 if (current < dots.length) {
+                    // qua mettere una frase random ogni due puntini tra un set di frasi
                     current++;
                     message.classList.remove("message-warning");
                     document.body.classList.remove("completed"); // sfondo verde finale
@@ -184,14 +185,21 @@ document.addEventListener("mouseup", e => {
                     ctx.strokeStyle = "rgba(231,76,60,0.7)";
                     ctx.lineWidth = 4;
                     ctx.stroke();
-
                     message.textContent = `Figura completata 🎉 `;
                     message.classList.remove("message-warning");
                     message.classList.add("message-success");
                     document.body.classList.add("completed"); // sfondo verde finale
 
+                    level++;
+                    if(level < levels.length){
+                        QT.say("Bravo, hai completato la figura. Adesso Passiamo al prossimo livello!")
+                    } else {
+                        QT.say("Bravissimo! Hai terminato tutti i livelli!")
+                    }
+
+
+
                     setTimeout(() => {
-                        level++;
                         if (level < levels.length) {
                             incrementaLivelliCompletati();
                             loadLevel(level);
@@ -206,9 +214,10 @@ document.addEventListener("mouseup", e => {
                                 showVictoryModal();
                             }, 200);
                         }
-                    }, 1000);
+                    }, 3000);
                 }
             } else {
+                QT.say("Attento! Non hai collegato il puntino giusto! ")
                 incrementaNumeroErrori();
                 message.textContent = "Attenzione, riprova!";
                 message.classList.remove("message-success");

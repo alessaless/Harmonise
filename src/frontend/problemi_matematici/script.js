@@ -66,9 +66,10 @@ let currentProblem = 0;
 
 
 function loadProblem(index) {
-    const problem = problems[index];
 
+    const problem = problems[index];
     // aggiorna testi
+    QT.say(problem.text)
     problemBig.textContent = problem.text;
     problemSmall.textContent = problem.text;
     levelInfo.textContent = `Livello ${index + 1}`;
@@ -143,6 +144,7 @@ function loadProblem(index) {
             const problem = problems[currentProblem];
 
             if (!problem.operands.includes(value)) {
+                QT.say("Questo numero non va usato! ")
                 incrementaNumeroErrori();
                 document.body.classList.add("error");
                 messageBox.textContent = "Ops! Hai usato un dato sbagliato 👀";
@@ -177,6 +179,7 @@ checkBtn.addEventListener("click", () => {
         .filter((n) => !isNaN(n));
 
     if (chosen.length < problem.operands.length) {
+        QT.say("Devi trascinare tutti i numeri!")
         document.body.classList.add("error");
         incrementaNumeroErrori();
         messageBox.textContent = "Devi trascinare tutti i numeri 👀";
@@ -197,11 +200,18 @@ checkBtn.addEventListener("click", () => {
     if (userAnswer === problem.correct && calc === problem.correct) {
         document.body.classList.add("completed");
         incrementaLivelliCompletati();
+        QT.say("Bravo! La risposta è giusta! ")
         messageBox.textContent = "Bravo! Risposta corretta 🎉";
         messageBox.className = "message-success";
 
+        currentLevel++;
+        if(currentLevel < levels.length) {
+            QT.say("Bravo, hai terminato il livello!")
+        } else {
+            QT.say("Bravissimo, hai terminato tutti i livelli")
+        }
+
         setTimeout(() => {
-            currentProblem++;
             if (currentProblem < problems.length) {
                 loadProblem(currentProblem);
 
@@ -221,11 +231,13 @@ checkBtn.addEventListener("click", () => {
             }
         }, 1000);
     } else {
+        QT.say("Ricontrolla il risultato! ")
         incrementaNumeroErrori();
         document.body.classList.add("error");
+
         messageBox.textContent = "Ops! Risultato sbagliato 👀";
         messageBox.className = "message-warning";
     }
 });
 
-loadProblem(currentProblem);
+

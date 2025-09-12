@@ -1,5 +1,6 @@
-
-<!-- <html lang="it">
+<!DOCTYPE html>
+<!--
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <title>Operazioni matematiche</title>
@@ -62,9 +63,11 @@
 
 
 </body>
-</html> -->
+</html>
+-->
 
-<!DOCTYPE html>
+
+
 <html lang="it">
 <head>
     <meta charset="UTF-8" />
@@ -106,25 +109,15 @@
 <img src="../logo.png" class="logo" alt="Logo"/>
 
 <h1>Scegli il risultato esatto</h1>
-<!-- Messaggio livello in alto -->
 <div id="level-info"></div>
 
-<!-- Barra per parlare veloce -->
-<div class="sayfast-bar" aria-label="Barra parlato veloce">
-    <input id="sayfast-input" type="text" placeholder="Scrivi qui ciò che il robot deve dire..." />
-    <button id="sayfast-btn" disabled>Parla (veloce)</button>
-</div>
-
-<!-- Area di gioco -->
 <div id="game">
     <canvas id="canvas" width="400" height="200"></canvas>
     <div id="cards"></div>
 </div>
 
-<!-- Messaggi di errore o completamento -->
 <div id="message"></div>
 
-<!-- Bottone per interrompere -->
 <button id="quit-btn">Termina esercizio</button>
 
 <div id="victory-modal" class="modal-overlay">
@@ -145,73 +138,32 @@
     </div>
 </div>
 
-<!-- Librerie: prima eventemitter2, poi roslib -->
 <script src="../qtrobot_lib/eventemitter2.min.js"></script>
 <script src="../qtrobot_lib/roslib.min.js"></script>
 
-<!-- Il tuo modulo QT (dove hai definito QT.init/configure/say/sayFast) -->
 <script src="../qtrobot_lib/qtrobot_utils.js"></script>
 
-<!-- Script condivisi e di pagina -->
 <script src="../common_script.js"></script>
 <script src="script.js"></script>
 
 <script>
+
+
     (async () => {
-        const btn   = document.getElementById('sayfast-btn');
-        const input = document.getElementById('sayfast-input');
-
-        const enableBtn = () => { if (btn) btn.disabled = false; };
-
         try {
-            // 1) Connessione
-            await QT.init('ws://192.168.100.2:9091');
-
-            // 2) Abilita SUBITO il bottone
-            enableBtn();
-
-            // 3) Configurazione (prova inizialmente SOLO volume per evitare silenzi da lingua non valida)
-            await QT.configure({ volume: 65 /*, language: 'it-IT' */ });
-
-            // 4) Primo messaggio: usa il SERVICE (affidabile) ma NON aspettarlo
-            QT.sayFast('In questo esercizio dovrai scegliere la risposta di alcune operazioni!')
-                .catch(err => console.error('say iniziale errore:', err));
-
-
+            await QT.init('ws://192.168.100.2:9091');                // connessione
+            await QT.configure({ volume: 65, language: 'it-IT' });   // setup iniziale
+            await QT.say("Ciao");
         } catch (e) {
             console.error('Errore durante init/configure:', e);
-            enableBtn();
-        } finally {
-            setTimeout(enableBtn, 1000);
         }
-
-        // Click del bottone Parla (veloce)
-        btn.addEventListener('click', async () => {
-            const text = (input.value || '').trim();
-            if (!text) return;
-
-            try {
-                if (QT.sayFast) {
-                    QT.sayFast(text); // publish fire-and-forget
-                } else {
-                    await QT.say(text); // fallback
-                }
-                input.value = '';
-            } catch (err) {
-                console.error('Errore in say/sayFast:', err);
-            }
-        });
-
-        // Invio dalla textbox
-        input.addEventListener('keydown', (ev) => {
-            if (ev.key === 'Enter' && !btn.disabled) btn.click();
-        });
     })();
+
+
+
 </script>
 
 
 
 </body>
 </html>
-
-

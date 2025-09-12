@@ -15,7 +15,7 @@
     <!-- Schermata 1 -->
     <div class="screen active" id="screen1">
         <div class="problem-big">
-            Se hai 3 mele e ne prendi altre 2, quante mele hai in tutto?
+            Attendi che il robot sia pronto...
         </div>
         <button id="next-btn">Avanti</button>
     </div>
@@ -65,7 +65,27 @@
 </div>
 
 
+<script src="../qtrobot_lib/eventemitter2.min.js"></script>
+<script src="../qtrobot_lib/roslib.min.js"></script>
+
+<script src="../qtrobot_lib/qtrobot_utils.js"></script>
+
 <script src="../common_script.js"></script>
 <script src="script.js"></script>
+
+<script>
+
+    (async () => {
+        try {
+            await QT.init('ws://192.168.100.2:9091');                // connessione
+            await QT.configure({ volume: 65, language: 'it-IT' });   // setup iniziale
+
+            loadProblem(0);
+        } catch (e) {
+            console.error('Errore durante init/configure:', e);
+        }
+    })();
+
+</script>
 </body>
 </html>

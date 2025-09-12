@@ -120,14 +120,14 @@ function createCards(correct) {
 // Controlla la risposta
 function checkAnswer(selected, correct) {
     if (selected === correct) {
-        QT.sayFast("Bravo!");
+        QT.say("Bravo!");
         showMessage("Corretto! 🎉", "success");
         if (currentLevel < maxLevel) {
             currentLevel++;
             incrementaLivelliCompletati();
             setTimeout(startLevel, 3000);
         } else {
-            QT.sayFast("Hai completato tutti i livelli");
+            QT.say("Hai completato tutti i livelli");
             document.body.classList.add("completed");
             showMessage("Hai completato tutti i livelli! 🌟", "success");
             incrementaLivelliCompletati()
@@ -139,7 +139,7 @@ function checkAnswer(selected, correct) {
         }
     } else {
         showMessage("Ops, riprova! ❌", "warning");
-        QT.sayFast("La risposta non è giusta, riprova");
+        QT.say("La risposta non è giusta, riprova");
         incrementaNumeroErrori();
     }
 }
