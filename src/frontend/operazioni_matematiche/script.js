@@ -6,7 +6,7 @@ const messageBox = document.getElementById("message");
 
 let currentLevel = 1;
 const maxLevel = 10;
-let idEsercizio = 1;
+let idEsercizio = 5;
 
 function getIdEsercizio() {
     return idEsercizio;
