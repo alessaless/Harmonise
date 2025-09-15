@@ -101,7 +101,7 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
         promptEl.textContent = currentItem.parola_errata;
         promptEl.style.visibility="visible"; promptEl.style.color="#111";
         const inp = $("answer"); if (inp){ inp.value=""; inp.focus(); }
-        QT.say(`Correggi la parola: ${currentItem.parola_errata}`);
+        QT.say(`Correggi la parola: ${currentItem.parola_corretta}`);
     }
 
     function submit(){
@@ -118,7 +118,7 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
             setMessage(`Risposta corretta: ${currentItem.parola_corretta}`, "warning");
             QT.say("Non preoccuparti, vai benissimo lo stesso!");
         }
-        setTimeout(startRound, 700);
+        setTimeout(startRound, 5000);
     }
 
     function nextRound(){

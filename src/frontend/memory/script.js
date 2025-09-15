@@ -110,13 +110,29 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
     async function playSequence(){
         if(!currentItem) return;
         const view = $("sequence-view"); if(!view) return;
-        view.textContent="";
-        for(const tok of currentItem.sequenza){
-            view.textContent=String(tok);
-            QT.say(String(tok));
-            await wait(550);
+        view.textContent = "";
+
+        const PER_TOKEN_MS = 2000; // 2 secondi per parola
+
+        for (const tok of currentItem.sequenza){
+            view.textContent = String(tok);
+
+            try {
+                const t0 = Date.now();
+                await QT.say(String(tok));          // aspetta che QT finisca di dire la parola
+                const elapsed = Date.now() - t0;
+
+                // garantisci almeno 2s totali per parola (voce+pausa)
+                if (elapsed < PER_TOKEN_MS) {
+                    await wait(PER_TOKEN_MS - elapsed);
+                }
+            } catch (_) {
+                // Se la sintesi fallisce, comunque rispetta il tempo
+                await wait(PER_TOKEN_MS);
+            }
         }
-        view.textContent="Ricostruisci la sequenza";
+
+        view.textContent = "Ricostruisci la sequenza";
     }
 
     function renderChoices(){
@@ -171,7 +187,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
         }
 
         userSeq=[];
-        setTimeout(startRound, 900);
+        setTimeout(startRound, 5000);
     }
 
     async function startRound(){

@@ -94,7 +94,8 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
         const prompt = $("prompt");
         const choices = $("choices");
         if (!prompt || !choices || !currentItem) return;
-        prompt.textContent = currentItem.parola || currentItem.risposta;
+        prompt.textContent = "Ascolta e scegli la parola pronunciata";
+        prompt.setAttribute("data-target", String(currentItem.parola || currentItem.risposta));
         prompt.style.visibility="visible";
         prompt.style.color="#111";
         choices.innerHTML="";
@@ -119,7 +120,7 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
             setMessage(`Risposta corretta: ${currentItem.risposta}`, "warning");
             QT.say("Tutto bene! Ci sono io con te. Avanti col prossimo.");
         }
-        setTimeout(()=> nextRound(), 700);
+        setTimeout(()=> nextRound(), 5000);
     }
 
     function nextRound(){

@@ -179,7 +179,7 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
             setMessage(`Risposta corretta: ${currentItem.risposta}`, "warning");
             QT.say("Va benissimo, capita! Sono con te. Andiamo al prossimo.");
         }
-        setTimeout(nextRound, 700);
+        setTimeout(nextRound, 5000);
     }
 
     function nextRound(){

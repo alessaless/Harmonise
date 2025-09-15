@@ -4,6 +4,68 @@
     <meta charset="UTF-8">
     <title>Esercizio 2 — Identifica la parola</title>
     <link rel="stylesheet" href="../common_style.css">
+    <style id="local-exercise-overrides">
+        /* Scala generale più compatta */
+        html { font-size: clamp(16px, 1.9vw, 19px); }
+        body { line-height: 1.45; padding: 0 12px; }
+
+        /* Titolo e badge livello */
+        h1 { font-size: 1.8em; margin: 6px 0; text-align: center; letter-spacing: .2px; }
+        #level-info.badge { font-size: 1.05em; padding: 8px 14px; border-radius: 14px; }
+
+        /* Card contenuti */
+        .card { background: #a5d8ff; border-radius: 16px; padding: 16px;
+            width: min(900px, 96vw); margin: 8px 0; }
+        .card.big, #prompt, #sequence-view { font-size: 1.6em; text-align: center; letter-spacing: .3px; }
+
+        /* Griglia scelte */
+        .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            width: min(900px, 96vw); margin: 6px 0 2px; }
+
+        /* Pulsanti opzione */
+        .option {
+            appearance: none; width: 100%; padding: 12px 14px; border-radius: 14px; border: 0;
+            font-size: 1.15em; cursor: pointer;
+            background: linear-gradient(180deg, #fff, #f3f6ff);
+            box-shadow: 0 5px 14px rgba(0,0,0,.10), inset 0 0 0 1px rgba(80,90,140,.10);
+            transition: transform .08s ease-out, box-shadow .16s ease, background .16s ease;
+        }
+        .option:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.14); }
+        .option:active { transform: translateY(0); }
+        .option:focus-visible { outline: 2px solid #4dabf7; outline-offset: 2px; }
+
+        /* Riga input + bottone (Parola Corretta) */
+        .input-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; }
+        .input-row input#answer {
+            font-size: 1em; padding: 8px 10px; border-radius: 12px; border: 2px solid #d0ebff; outline: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,.06) inset; width: 100%;
+        }
+        .input-row input#answer:focus { border-color: #74c0fc; box-shadow: 0 0 0 3px rgba(116,192,252,.22); }
+
+        /* Bottoni azione */
+        .btn, #submit, #quit-btn, #play-again-btn, .modal-buttons button {
+            font-size: 1.1em; padding: 11px 16px; border-radius: 14px; border: 0; cursor: pointer;
+            box-shadow: 0 6px 14px rgba(0,0,0,.12); transition: transform .08s ease-out, filter .14s ease;
+        }
+        #submit, .btn { background: #51cf66; color: #fff; }
+        #submit:hover, .btn:hover { filter: brightness(.98); transform: translateY(-1px); }
+
+        /* Messaggi feedback */
+        #message { font-size: 1.15em; min-height: 40px; padding: 8px 12px; border-radius: 12px; width: min(900px, 96vw); }
+
+        /* Modali un po' più contenute */
+        .modal-content { max-width: 520px; width: 92%; }
+        .modal-content h2 { font-size: 1.7em; }
+        .modal-content p  { font-size: 1.1em; }
+
+        /* Touch */
+        button, input { touch-action: manipulation; }
+        @media (pointer: coarse) {
+            .option { padding: 14px 16px; }
+            #submit, #quit-btn { padding: 13px 18px; }
+        }
+    </style>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="logo.ico" sizes="any">
@@ -53,7 +115,7 @@
         try {
             await QT.init('ws://192.168.100.2:9091');                // connessione
             await QT.configure({ volume: 65, language: 'it-IT' });   // setup iniziale
-            await QT.say("Ciao");
+            await QT.say("");
         } catch (e) {
             console.error('Errore durante init/configure:', e);
         }
