@@ -45,7 +45,7 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
             if (this.complexities.length){
                 maxC = Math.max(...this.complexities);
                 minC = Math.min(...this.complexities);
-                avgC = Math.round(this.complexities.reduce((a,b)=>a+b,0)/this.complexities.length);
+                avgC = Math.round(this.complexities.reduce((a,b)=>a+b,0)/this.complessità?.length || this.complexities.length);
             }
             const punti = Math.min(30, Math.max(0, this.correct)); // 1 punto per corretto, cap 30
             return {
@@ -102,7 +102,7 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
         promptEl.textContent = currentItem.parola_errata;
         promptEl.style.visibility="visible"; promptEl.style.color="#111";
         const inp = $("answer"); if (inp){ inp.value=""; inp.focus(); }
-        try{ QT.say(`Correggi la parola: ${currentItem.parola_errata}`); }catch{}
+        QT.say(`Correggi la parola: ${currentItem.parola_errata}`); // <-- diretto
     }
 
     function submit(){
@@ -114,10 +114,10 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
 
         if (ok){
             setMessage("Perfetto! ✅", "success");
-            try{ QT.say("Grande! Ottimo lavoro!"); }catch{}
+            QT.say("Grande! Ottimo lavoro!"); // <-- diretto
         } else {
             setMessage(`Risposta corretta: ${currentItem.parola_corretta}`, "warning");
-            try{ QT.say("Tranquilla, va benissimo! Ora lo sai. Avanti così!"); }catch{}
+            QT.say("Non preoccuparti, vai benissimo lo stesso!"); // <-- diretto
         }
         setTimeout(startRound, 700);
     }

@@ -106,7 +106,7 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
             btn.addEventListener("click", ()=>submit(i));
             choices.appendChild(btn);
         });
-        try{ QT.say(String(currentItem.parola || currentItem.risposta)); }catch{}
+        QT.say(String(currentItem.parola || currentItem.risposta)); // <-- diretto
     }
 
     function submit(idx){
@@ -116,10 +116,10 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
 
         if (ok){
             setMessage("Ottimo! ✅", "success");
-            try{ QT.say("Brava! Grande risposta!"); }catch{}
+            QT.say("Ottimo! Grande risposta!"); // <-- diretto
         } else {
             setMessage(`Risposta corretta: ${currentItem.risposta}`, "warning");
-            try{ QT.say("Tutto bene! Ci sto io con te. Avanti col prossimo."); }catch{}
+            QT.say("Tutto bene! Ci sono io con te. Avanti col prossimo."); // <-- diretto
         }
         setTimeout(()=> nextRound(), 700);
     }

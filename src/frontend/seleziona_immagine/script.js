@@ -168,7 +168,7 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
             choices.appendChild(b);
         });
 
-        try{ QT.say(String(currentItem.testo)); }catch{}
+        QT.say(String(currentItem.testo)); // <-- diretto
     }
 
     function submit(sel){
@@ -179,10 +179,10 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
 
         if (ok){
             setMessage("Corretto! 🎉", "success");
-            try{ QT.say("Bravissima! Continuiamo così!"); }catch{}
+            QT.say("Fantastico! Continuiamo così!"); // <-- diretto
         } else {
             setMessage(`Risposta corretta: ${currentItem.risposta}`, "warning");
-            try{ QT.say("Va benissimo, capita! Sono con te. Andiamo al prossimo."); }catch{}
+            QT.say("Va benissimo, capita! Sono con te. Andiamo al prossimo."); // <-- diretto
         }
         setTimeout(nextRound, 700);
     }

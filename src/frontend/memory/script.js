@@ -116,7 +116,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
         view.textContent="";
         for(const tok of currentItem.sequenza){
             view.textContent=String(tok);
-            try{ await QT.say(String(tok)); }catch{}
+            QT.say(String(tok));
             await wait(550);
         }
         view.textContent="Ricostruisci la sequenza";
@@ -154,7 +154,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
 
         if (ok){
             setMessage("Bravo! ✅", "success");
-            try{ QT.say("Fantastico! Sei fortissima!"); }catch{}
+            QT.say("Fantastico! Sei forte!"); // <-- diretto
             roundInLevel++;
             if (roundInLevel >= ROUNDS_PER_LEVEL){
                 if (currentLevel < LEVELS.length-1){
@@ -164,7 +164,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
             }
         } else {
             setMessage(`Sequenza corretta: ${currentItem.sequenza.join(" · ")}`, "warning");
-            try{ QT.say("Nessun problema! Ci sto io a tifare per te. Andiamo avanti!"); }catch{}
+            QT.say("Nessun problema! Ci sto io a tifare per te. Andiamo avanti!"); // <-- diretto
             // su errore: passa comunque al prossimo item
             roundInLevel++;
             if (roundInLevel >= ROUNDS_PER_LEVEL){
