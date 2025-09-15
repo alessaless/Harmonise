@@ -103,6 +103,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
         localStorage.setItem(seenKey, JSON.stringify(Array.from(seen)));
         const sv=$("sequence-view"); if(sv){ sv.textContent="Ascolta e osserva la sequenza"; sv.style.visibility="visible"; sv.style.color="#111"; }
         const ans=$("answer-seq"); if(ans) ans.textContent="";
+        const wrap=$("answer-wrapper"); if(wrap) wrap.style.display="none";
         updateLevelBadge();
         return currentItem;
     }
@@ -156,9 +157,17 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
 
     function appendToken(tok){
         userSeq.push(tok);
+
+        // se è il primo token selezionato, mostra il box
+        if (userSeq.length === 1){
+            const wrap=$("answer-wrapper");
+            if (wrap) wrap.style.display = "block";
+        }
+
         const ans=$("answer-seq"); if(ans) ans.textContent=userSeq.join(" · ");
         if (userSeq.length === currentItem.sequenza.length) submit();
     }
+
 
     function submit(){
         const ok = JSON.stringify(userSeq) === JSON.stringify(currentItem.sequenza);

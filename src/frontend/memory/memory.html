@@ -56,21 +56,18 @@
             }
             .input-row input#answer:focus { border-color: #74c0fc; box-shadow: 0 0 0 3px rgba(116,192,252,.22); }
 
-            /* Bottoni azione */
-            .btn, #submit, #quit-btn, #play-again-btn, .modal-buttons button {
-                font-size: 1.1em; padding: 11px 16px; border-radius: 14px; border: 0; cursor: pointer;
-                box-shadow: 0 6px 14px rgba(0,0,0,.12); transition: transform .08s ease-out, filter .14s ease;
+
+            /* Mostra la sequenza solo dopo la prima scelta dell'utente */
+            #answer-wrapper {
+                display: none;              /* nascosto di default */
+                font-size: 1.25em;          /* leggermente più grande */
             }
-            #submit, .btn { background: #51cf66; color: #fff; }
-            #submit:hover, .btn:hover { filter: brightness(.98); transform: translateY(-1px); }
+            /* ingrandisco un filo il badge della sequenza */
+            #answer-wrapper .badge {
+                font-size: 1.05em;
+                padding: 0.35em 0.6em;
+            }
 
-            /* Messaggi feedback */
-            #message { font-size: 1.15em; min-height: 40px; padding: 8px 12px; border-radius: 12px; width: min(900px, 96vw); }
-
-            /* Modali un po' più contenute */
-            .modal-content { max-width: 520px; width: 92%; }
-            .modal-content h2 { font-size: 1.7em; }
-            .modal-content p  { font-size: 1.1em; }
 
             /* Touch */
             button, input { touch-action: manipulation; }
@@ -99,7 +96,10 @@
 
 <div id="sequence-view" class="card big">Ascolta e osserva la sequenza</div>
 <div id="choices" class="grid"></div>
-<div class="card"><strong>La tua sequenza:</strong> <span id="answer-seq" class="badge"></span></div>
+<div id="answer-wrapper" class="card">
+    <strong>La tua sequenza:</strong> <span id="answer-seq" class="badge"></span>
+</div>
+
 
 <div id="message"></div>
 <button id="quit-btn" type="button">Termina esercizio</button>
