@@ -113,8 +113,15 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
         const scelto = currentItem.scelte[idx];
         const ok = normalize(scelto) === normalize(currentItem.risposta);
         metrics.endItem({ correct: ok, topic: currentItem.topic || null, complexity: currentLevel+1 });
-        setMessage(ok? "Ottimo! ✅" : `Corretto: ${currentItem.risposta}`, ok? "success":"warning");
-        if (ok) nextRound();
+
+        if (ok){
+            setMessage("Ottimo! ✅", "success");
+            try{ QT.say("Brava! Grande risposta!"); }catch{}
+        } else {
+            setMessage(`Risposta corretta: ${currentItem.risposta}`, "warning");
+            try{ QT.say("Tutto bene! Ci sto io con te. Avanti col prossimo."); }catch{}
+        }
+        setTimeout(()=> nextRound(), 700);
     }
 
     function nextRound(){
@@ -167,7 +174,6 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
             console.warn("Salvataggio esecuzione fallito:", e);
         }finally{
             try{
-                // ✅ redirect assoluto a /src/frontend/elenco_esercizi.html senza funzione di supporto
                 var marker = "/src/frontend/";
                 var origin = window.location.origin;
                 var pathname = window.location.pathname;
@@ -187,7 +193,6 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
         const qn=$("quit-no-btn"); if(qn) qn.addEventListener("click", e=>{ e.preventDefault(); hideQuit(); });
         const pa=$("play-again-btn"); if(pa) pa.addEventListener("click", e=>{ e.preventDefault(); hideVictory(); finish(true); });
     }
-
 
     /* ===== Livello iniziale via ML ===== */
     async function fetchHistoryForBambino(){

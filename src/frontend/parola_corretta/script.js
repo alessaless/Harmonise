@@ -111,8 +111,15 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
         const userAns = normalize(inp ? inp.value : "");
         const ok = userAns === normalize(currentItem.parola_corretta);
         metrics.endItem({ correct: ok, topic: currentItem.topic || null, complexity: currentLevel+1 });
-        setMessage(ok ? "Perfetto! ✅" : "Quasi! Riprova. ❌", ok ? "success" : "warning");
-        if (ok) nextRound();
+
+        if (ok){
+            setMessage("Perfetto! ✅", "success");
+            try{ QT.say("Grande! Ottimo lavoro!"); }catch{}
+        } else {
+            setMessage(`Risposta corretta: ${currentItem.parola_corretta}`, "warning");
+            try{ QT.say("Tranquilla, va benissimo! Ora lo sai. Avanti così!"); }catch{}
+        }
+        setTimeout(startRound, 700);
     }
 
     function nextRound(){
@@ -164,7 +171,6 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
             console.warn("Salvataggio esecuzione fallito:", e);
         }finally{
             try{
-                // redirect assoluto a /src/frontend/elenco_esercizi.html (inline)
                 var marker="/src/frontend/";
                 var origin=window.location.origin;
                 var pathname=window.location.pathname;
@@ -185,7 +191,6 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
         const qn=$("quit-no-btn"); if(qn) qn.addEventListener("click", e=>{ e.preventDefault(); hideQuit(); });
         const pa=$("play-again-btn"); if(pa) pa.addEventListener("click", e=>{ e.preventDefault(); hideVictory(); finish(true); });
     }
-
 
     /* ===== Livello iniziale via ML ===== */
     async function fetchHistoryForBambino(){

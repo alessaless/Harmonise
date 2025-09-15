@@ -127,7 +127,7 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
     function pickItem(){
         const key = LEVELS[currentLevel];
         const bag = dataset[key] || [];
-        const available = bag.map((_,i)=>i).filter(i => !seen.has(`${currentLevel}:${i}`)); // (fix: rimosso typo)
+        const available = bag.map((_,i)=>i).filter(i => !seen.has(`${currentLevel}:${i}`));
 
         if (!available.length){
             if (currentLevel < LEVELS.length-1){
@@ -176,8 +176,15 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
         const topic = currentItem.topic || null;
         const complexity = currentLevel + 1;
         metrics.endItem({ correct: ok, topic, complexity });
-        setMessage(ok ? "Corretto! 🎉" : "Ops, riproviamo. ❌", ok ? "success" : "warning");
-        if (ok) nextRound();
+
+        if (ok){
+            setMessage("Corretto! 🎉", "success");
+            try{ QT.say("Bravissima! Continuiamo così!"); }catch{}
+        } else {
+            setMessage(`Risposta corretta: ${currentItem.risposta}`, "warning");
+            try{ QT.say("Va benissimo, capita! Sono con te. Andiamo al prossimo."); }catch{}
+        }
+        setTimeout(nextRound, 700);
     }
 
     function nextRound(){
@@ -262,6 +269,25 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
         const pa = $("play-again-btn"); if (pa) pa.addEventListener("click", e=>{ e.preventDefault(); hideVictory(); finish(true); });
     }
 
+    (async function main(){
+        try{
+            metrics.startSession();
+            wireUI();
+            updateLevelBadge();
+            await loadData();
+            currentLevel = await decideStartingLevel(ID_ESERCIZIO);
+            updateLevelBadge();
+
+            const bid = getBambinoId();
+            seenKey = `comprensione1_seen_${bid || "anon"}`;
+            seen = new Set(JSON.parse(localStorage.getItem(seenKey) || "[]"));
+
+            startRound();
+        }catch(e){
+            console.error(e);
+            setMessage("Errore di inizializzazione. Controlla la console.", "warning");
+        }
+    })();
 
     /* ===== Livello iniziale via ML ===== */
     async function fetchHistoryForBambino(){
@@ -297,24 +323,4 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
             return 0;
         }
     }
-
-    (async function main(){
-        try{
-            metrics.startSession();
-            wireUI();
-            updateLevelBadge();
-            await loadData();
-            currentLevel = await decideStartingLevel(ID_ESERCIZIO);
-            updateLevelBadge();
-
-            const bid = getBambinoId();
-            seenKey = `comprensione1_seen_${bid || "anon"}`;
-            seen = new Set(JSON.parse(localStorage.getItem(seenKey) || "[]"));
-
-            startRound();
-        }catch(e){
-            console.error(e);
-            setMessage("Errore di inizializzazione. Controlla la console.", "warning");
-        }
-    })();
 }

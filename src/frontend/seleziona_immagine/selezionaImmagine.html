@@ -44,25 +44,25 @@
     </div>
 </div>
 
-<!-- QTrobot -->
-<script src="../qtrobot_lib/roslib.min.js"></script>
 <script src="../qtrobot_lib/eventemitter2.min.js"></script>
+<script src="../qtrobot_lib/roslib.min.js"></script>
 <script src="../qtrobot_lib/qtrobot_utils.js"></script>
-
-<script src="../common_script.js"></script>
 <script src="script.js"></script>
 
 <script>
+
     (async () => {
         try {
-            await QT.init('ws://192.168.100.2:9091');
-            await QT.configure({ volume: 65, language: 'it-IT' });
-            await QT.say("In questo esercizio ascolta la descrizione e scegli l'opzione corretta.");
+            await QT.init('ws://192.168.100.2:9091');                // connessione
+            await QT.configure({ volume: 65, language: 'it-IT' });   // setup iniziale
+            await QT.say("Ciao");
         } catch (e) {
-            console.warn('QT non disponibile:', e);
+            console.error('Errore durante init/configure:', e);
         }
     })();
-</script>
 
+
+
+</script>
 </body>
 </html>

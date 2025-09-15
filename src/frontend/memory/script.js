@@ -28,6 +28,15 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
     // solo data (YYYY-MM-DD)
     const formatDateSQL=(d)=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
 
+    // shuffle per mescolare i pulsanti e NON mantenere l'ordine corretto
+    function shuffle(arr){
+        for (let i=arr.length-1;i>0;i--){
+            const j=Math.floor(Math.random()*(i+1));
+            [arr[i],arr[j]]=[arr[j],arr[i]];
+        }
+        return arr;
+    }
+
     const metrics = {
         sessionStart:null, itemStart:null,
         total:0, correct:0, errors:0, durations:[],
@@ -116,7 +125,15 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
     function renderChoices(){
         const cont=$("choices"); if(!cont || !currentItem) return;
         cont.innerHTML="";
-        const tokens=[...new Set(currentItem.sequenza)];
+        const original=[...new Set(currentItem.sequenza)];
+        let tokens=[...original];
+
+        // mescola e assicurati che NON sia l'ordine originale
+        shuffle(tokens);
+        if (tokens.length>1 && tokens.every((t,i)=>t===original[i])){
+            tokens.reverse();
+        }
+
         tokens.forEach(tok=>{
             const btn=document.createElement("button");
             btn.type="button"; btn.className="option"; btn.textContent=String(tok);
@@ -134,9 +151,10 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
     function submit(){
         const ok = JSON.stringify(userSeq) === JSON.stringify(currentItem.sequenza);
         metrics.endItem({ correct: ok, topic: currentItem.tipo || null, complexity: currentLevel+1 });
-        setMessage(ok ? "Bravo! ✅" : "Riproviamo! ❌", ok ? "success" : "warning");
-        userSeq=[];
+
         if (ok){
+            setMessage("Bravo! ✅", "success");
+            try{ QT.say("Fantastico! Sei fortissima!"); }catch{}
             roundInLevel++;
             if (roundInLevel >= ROUNDS_PER_LEVEL){
                 if (currentLevel < LEVELS.length-1){
@@ -144,8 +162,21 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
                 }
                 roundInLevel=0;
             }
-            setTimeout(startRound, 700);
+        } else {
+            setMessage(`Sequenza corretta: ${currentItem.sequenza.join(" · ")}`, "warning");
+            try{ QT.say("Nessun problema! Ci sto io a tifare per te. Andiamo avanti!"); }catch{}
+            // su errore: passa comunque al prossimo item
+            roundInLevel++;
+            if (roundInLevel >= ROUNDS_PER_LEVEL){
+                if (currentLevel < LEVELS.length-1){
+                    currentLevel++; metrics.maxLevelReached=Math.max(metrics.maxLevelReached,currentLevel);
+                }
+                roundInLevel=0;
+            }
         }
+
+        userSeq=[];
+        setTimeout(startRound, 900);
     }
 
     async function startRound(){
@@ -207,7 +238,6 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
         const qn=$("quit-no-btn"); if(qn) qn.addEventListener("click", e=>{ e.preventDefault(); hideQuit(); });
         const pa=$("play-again-btn"); if(pa) pa.addEventListener("click", e=>{ e.preventdefault(); hideVictory(); finish(true); });
     }
-
 
     /* ===== Livello iniziale via ML ===== */
     async function fetchHistoryForBambino(){
