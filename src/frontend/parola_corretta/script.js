@@ -10,7 +10,6 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
     const DATA_URL = new URL('esercizio3_ortografia.json', __BASE__).toString();
     const LEVELS = ["facile","medio","difficile"];
     const ROUNDS_PER_LEVEL = 5;
-    const QT = window.QT || { say: async () => {} };
 
     let dataset=null, currentLevel=0, roundInLevel=0, currentItem=null;
     let seenKey="", seen=new Set();
@@ -24,7 +23,6 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
     const hideQuit=()=>{ const m=$("quit-modal"); if(m) m.style.display="none"; };
     const normalize=(s)=>String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
     const pad = (n)=>String(n).padStart(2,"0");
-    // solo data (YYYY-MM-DD)
     const formatDateSQL = (d)=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
 
     const metrics = {
@@ -45,7 +43,8 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
             if (this.complexities.length){
                 maxC = Math.max(...this.complexities);
                 minC = Math.min(...this.complexities);
-                avgC = Math.round(this.complexities.reduce((a,b)=>a+b,0)/this.complessità?.length || this.complexities.length);
+                // fix: uso sempre complexities.length come denominatore
+                avgC = Math.round(this.complexities.reduce((a,b)=>a+b,0) / this.complexities.length);
             }
             const punti = Math.min(30, Math.max(0, this.correct)); // 1 punto per corretto, cap 30
             return {
@@ -102,7 +101,7 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
         promptEl.textContent = currentItem.parola_errata;
         promptEl.style.visibility="visible"; promptEl.style.color="#111";
         const inp = $("answer"); if (inp){ inp.value=""; inp.focus(); }
-        QT.say(`Correggi la parola: ${currentItem.parola_errata}`); // <-- diretto
+        QT.say(`Correggi la parola: ${currentItem.parola_errata}`);
     }
 
     function submit(){
@@ -114,10 +113,10 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
 
         if (ok){
             setMessage("Perfetto! ✅", "success");
-            QT.say("Grande! Ottimo lavoro!"); // <-- diretto
+            QT.say("Grande! Ottimo lavoro!");
         } else {
             setMessage(`Risposta corretta: ${currentItem.parola_corretta}`, "warning");
-            QT.say("Non preoccuparti, vai benissimo lo stesso!"); // <-- diretto
+            QT.say("Non preoccuparti, vai benissimo lo stesso!");
         }
         setTimeout(startRound, 700);
     }
@@ -192,7 +191,6 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
         const pa=$("play-again-btn"); if(pa) pa.addEventListener("click", e=>{ e.preventDefault(); hideVictory(); finish(true); });
     }
 
-    /* ===== Livello iniziale via ML ===== */
     async function fetchHistoryForBambino(){
         const bambino = getBambinoId();
         const token = getToken();
@@ -227,7 +225,7 @@ if (window.__ORTOGRAFIA3_BOOTSTRAPPED__) {
         }
     }
 
-    (async function main(){
+    ;(async function main(){
         try{
             metrics.startSession(); updateLevelBadge(); wireUI();
             await loadData();

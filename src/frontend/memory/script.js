@@ -10,7 +10,6 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
     const DATA_URL = new URL('esercizio4_memoria.json', __BASE__).toString();
     const LEVELS = ["facile","medio","difficile"];
     const ROUNDS_PER_LEVEL = 5;
-    const QT = window.QT || { say: async () => {} };
 
     let data=null, currentLevel=0, roundInLevel=0, currentItem=null, userSeq=[];
     let seenKey="", seen=new Set();
@@ -25,10 +24,8 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
     const wait=(ms)=>new Promise(r=>setTimeout(r,ms));
     const normalize=(s)=>String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
     const pad=(n)=>String(n).padStart(2,"0");
-    // solo data (YYYY-MM-DD)
     const formatDateSQL=(d)=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
 
-    // shuffle per mescolare i pulsanti e NON mantenere l'ordine corretto
     function shuffle(arr){
         for (let i=arr.length-1;i>0;i--){
             const j=Math.floor(Math.random()*(i+1));
@@ -128,7 +125,6 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
         const original=[...new Set(currentItem.sequenza)];
         let tokens=[...original];
 
-        // mescola e assicurati che NON sia l'ordine originale
         shuffle(tokens);
         if (tokens.length>1 && tokens.every((t,i)=>t===original[i])){
             tokens.reverse();
@@ -154,7 +150,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
 
         if (ok){
             setMessage("Bravo! ✅", "success");
-            QT.say("Fantastico! Sei forte!"); // <-- diretto
+            QT.say("Fantastico! Sei forte!");
             roundInLevel++;
             if (roundInLevel >= ROUNDS_PER_LEVEL){
                 if (currentLevel < LEVELS.length-1){
@@ -164,8 +160,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
             }
         } else {
             setMessage(`Sequenza corretta: ${currentItem.sequenza.join(" · ")}`, "warning");
-            QT.say("Nessun problema! Ci sto io a tifare per te. Andiamo avanti!"); // <-- diretto
-            // su errore: passa comunque al prossimo item
+            QT.say("Nessun problema! Ci sto io a tifare per te. Andiamo avanti!");
             roundInLevel++;
             if (roundInLevel >= ROUNDS_PER_LEVEL){
                 if (currentLevel < LEVELS.length-1){
@@ -219,7 +214,6 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
             console.warn("Salvataggio esecuzione fallito:", e);
         }finally{
             try{
-                // redirect assoluto a /src/frontend/elenco_esercizi.html (inline)
                 var marker="/src/frontend/";
                 var origin=window.location.origin;
                 var pathname=window.location.pathname;
@@ -236,7 +230,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
         const qb=$("quit-btn"); if(qb) qb.addEventListener("click", e=>{ e.preventDefault(); showQuit(); });
         const qy=$("quit-yes-btn"); if(qy) qy.addEventListener("click", e=>{ e.preventDefault(); hideQuit(); finish(false); });
         const qn=$("quit-no-btn"); if(qn) qn.addEventListener("click", e=>{ e.preventDefault(); hideQuit(); });
-        const pa=$("play-again-btn"); if(pa) pa.addEventListener("click", e=>{ e.preventdefault(); hideVictory(); finish(true); });
+        const pa=$("play-again-btn"); if(pa) pa.addEventListener("click", e=>{ e.preventDefault(); hideVictory(); finish(true); });
     }
 
     /* ===== Livello iniziale via ML ===== */
@@ -274,7 +268,7 @@ if (window.__MEMORY4_BOOTSTRAPPED__) {
         }
     }
 
-    (async function main(){
+    ;(async function main(){
         try{
             metrics.startSession(); wireUI(); updateLevelBadge(); await loadData();
             currentLevel = await decideStartingLevel(ID_ESERCIZIO);

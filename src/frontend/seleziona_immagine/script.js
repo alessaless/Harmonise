@@ -14,8 +14,6 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
     const LEVELS = ["facile", "medio", "difficile"];
     const ROUNDS_PER_LEVEL = 5;
 
-    const QT = window.QT || { say: async () => {} };
-
     /* ===== Stato ===== */
     let dataset = null;
     let currentLevel = 0;
@@ -45,19 +43,16 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
     const shuffle = (a) => a.slice().sort(() => Math.random() - 0.5);
     const normalize = (s) => String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
     const pad = (n) => String(n).padStart(2, "0");
-    // solo data (YYYY-MM-DD)
     const formatDateSQL = (d) => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
 
-    // ➜ Risolutore per redirect alla root /src/frontend/
     function resolveFrontendURL(filename){
         const marker = "/src/frontend/";
         const { origin, pathname } = window.location;
         const idx = pathname.indexOf(marker);
         if (idx !== -1) {
-            const base = origin + pathname.slice(0, idx + marker.length); // include trailing slash
+            const base = origin + pathname.slice(0, idx + marker.length);
             return new URL(filename, base).href;
         }
-        // Fallback: un livello sopra
         return new URL(`../${filename}`, window.location.href).href;
     }
 
@@ -68,9 +63,9 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
         total: 0,
         correct: 0,
         errors: 0,
-        durations: [],         // ms per item
-        topics: new Set(),     // topic dal JSON
-        complexities: [],      // 1..3 (livello corrente)
+        durations: [],
+        topics: new Set(),
+        complexities: [],
         maxLevelReached: 0,
 
         startSession(){ this.sessionStart = Date.now(); },
@@ -96,7 +91,7 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
                 avgC = Math.round(this.complexities.reduce((a,b)=>a+b,0)/this.complexities.length);
             }
 
-            const punti = Math.min(30, Math.max(0, this.correct)); // 1 punto per corretto, max 30
+            const punti = Math.min(30, Math.max(0, this.correct));
 
             return {
                 bambino: getBambinoId(),
@@ -168,7 +163,7 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
             choices.appendChild(b);
         });
 
-        QT.say(String(currentItem.testo)); // <-- diretto
+        QT.say(String(currentItem.testo));
     }
 
     function submit(sel){
@@ -179,10 +174,10 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
 
         if (ok){
             setMessage("Corretto! 🎉", "success");
-            QT.say("Fantastico! Continuiamo così!"); // <-- diretto
+            QT.say("Fantastico! Continuiamo così!");
         } else {
             setMessage(`Risposta corretta: ${currentItem.risposta}`, "warning");
-            QT.say("Va benissimo, capita! Sono con te. Andiamo al prossimo."); // <-- diretto
+            QT.say("Va benissimo, capita! Sono con te. Andiamo al prossimo.");
         }
         setTimeout(nextRound, 700);
     }
@@ -261,7 +256,6 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
         }
     }
 
-    /* ===== Wiring & start ===== */
     function wireUI(){
         const qb = $("quit-btn"); if (qb) qb.addEventListener("click", e=>{ e.preventDefault(); showQuit(); });
         const qy = $("quit-yes-btn"); if (qy) qy.addEventListener("click", e=>{ e.preventDefault(); hideQuit(); finish(false); });
@@ -269,7 +263,7 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
         const pa = $("play-again-btn"); if (pa) pa.addEventListener("click", e=>{ e.preventDefault(); hideVictory(); finish(true); });
     }
 
-    (async function main(){
+    ;(async function main(){
         try{
             metrics.startSession();
             wireUI();

@@ -10,7 +10,6 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
     const DATA_URL = new URL("esercizio2_identificazione.json", __BASE__).toString();
     const LEVELS = ["facile","medio","difficile"];
     const ROUNDS_PER_LEVEL = 5;
-    const QT = window.QT || { say: async () => {} };
 
     let dataset = null, currentLevel = 0, roundInLevel = 0, currentItem = null;
     let seenKey = "", seen = new Set();
@@ -23,7 +22,6 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
     const showQuit   =()=>{ const m=$("quit-modal");    if(m) m.style.display="flex"; };
     const hideQuit   =()=>{ const m=$("quit-modal");    if(m) m.style.display="none"; };
     const pad = (n)=>String(n).padStart(2,"0");
-    // >>> solo data (YYYY-MM-DD)
     const formatDateSQL = (d)=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
     const normalize = (s)=>String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
 
@@ -47,14 +45,14 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
                 minC = Math.min(...this.complexities);
                 avgC = Math.round(this.complexities.reduce((a,b)=>a+b,0)/this.complexities.length);
             }
-            const punti = Math.min(30, Math.max(0, this.correct)); // 1 punto per corretto, cap 30
+            const punti = Math.min(30, Math.max(0, this.correct));
 
             return {
                 bambino: getBambinoId(),
                 idEsercizio: ID_ESERCIZIO,
                 numeroErrori: this.errors,
                 terminato: terminated ? "Y" : "N",
-                dataEsecuzione: formatDateSQL(new Date()), // <<< solo data
+                dataEsecuzione: formatDateSQL(new Date()),
                 livelliCompletati: Math.min(LEVELS.length, this.maxLevelReached + 1),
                 averagedTimespent: avgSec,
                 totalNumProblems: this.total,
@@ -106,7 +104,7 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
             btn.addEventListener("click", ()=>submit(i));
             choices.appendChild(btn);
         });
-        QT.say(String(currentItem.parola || currentItem.risposta)); // <-- diretto
+        QT.say(String(currentItem.parola || currentItem.risposta));
     }
 
     function submit(idx){
@@ -116,10 +114,10 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
 
         if (ok){
             setMessage("Ottimo! ✅", "success");
-            QT.say("Ottimo! Grande risposta!"); // <-- diretto
+            QT.say("Ottimo! Grande risposta!");
         } else {
             setMessage(`Risposta corretta: ${currentItem.risposta}`, "warning");
-            QT.say("Tutto bene! Ci sono io con te. Avanti col prossimo."); // <-- diretto
+            QT.say("Tutto bene! Ci sono io con te. Avanti col prossimo.");
         }
         setTimeout(()=> nextRound(), 700);
     }
@@ -229,7 +227,7 @@ if (window.__IDENT2_BOOTSTRAPPED__) {
         }
     }
 
-    (async function main(){
+    ;(async function main(){
         try{
             metrics.startSession(); wireUI(); updateLevelBadge(); await loadData();
             currentLevel = await decideStartingLevel(ID_ESERCIZIO);
