@@ -11,7 +11,7 @@ let isDrawing = false;
 let level = 0;
 let dots = [];
 
-let idEsercizio = 4;
+let idEsercizio = 8;
 
 function getIdEsercizio() {
     return idEsercizio;

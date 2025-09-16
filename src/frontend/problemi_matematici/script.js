@@ -1,4 +1,4 @@
-let idEsercizio = 3;
+let idEsercizio = 7;
 
 function getIdEsercizio() {
     return idEsercizio;
