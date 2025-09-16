@@ -263,7 +263,7 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
         const pa = $("play-again-btn"); if (pa) pa.addEventListener("click", e=>{ e.preventDefault(); hideVictory(); finish(true); });
     }
 
-    ;(async function main(){
+;(async function main(){
         try{
             metrics.startSession();
             wireUI();
@@ -283,38 +283,38 @@ if (window.__COMPRENSIONE1_BOOTSTRAPPED__) {
         }
     })();
 
-    /* ===== Livello iniziale via ML ===== */
-    async function fetchHistoryForBambino(){
-        const bambino = getBambinoId();
-        const token = getToken();
-        if (!bambino) throw new Error("Bambino non determinato");
-        if (!token) throw new Error("Token mancante in localStorage");
-        const url = `http://localhost:8080/execution/advanced/byBambino/${bambino}`;
-        const res = await fetch(url, { headers: { "Authorization": `Bearer ${token}` }});
-        if (!res.ok) throw new Error(`GET history HTTP ${res.status}`);
-        return res.json();
-    }
-    async function decideStartingLevel(ID_ESERCIZIO){
-        try{
-            const history = await fetchHistoryForBambino();
-            if (!Array.isArray(history) || history.length === 0){
-                return 0; // nessuna esecuzione -> facile
-            }
-            const resp = await fetch("http://127.0.0.1:8000/predict-level-from-history",{
-                method:"POST",
-                headers:{ "Content-Type":"application/json" },
-                body: JSON.stringify({ idEsercizio: ID_ESERCIZIO, history })
-            });
-            if(!resp.ok) throw new Error(`predict HTTP ${resp.status}`);
-            const out = await resp.json();
-            const suggested = parseInt(out.level, 10); // 1..3
-            if (Number.isFinite(suggested)){
-                return Math.max(0, Math.min(2, suggested - 1)); // 0..2
-            }
-            return 0;
-        }catch(e){
-            console.warn("[level-picker] fallback a livello facile:", e);
-            return 0;
+/* ===== Livello iniziale via ML ===== */
+async function fetchHistoryForBambino(){
+    const bambino = getBambinoId();
+    const token = getToken();
+    if (!bambino) throw new Error("Bambino non determinato");
+    if (!token) throw new Error("Token mancante in localStorage");
+    const url = `http://localhost:8080/execution/advanced/byBambino/${bambino}`;
+    const res = await fetch(url, { headers: { "Authorization": `Bearer ${token}` }});
+    if (!res.ok) throw new Error(`GET history HTTP ${res.status}`);
+    return res.json();
+}
+async function decideStartingLevel(ID_ESERCIZIO){
+    try{
+        const history = await fetchHistoryForBambino();
+        if (!Array.isArray(history) || history.length === 0){
+            return 0; // nessuna esecuzione -> facile
         }
+        const resp = await fetch("http://127.0.0.1:8000/predict-level-from-history",{
+            method:"POST",
+            headers:{ "Content-Type":"application/json" },
+            body: JSON.stringify({ idEsercizio: ID_ESERCIZIO, history })
+        });
+        if(!resp.ok) throw new Error(`predict HTTP ${resp.status}`);
+        const out = await resp.json();
+        const suggested = parseInt(out.level, 10); // 1..3
+        if (Number.isFinite(suggested)){
+            return Math.max(0, Math.min(2, suggested - 1)); // 0..2
+        }
+        return 0;
+    }catch(e){
+        console.warn("[level-picker] fallback a livello facile:", e);
+        return 0;
     }
+}
 }

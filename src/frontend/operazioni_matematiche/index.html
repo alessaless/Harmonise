@@ -153,7 +153,7 @@
         try {
             await QT.init('ws://192.168.100.2:9091');                // connessione
             await QT.configure({ volume: 65, language: 'it-IT' });   // setup iniziale
-            await QT.say("Ciao");
+            await QT.say("Ciao! In questo esercizio dovrai scegliere il risultato delle operazioni che vedi sullo schermo");
         } catch (e) {
             console.error('Errore durante init/configure:', e);
         }

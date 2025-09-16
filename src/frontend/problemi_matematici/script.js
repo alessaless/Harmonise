@@ -5,12 +5,7 @@ function getIdEsercizio() {
 }
 
 const problems = [
-    {
-        text: "In una scatola ci sono 15 mele, ne mangio 4 e ne regalo 3 ad un amico, insieme a 2 banane. Quante mele mi restano?",
-        correct: 8,
-        operands: [15, 4, 3],
-        operator: "-"
-    }/*,
+    // --- Addizioni ---
     {
         text: "Avevo 6 mele, compro altre 2 mele e 5 patate. Quante mele ho adesso?",
         correct: 8,
@@ -23,31 +18,50 @@ const problems = [
         operands: [4, 3],
         operator: "+"
     },
+
+    // --- Sottrazioni ---
     {
-        text: "Luca aveva 9 palline, ne regala 4 e riceve 2 fumetti. Quante palline gli rimangono?",
-        correct: 5,
-        operands: [9, 4],
-        operator: "-"
-    },
-    {
-        text: "Sara ha 12 penne, ne presta 5 e compra 3 quaderni. Quante penne ha adesso?",
-        correct: 7,
-        operands: [12, 5],
-        operator: "-"
-    },
-    {
-        text: "In un parco ci sono 5 bambini, arrivano altri 3 e 2 adulti. Quanti bambini ci sono in tutto?",
+        text: "In una scatola ci sono 15 mele, ne mangio 4 e ne regalo 3 ad un amico, insieme a 2 banane. Quante mele mi restano?",
         correct: 8,
-        operands: [5, 3],
-        operator: "+"
+        operands: [15, 4, 3],
+        operator: "-"
     },
     {
-        text: "Avevo 10 euro. Compro una matita da 2 euro, un quaderno da 3 euro e un panino da 5 euro. Quanti euro mi restano?",
-        correct: 0,
-        operands: [10, 2, 3, 5], // inteso come 10 - (2+3+5)
+        text: "Ho 20 caramelle, ne mangio 5 e ne regalo altre 7. Quante caramelle mi restano?",
+        correct: 8,
+        operands: [20, 5, 7],
         operator: "-"
-    }*/
+    },
+
+    // --- Moltiplicazioni ---
+    {
+        text: "Luca ha comprato 3 caramelle. Ogni caramella costa 2 euro. Quanto ha speso Luca?",
+        correct: 6,
+        operands: [2, 3],
+        operator: "*"
+    },
+    {
+        text: "Ogni scatola contiene 4 biscotti. Se compro 5 scatole, quanti biscotti ho in totale?",
+        correct: 20,
+        operands: [4, 5],
+        operator: "*"
+    },
+
+    // --- Divisioni ---
+    {
+        text: "Sara ha 12 penne e le distribuisce ai suoi 4 amici. Quante penne ha ciascun amico?",
+        correct: 3,
+        operands: [12, 4],
+        operator: "/"
+    },
+    {
+        text: "Un pasticcere ha 18 torte e vuole metterle in scatole da 6. Quante scatole riuscirà a riempire?",
+        correct: 3,
+        operands: [18, 6],
+        operator: "/"
+    }
 ];
+
 
 
 const screen1 = document.getElementById("screen1");
@@ -200,12 +214,11 @@ checkBtn.addEventListener("click", () => {
     if (userAnswer === problem.correct && calc === problem.correct) {
         document.body.classList.add("completed");
         incrementaLivelliCompletati();
-        QT.say("Bravo! La risposta è giusta! ")
         messageBox.textContent = "Bravo! Risposta corretta 🎉";
         messageBox.className = "message-success";
 
-        currentLevel++;
-        if(currentLevel < levels.length) {
+        currentProblem++;
+        if(currentProblem < problems.length) {
             QT.say("Bravo, hai terminato il livello!")
         } else {
             QT.say("Bravissimo, hai terminato tutti i livelli")
@@ -229,7 +242,7 @@ checkBtn.addEventListener("click", () => {
                 }, 500);
 
             }
-        }, 1000);
+        }, 3000);
     } else {
         QT.say("Ricontrolla il risultato! ")
         incrementaNumeroErrori();

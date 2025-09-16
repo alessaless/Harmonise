@@ -16,7 +16,44 @@ const levels = [
             "Metti la mela sul naso",
             "Gioca a calcio"
         ]
+    },
+    {
+        "title": "Livello 2: Bere un bicchiere d’acqua",
+        "correctOrder": [
+            "Prendi il bicchiere",
+            "Riempilo d’acqua",
+            "Bevi l’acqua"
+        ],
+        "distractors": [
+            "Metti il bicchiere in tasca",
+            "Versa l’acqua sul pavimento"
+        ]
+    },
+    {
+        "title": "Livello 3: Fare un disegno",
+        "correctOrder": [
+            "Prendi un foglio",
+            "Prendi una matita",
+            "Disegna sul foglio"
+        ],
+        "distractors": [
+            "Mangia la matita",
+            "Metti il foglio in testa"
+        ]
+    },
+    {
+        "title": "Livello 4: Andare a dormire",
+        "correctOrder": [
+            "Metti il pigiama",
+            "Vai a letto",
+            "Chiudi gli occhi"
+        ],
+        "distractors": [
+            "Indossa le scarpe",
+            "Accendi la musica forte"
+        ]
     }
+
     /*,
     {
         "title": "Livello 2: Mettersi il cappotto",
@@ -31,30 +68,8 @@ const levels = [
             "Lancia il cappotto"
         ]
     },
-    {
-        "title": "Livello 3: Bere un bicchiere d’acqua",
-        "correctOrder": [
-            "Prendi il bicchiere",
-            "Riempilo d’acqua",
-            "Bevi l’acqua"
-        ],
-        "distractors": [
-            "Metti il bicchiere in tasca",
-            "Versa l’acqua sul pavimento"
-        ]
-    },
-    {
-        "title": "Livello 4: Disegnare",
-        "correctOrder": [
-            "Prendi un foglio",
-            "Prendi una matita",
-            "Disegna sul foglio"
-        ],
-        "distractors": [
-            "Mangia la matita",
-            "Metti il foglio in testa"
-        ]
-    },
+
+
     {
         "title": "Livello 5: Giocare con le costruzioni",
         "correctOrder": [
@@ -67,18 +82,7 @@ const levels = [
             "Nascondi i pezzi"
         ]
     },
-    {
-        "title": "Livello 6: Prepararsi per dormire",
-        "correctOrder": [
-            "Metti il pigiama",
-            "Vai a letto",
-            "Chiudi gli occhi"
-        ],
-        "distractors": [
-            "Indossa le scarpe",
-            "Accendi la musica forte"
-        ]
-    }*/
+    */
 ];
 
 
@@ -92,7 +96,17 @@ const taskList = document.querySelector(".task-list");
 const rightPanel = document.getElementById("right-panel");
 
 function loadLevel() {
+
+
     const level = levels[currentLevel];
+
+    if(currentLevel == 0){
+        QT.say("Ciao! In questo esercizio dovrai scegliere le azioni corrette per completare l'attività ")
+        QT.say(level.title)
+    } else {
+        QT.say(level.title)
+    }
+
     levelInfo.textContent = level.title;
     message.textContent = "";
     message.className = "";
@@ -236,7 +250,9 @@ checkBtn.addEventListener("click", () => {
             document.body.classList.remove("completed");
 
             if (currentLevel < levels.length) {
-                loadLevel();
+                setTimeout(() => {
+                    loadLevel();
+                }, 2000)
             } else {
                 terminaEsercuzioneEsercizio(idEsercizio, "Y", false)
                 showVictoryModal();
@@ -282,5 +298,11 @@ function addTaskToList(value) {
 }
 
 
+function pronunciaLivello() {
+    console.log("pronuncia livello");
+    QT.say(levels[currentLevel].title)
+}
+
+
 // Avvio
-loadLevel();
+//loadLevel();
