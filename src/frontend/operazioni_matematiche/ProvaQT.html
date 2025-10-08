@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script src="js/eventemitter2.min.js"></script>
+<script src="js/roslib.min.js"></script>
+<script src="js/qtrobot-1.0.min.js"></script>
+
+<script>
+  // IP del robot: wlan0 e eth0 (dai tuoi output)
+  const CANDIDATE_HOSTS = ["192.168.137.114", "192.168.100.2"];
+  const CANDIDATE_PORTS = [9090];         // dal log rosbridge
+  const CANDIDATE_SCHEMES = ["ws"];      // server in TLS
+
+  // Prompt iniziale (puoi annullare per usare fallback automatici)
+  const userUrl = "ws://192.168.137.114:9090";
+
+  // Costruisco lista di URL da provare
+  const urlsToTry = [];
+  if (userUrl) urlsToTry.push(userUrl);
+  for (const h of CANDIDATE_HOSTS) {
+    for (const p of CANDIDATE_PORTS) {
+      for (const s of CANDIDATE_SCHEMES) {
+        const u = `${s}://${h}:${p}`;
+        if (!urlsToTry.includes(u)) urlsToTry.push(u);
+      }
+    }
+  }
+
+  function tryConnect(urls, idx = 0) {
+    if (idx >= urls.length) {
+      console.error("Tutti i tentativi di connessione sono falliti:", urls);
+      return;
+    }
+    const url = urls[idx];
+    console.log("Connecting to QTrobot (please wait...)", url);
+
+    const qtrobot = new QTrobot({
+      url,
+      connection: function () {
+        console.log("Connected to", url);
+        qtrobot.talk_text('Hello! my name is QT!', function () {
+          qtrobot.show_emotion('QT/happy');
+        });
+      },
+      error: function (error) {
+        console.warn("WS error on", url, error);
+      },
+      close: function (ev) {
+        console.warn("Disconnected from", url, ev && ev.code, ev && ev.reason);
+        // Prossimo tentativo
+        tryConnect(urls, idx + 1);
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    tryConnect(urlsToTry);
+  });
+</script>
+
+<p style="text-align:center;">Apri la console del browser per i log.</p>
+</body>
+</html>
