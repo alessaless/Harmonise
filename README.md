@@ -1,5 +1,5 @@
 <div align = "center">
-<img src="https://i.imgur.com/SvIwWAN.png" alt="logo" width="400"/>
+<img src="https://i.imgur.com/7ZylX0z.png" alt="logo" width="400"/>
 <h2>Università degli Studi di Salerno</h2>
 Progetto Tesi Magistrale </strong>
 </div>
